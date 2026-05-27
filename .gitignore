@@ -1,0 +1,5 @@
+scripts/
+cms/history/
+node_modules/
+.claude/
+*.log

@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve-cms.mjs",
+    "start:cms": "node scripts/serve-cms.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-cms-text-key="seo.title">Вова — Веб-разработчик. Лендинги под ключ.</title>
+  <meta name="description" data-cms-text-key="seo.description" content="Создаю лендинги и сайты, которые продают. Быстро, красиво, адаптивно. Сделаем ваш проект вместе." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cms/cms.css" />
+</head>
+<body>
+
+<!-- ===== ДЕКОРАТИВНЫЙ ФОН ===== -->
+<div class="bg-blobs" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="/">
+      <div class="logo-icon">V</div>
+      <span class="logo-text" data-cms-text-key="logo.name">Vova.dev</span>
+    </a>
+
+    <nav class="header__nav" id="nav">
+      <a href="#about">О себе</a>
+      <a href="#services">Услуги</a>
+      <a href="#portfolio">Портфолио</a>
+      <a href="#contact">Контакт</a>
+    </nav>
+
+    <button class="btn btn--accent header__cta" id="headerContactBtn">Написать мне</button>
+
+    <button class="burger" id="burgerBtn" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="hero__eyebrow" data-cms-text-key="hero.eyebrow">Веб-разработчик · Фриланс</p>
+      <h1 class="hero__title">
+        <span data-cms-text-key="hero.title.1">Создаю лендинги,</span>
+        <br />
+        <span class="hero__title-accent" data-cms-text-key="hero.title.2">которые продают</span>
+      </h1>
+      <p class="hero__sub" data-cms-text-key="hero.sub">Разрабатываю сайты и лендинги под ключ: дизайн, вёрстка, адаптив, CMS для самостоятельного редактирования. Быстро и чисто.</p>
+
+      <div class="hero__actions">
+        <button class="btn btn--accent btn--lg" id="heroContactBtn">Обсудить проект</button>
+        <a class="btn btn--glass btn--lg" href="#portfolio">Мои работы</a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <strong data-cms-text-key="stat.projects">5+</strong>
+          <span data-cms-text-key="stat.projects.label">проектов сдано</span>
+        </div>
+        <div class="hero__stat">
+          <strong data-cms-text-key="stat.speed">7 дней</strong>
+          <span data-cms-text-key="stat.speed.label">средний срок</span>
+        </div>
+        <div class="hero__stat">
+          <strong data-cms-text-key="stat.satisfaction">100%</strong>
+          <span data-cms-text-key="stat.satisfaction.label">довольных клиентов</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__media">
+      <div class="hero__photo-wrap">
+        <div class="hero__photo-glow"></div>
+        <div class="hero__photo-frame">
+          <img
+            class="hero__photo"
+            data-cms-image-key="hero.photo"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='560' viewBox='0 0 480 560'%3E%3Crect width='480' height='560' fill='%23130f2a'/%3E%3Ccircle cx='240' cy='200' r='90' fill='%237c3aed' opacity='.25'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-size='18' fill='%23a78bfa'%3EДобавьте фото%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-size='13' fill='%23664ab5'%3Eчерез CMS (%3Furl%3Fcms)%3C/text%3E%3C/svg%3E"
+            alt="Вова — веб-разработчик"
+          />
+        </div>
+        <div class="hero__badge hero__badge--tl glass-card">
+          <span class="badge-icon">⚡</span>
+          <span data-cms-text-key="hero.badge1">Быстрая сдача</span>
+        </div>
+        <div class="hero__badge hero__badge--br glass-card">
+          <span class="badge-icon">✓</span>
+          <span data-cms-text-key="hero.badge2">CMS в подарок</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about__inner">
+      <div class="about__photo-wrap">
+        <div class="about__photo-frame glass-card">
+          <img
+            class="about__photo"
+            data-cms-image-key="about.photo"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='380' height='460' viewBox='0 0 380 460'%3E%3Crect width='380' height='460' fill='%23130f2a'/%3E%3Ccircle cx='190' cy='180' r='70' fill='%237c3aed' opacity='.2'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-size='15' fill='%23a78bfa'%3EФото%3C/text%3E%3C/svg%3E"
+            alt="Вова"
+          />
+        </div>
+        <div class="about__exp-badge glass-card">
+          <strong data-cms-text-key="about.exp.num">2026</strong>
+          <span data-cms-text-key="about.exp.label">год основания</span>
+        </div>
+      </div>
+
+      <div class="about__content">
+        <p class="section-eyebrow">Обо мне</p>
+        <h2 class="section-title" data-cms-text-key="about.title">Привет, я Вова</h2>
+        <p class="about__bio" data-cms-text-key="about.bio1">Я веб-разработчик, специализирующийся на создании лендингов и сайтов под ключ. Делаю так, чтобы сайт не только выглядел красиво — но и работал на результат.</p>
+        <p class="about__bio" data-cms-text-key="about.bio2">Каждый проект — это чистый код, пиксель-перфект вёрстка и встроенная CMS, чтобы вы могли сами менять тексты и фотографии без программиста.</p>
+
+        <div class="about__skills">
+          <div class="skill-tag">HTML / CSS</div>
+          <div class="skill-tag">JavaScript</div>
+          <div class="skill-tag">Адаптивная вёрстка</div>
+          <div class="skill-tag">CMS</div>
+          <div class="skill-tag">UI/UX</div>
+          <div class="skill-tag">Figma</div>
+          <div class="skill-tag">Git</div>
+          <div class="skill-tag">Node.js</div>
+        </div>
+
+        <a class="btn btn--accent" href="#contact">Давайте работать</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head">
+      <p class="section-eyebrow">Услуги</p>
+      <h2 class="section-title" data-cms-text-key="services.title">Что я делаю</h2>
+      <p class="section-sub" data-cms-text-key="services.sub">От идеи до готового сайта — без лишних звеньев</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card glass-card">
+        <div class="service-icon">🚀</div>
+        <h3 data-cms-text-key="srv.1.title">Лендинг под ключ</h3>
+        <p data-cms-text-key="srv.1.desc">Одностраничный сайт с продающей структурой, красивым дизайном и встроенной CMS. Готово за 5–10 дней.</p>
+        <div class="service-price">
+          <span data-cms-text-key="srv.1.price">от 15 000 ₽</span>
+        </div>
+        <button class="btn btn--glass service-cta" onclick="openContact('Лендинг под ключ')">Заказать</button>
+      </div>
+
+      <div class="service-card glass-card service-card--featured">
+        <div class="service-featured-label">Популярно</div>
+        <div class="service-icon">✦</div>
+        <h3 data-cms-text-key="srv.2.title">Сайт с CMS</h3>
+        <p data-cms-text-key="srv.2.desc">Многостраничный сайт с визуальным редактором контента. Вы сами меняете тексты и фото без разработчика.</p>
+        <div class="service-price">
+          <span data-cms-text-key="srv.2.price">от 25 000 ₽</span>
+        </div>
+        <button class="btn btn--accent service-cta" onclick="openContact('Сайт с CMS')">Заказать</button>
+      </div>
+
+      <div class="service-card glass-card">
+        <div class="service-icon">🎨</div>
+        <h3 data-cms-text-key="srv.3.title">Вёрстка по макету</h3>
+        <p data-cms-text-key="srv.3.desc">Есть дизайн в Figma или референс? Точно и аккуратно перенесу в HTML/CSS с адаптивом под все устройства.</p>
+        <div class="service-price">
+          <span data-cms-text-key="srv.3.price">от 8 000 ₽</span>
+        </div>
+        <button class="btn btn--glass service-cta" onclick="openContact('Вёрстка по макету')">Заказать</button>
+      </div>
+
+      <div class="service-card glass-card">
+        <div class="service-icon">⚙️</div>
+        <h3 data-cms-text-key="srv.4.title">Доработка сайта</h3>
+        <p data-cms-text-key="srv.4.desc">Исправлю баги, улучшу скорость, добавлю новый блок или сделаю редизайн существующего сайта.</p>
+        <div class="service-price">
+          <span data-cms-text-key="srv.4.price">от 3 000 ₽</span>
+        </div>
+        <button class="btn btn--glass service-cta" onclick="openContact('Доработка сайта')">Заказать</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PORTFOLIO ===== -->
+<section class="section" id="portfolio">
+  <div class="container">
+    <div class="section-head">
+      <p class="section-eyebrow">Портфолио</p>
+      <h2 class="section-title" data-cms-text-key="portfolio.title">Мои работы</h2>
+      <p class="section-sub" data-cms-text-key="portfolio.sub">Сайты и лендинги, которые я создал</p>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <!-- Проект 1 — Nail Studio -->
+      <article class="project-card glass-card">
+        <div class="project-img-wrap">
+          <img
+            class="project-img"
+            data-cms-image-key="project.1.img"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='380' viewBox='0 0 600 380'%3E%3Crect width='600' height='380' fill='%23fffdf6'/%3E%3Crect x='0' y='0' width='600' height='48' fill='%231a1a18'/%3E%3Ccircle cx='24' cy='24' r='6' fill='%23ff5f57'/%3E%3Ccircle cx='44' cy='24' r='6' fill='%23ffbd2e'/%3E%3Ccircle cx='64' cy='24' r='6' fill='%2328c840'/%3E%3Ctext x='300' y='160' text-anchor='middle' font-family='Georgia,serif' font-size='32' fill='%231a1a18'%3ENail Studio%3C/text%3E%3Ctext x='300' y='200' text-anchor='middle' font-family='Georgia,serif' font-size='14' fill='%23888'%3EПремиум лендинг · Санкт-Петербург%3C/text%3E%3Ctext x='300' y='310' text-anchor='middle' font-family='Inter,sans-serif' font-size='12' fill='%23aaa'%3EЗамените на скриншот через CMS%3C/text%3E%3C/svg%3E"
+            alt="Nail Studio — лендинг"
+          />
+          <div class="project-overlay">
+            <a class="btn btn--accent" href="#" data-cms-link-key="project.1.link" target="_blank" rel="noopener">Открыть сайт</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JS</span>
+            <span class="tag">CMS</span>
+          </div>
+          <h3 class="project-title" data-cms-text-key="project.1.title">Nail Studio</h3>
+          <p class="project-desc" data-cms-text-key="project.1.desc">Премиум лендинг для студии маникюра. Онлайн-запись, галерея работ, мастера, отзывы и встроенный визуальный редактор.</p>
+        </div>
+      </article>
+
+      <!-- Проект 2 — место для следующего -->
+      <article class="project-card glass-card">
+        <div class="project-img-wrap">
+          <img
+            class="project-img"
+            data-cms-image-key="project.2.img"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='380' viewBox='0 0 600 380'%3E%3Crect width='600' height='380' fill='%230e0c1e'/%3E%3Crect x='0' y='0' width='600' height='48' fill='%23130f2a'/%3E%3Ccircle cx='24' cy='24' r='6' fill='%23ff5f57'/%3E%3Ccircle cx='44' cy='24' r='6' fill='%23ffbd2e'/%3E%3Ccircle cx='64' cy='24' r='6' fill='%2328c840'/%3E%3Ctext x='300' y='190' text-anchor='middle' font-family='Inter,sans-serif' font-size='16' fill='%23a78bfa'%3EВаш следующий проект%3C/text%3E%3Ctext x='300' y='215' text-anchor='middle' font-family='Inter,sans-serif' font-size='12' fill='%23664ab5'%3EЗамените через CMS (%3Fcms)%3C/text%3E%3C/svg%3E"
+            alt="Проект 2"
+          />
+          <div class="project-overlay">
+            <a class="btn btn--accent" href="#" data-cms-link-key="project.2.link" target="_blank" rel="noopener">Открыть сайт</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag" data-cms-text-key="project.2.tag1">HTML</span>
+            <span class="tag" data-cms-text-key="project.2.tag2">CSS</span>
+          </div>
+          <h3 class="project-title" data-cms-text-key="project.2.title">Новый проект</h3>
+          <p class="project-desc" data-cms-text-key="project.2.desc">Добавьте описание вашего следующего проекта через CMS-редактор.</p>
+        </div>
+      </article>
+
+      <!-- Проект 3 -->
+      <article class="project-card glass-card">
+        <div class="project-img-wrap">
+          <img
+            class="project-img"
+            data-cms-image-key="project.3.img"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='380' viewBox='0 0 600 380'%3E%3Crect width='600' height='380' fill='%230e0c1e'/%3E%3Crect x='0' y='0' width='600' height='48' fill='%23130f2a'/%3E%3Ccircle cx='24' cy='24' r='6' fill='%23ff5f57'/%3E%3Ccircle cx='44' cy='24' r='6' fill='%23ffbd2e'/%3E%3Ccircle cx='64' cy='24' r='6' fill='%2328c840'/%3E%3Ctext x='300' y='190' text-anchor='middle' font-family='Inter,sans-serif' font-size='16' fill='%23a78bfa'%3EВаш следующий проект%3C/text%3E%3Ctext x='300' y='215' text-anchor='middle' font-family='Inter,sans-serif' font-size='12' fill='%23664ab5'%3EЗамените через CMS (%3Fcms)%3C/text%3E%3C/svg%3E"
+            alt="Проект 3"
+          />
+          <div class="project-overlay">
+            <a class="btn btn--accent" href="#" data-cms-link-key="project.3.link" target="_blank" rel="noopener">Открыть сайт</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag" data-cms-text-key="project.3.tag1">HTML</span>
+            <span class="tag" data-cms-text-key="project.3.tag2">CSS</span>
+          </div>
+          <h3 class="project-title" data-cms-text-key="project.3.title">Новый проект</h3>
+          <p class="project-desc" data-cms-text-key="project.3.desc">Добавьте описание вашего следующего проекта через CMS-редактор.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== ПРОЦЕСС ===== -->
+<section class="section" id="process">
+  <div class="container">
+    <div class="section-head">
+      <p class="section-eyebrow">Как я работаю</p>
+      <h2 class="section-title" data-cms-text-key="process.title">Простой процесс</h2>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <h3 data-cms-text-key="step.1.title">Обсуждение</h3>
+        <p data-cms-text-key="step.1.desc">Обсудим задачу, аудиторию и цели сайта. Определим структуру и стиль.</p>
+      </div>
+      <div class="process-step-arrow">→</div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <h3 data-cms-text-key="step.2.title">Дизайн</h3>
+        <p data-cms-text-key="step.2.desc">Создам прототип и визуальный концепт. Согласуем до начала вёрстки.</p>
+      </div>
+      <div class="process-step-arrow">→</div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <h3 data-cms-text-key="step.3.title">Разработка</h3>
+        <p data-cms-text-key="step.3.desc">Верстаю чистый пиксель-перфект код с адаптивом под все устройства.</p>
+      </div>
+      <div class="process-step-arrow">→</div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <h3 data-cms-text-key="step.4.title">Сдача</h3>
+        <p data-cms-text-key="step.4.desc">Сдаю готовый сайт с CMS, инструкцией и поддержкой после запуска.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ОТЗЫВЫ ===== -->
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <p class="section-eyebrow">Отзывы</p>
+      <h2 class="section-title" data-cms-text-key="reviews.title">Что говорят клиенты</h2>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card glass-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text" data-cms-text-key="review.1.text">«Вова сделал лендинг для нашей студии маникюра — выглядит шикарно. Всё адаптивно, быстро работает. И CMS очень удобная — сами меняем фото.»</p>
+        <div class="review-author">
+          <div class="review-avatar" data-cms-text-key="review.1.initial">А</div>
+          <div>
+            <strong data-cms-text-key="review.1.name">Алина К.</strong>
+            <span data-cms-text-key="review.1.role">Nail Studio</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card glass-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text" data-cms-text-key="review.2.text">«Заказывала лендинг для услуги. Сдал вовремя, всё как обговорили. Дизайн понравился, конверсия выросла.»</p>
+        <div class="review-author">
+          <div class="review-avatar" data-cms-text-key="review.2.initial">М</div>
+          <div>
+            <strong data-cms-text-key="review.2.name">Мария С.</strong>
+            <span data-cms-text-key="review.2.role">Клиент</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card glass-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text" data-cms-text-key="review.3.text">«Отличная работа. Четко по ТЗ, без лишних правок. Буду обращаться снова.»</p>
+        <div class="review-author">
+          <div class="review-avatar" data-cms-text-key="review.3.initial">Д</div>
+          <div>
+            <strong data-cms-text-key="review.3.name">Дмитрий П.</strong>
+            <span data-cms-text-key="review.3.role">Клиент</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== КОНТАКТ ===== -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="contact__inner">
+      <div class="contact__info">
+        <p class="section-eyebrow">Контакт</p>
+        <h2 class="section-title" data-cms-text-key="contact.title">Давайте сделаем ваш проект</h2>
+        <p class="contact__sub" data-cms-text-key="contact.sub">Опишите задачу — обсудим, оценим и стартуем в ближайшие дни.</p>
+
+        <div class="contact-links">
+          <a class="contact-link" href="https://t.me/username" data-cms-link-key="contact.tg">
+            <div class="contact-link-icon">✈</div>
+            <div>
+              <strong data-cms-text-key="contact.tg.label">Telegram</strong>
+              <span data-cms-text-key="contact.tg.val">@username</span>
+            </div>
+          </a>
+          <a class="contact-link" href="mailto:kingknife29@gmail.com" data-cms-link-key="contact.email">
+            <div class="contact-link-icon">✉</div>
+            <div>
+              <strong data-cms-text-key="contact.email.label">Email</strong>
+              <span data-cms-text-key="contact.email.val">kingknife29@gmail.com</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact__form-wrap glass-card">
+        <h3 data-cms-text-key="form.title">Написать мне</h3>
+        <form class="contact-form" id="contactFormInline" onsubmit="submitContactForm(event)">
+          <div class="form-group">
+            <label for="cName">Имя</label>
+            <input id="cName" name="name" type="text" placeholder="Ваше имя" required />
+          </div>
+          <div class="form-group">
+            <label for="cContact">Telegram или Email</label>
+            <input id="cContact" name="contact" type="text" placeholder="@username или email@mail.ru" required />
+          </div>
+          <div class="form-group">
+            <label for="cService">Услуга</label>
+            <select id="cService" name="service">
+              <option value="">Выберите услугу</option>
+              <option value="Лендинг под ключ">Лендинг под ключ</option>
+              <option value="Сайт с CMS">Сайт с CMS</option>
+              <option value="Вёрстка по макету">Вёрстка по макету</option>
+              <option value="Доработка сайта">Доработка сайта</option>
+              <option value="Другое">Другое</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cMessage">Сообщение</label>
+            <textarea id="cMessage" name="message" placeholder="Расскажите о проекте..." rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn btn--accent btn--full">Отправить заявку</button>
+        </form>
+        <div class="contact-success" id="contactSuccess" hidden>
+          <div class="success-icon">✓</div>
+          <h3>Заявка отправлена!</h3>
+          <p>Свяжусь с вами в ближайшее время.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <div class="logo-icon logo-icon--sm">V</div>
+      <span class="logo-text" data-cms-text-key="footer.logo">Vova.dev</span>
+    </div>
+    <p class="footer__copy" data-cms-text-key="footer.copy">© 2026 Vova.dev. Все права защищены.</p>
+    <div class="footer__links">
+      <a href="https://t.me/username" data-cms-link-key="footer.tg">Telegram</a>
+      <a href="mailto:kingknife29@gmail.com" data-cms-link-key="footer.email">Email</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== МОДАЛКА КОНТАКТ ===== -->
+<div class="modal-backdrop" id="contactModal">
+  <div class="modal-card glass-card">
+    <button class="modal-close" id="contactClose" aria-label="Закрыть">✕</button>
+    <h2>Обсудим проект</h2>
+    <p class="modal-sub">Опишите задачу — отвечу в течение нескольких часов.</p>
+    <form class="contact-form" id="contactForm" onsubmit="submitContactModal(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="mName">Имя</label>
+          <input id="mName" name="name" type="text" placeholder="Ваше имя" required />
+        </div>
+        <div class="form-group">
+          <label for="mContact">Telegram или Email</label>
+          <input id="mContact" name="contact" type="text" placeholder="@username или email" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="mService">Услуга</label>
+        <select id="mService" name="service">
+          <option value="">Выберите услугу</option>
+          <option value="Лендинг под ключ">Лендинг под ключ</option>
+          <option value="Сайт с CMS">Сайт с CMS</option>
+          <option value="Вёрстка по макету">Вёрстка по макету</option>
+          <option value="Доработка сайта">Доработка сайта</option>
+          <option value="Другое">Другое</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="mMessage">Сообщение</label>
+        <textarea id="mMessage" name="message" placeholder="Расскажите о проекте..." rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn--accent btn--full">Отправить заявку</button>
+    </form>
+    <div class="contact-success" id="modalSuccess" hidden>
+      <div class="success-icon">✓</div>
+      <h3>Заявка отправлена!</h3>
+      <p>Свяжусь с вами в ближайшее время.</p>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+<script src="cms/cms.js"></script>
+</body>
+</html>
