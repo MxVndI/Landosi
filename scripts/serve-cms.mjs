@@ -179,7 +179,7 @@ const server = http.createServer(async (req, res) => {
       const filename = safeFileName(json.filename || 'image.png');
       await fs.mkdir(uploadsDir, { recursive: true });
       await fs.writeFile(path.join(uploadsDir, filename), Buffer.from(match[2], 'base64'));
-      sendJson(res, 200, { ok: true, path: `/uploads/${filename}` });
+      sendJson(res, 200, { ok: true, path: `uploads/${filename}` });
       return;
     }
 

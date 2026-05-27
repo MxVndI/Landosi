@@ -199,7 +199,7 @@
     toolbar.querySelector('.cms-seo').addEventListener('click', showSeoPanel);
     toolbar.querySelector('.cms-history').addEventListener('click', showHistoryPanel);
     toolbar.querySelector('.cms-help').addEventListener('click', () => toast('Текст: клик и печатай. Фото: клик и файл. SEO: title/description. История: откат к любой версии.'));
-    toolbar.querySelector('.cms-exit').addEventListener('click', () => { location.href = '/'; });
+    toolbar.querySelector('.cms-exit').addEventListener('click', () => { location.href = location.pathname + location.hash; });
     panel.querySelector('[data-cms-apply]').addEventListener('click', applyPanelFields);
     panel.querySelector('[data-cms-clear]').addEventListener('click', clearSelectedOverride);
     panel.querySelector('[data-cms-history-list]').addEventListener('click', event => {
