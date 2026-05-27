@@ -81,33 +81,31 @@
     if (typeof seoDescription === 'string') ensureMetaDescription().setAttribute('content', seoDescription.trim());
     Object.entries(items).forEach(([key, item]) => {
       if (!item || typeof item !== 'object') return;
-      // Text вЂ” works with any key prefix (hero.h1, price.t1-price, teach.t1-badge, etc.)
-      const textEl = document.querySelector(`[data-cms-text-key="${CSS.escape(key)}"]`);
-      if (textEl) {
-        if (typeof item.html === 'string') textEl.innerHTML = item.html;
-        else if (typeof item.text === 'string') textEl.textContent = item.text;
+      // Support both auto-generated keys (text.0001) and named keys (hero.title)
+      // by falling back to item.type when the prefix doesn't match
+      const isText  = key.startsWith('text.')  || item.type === 'text';
+      const isImage = key.startsWith('image.') || item.type === 'image';
+      const isLink  = key.startsWith('link.')  || item.type === 'link';
+      if (isText) {
+        const el = document.querySelector(`[data-cms-text-key="${CSS.escape(key)}"]`);
+        if (el && typeof item.html === 'string') el.innerHTML = item.html;
+        if (el && typeof item.text === 'string' && typeof item.html !== 'string') el.textContent = item.text;
       }
-      // Image вЂ” works with any key prefix (teach.t1-photo, hero.photo, etc.)
-      const imgEl = document.querySelector(`[data-cms-image-key="${CSS.escape(key)}"]`);
-      if (imgEl) {
-        if (typeof item.src === 'string') {
-          imgEl.setAttribute('src', item.src);
-          // Show img and hide fallback avatar when a real photo is set
-          imgEl.style.display = '';
-          const avatar = imgEl.nextElementSibling;
-          if (avatar?.classList.contains('teacher-avatar')) avatar.style.display = 'none';
-        }
-        if (typeof item.alt === 'string') imgEl.setAttribute('alt', item.alt);
+      if (isImage) {
+        const el = document.querySelector(`[data-cms-image-key="${CSS.escape(key)}"]`);
+        if (el && typeof item.src === 'string') el.setAttribute('src', item.src);
+        if (el && typeof item.alt === 'string') el.setAttribute('alt', item.alt);
       }
-      // Link вЂ” works with any key prefix
-      const linkEl = document.querySelector(`[data-cms-link-key="${CSS.escape(key)}"]`);
-      if (linkEl && typeof item.href === 'string') linkEl.setAttribute('href', item.href);
+      if (isLink) {
+        const el = document.querySelector(`[data-cms-link-key="${CSS.escape(key)}"]`);
+        if (el && typeof item.href === 'string') el.setAttribute('href', item.href);
+      }
     });
   }
 
   function markDirty() {
     state.dirty = true;
-    if (state.saveButton) state.saveButton.textContent = 'РЎРѕС…СЂР°РЅРёС‚СЊ *';
+    if (state.saveButton) state.saveButton.textContent = 'Сохранить *';
   }
 
   function setItem(key, patch) {
@@ -135,7 +133,7 @@
   }
 
   function formatHistoryDate(value) {
-    if (!value) return 'Р±РµР· РґР°С‚С‹';
+    if (!value) return 'без даты';
     const date = new Date(value);
     if (Number.isNaN(date.getTime())) return String(value);
     return new Intl.DateTimeFormat('ru-RU', {
@@ -153,31 +151,31 @@
     toolbar.className = 'cms-toolbar';
     toolbar.innerHTML = `
       <strong>Visual CMS v2</strong>
-      <button class="cms-save" type="button">РЎРѕС…СЂР°РЅРёС‚СЊ</button>
+      <button class="cms-save" type="button">Сохранить</button>
       <button class="cms-seo" type="button">SEO</button>
-      <button class="cms-history" type="button">РСЃС‚РѕСЂРёСЏ</button>
-      <button class="cms-help" type="button">РљР°Рє</button>
-      <button class="cms-exit" type="button">Р’С‹Р№С‚Рё</button>
+      <button class="cms-history" type="button">История</button>
+      <button class="cms-help" type="button">Как</button>
+      <button class="cms-exit" type="button">Выйти</button>
     `;
 
     const panel = document.createElement('aside');
     panel.className = 'cms-panel';
     panel.hidden = true;
     panel.innerHTML = `
-      <h3 data-cms-panel-title>Р­Р»РµРјРµРЅС‚</h3>
-      <p data-cms-panel-help>РљР»РёРєРЅРё С‚РµРєСЃС‚ Рё РїРёС€Рё РїСЂСЏРјРѕ РЅР° СЃС‚СЂР°РЅРёС†Рµ. РљР»РёРєРЅРё С„РѕС‚РєСѓ вЂ” Р·Р°РіСЂСѓР·РёС€СЊ РЅРѕРІСѓСЋ. РЈ СЃСЃС‹Р»РѕРє РјРѕР¶РЅРѕ РјРµРЅСЏС‚СЊ URL С‚СѓС‚.</p>
+      <h3 data-cms-panel-title>Элемент</h3>
+      <p data-cms-panel-help>Кликни текст и пиши прямо на странице. Кликни фотку — загрузишь новую. У ссылок можно менять URL тут.</p>
       <div class="cms-seo-fields" hidden>
-        <label>SEO title<input data-cms-seo-title placeholder="Р—Р°РіРѕР»РѕРІРѕРє РІРєР»Р°РґРєРё / Google"></label>
-        <label>SEO description<textarea data-cms-seo-description placeholder="РћРїРёСЃР°РЅРёРµ РґР»СЏ РїРѕРёСЃРєРѕРІРёРєРѕРІ"></textarea></label>
+        <label>SEO title<input data-cms-seo-title placeholder="Заголовок вкладки / Google"></label>
+        <label>SEO description<textarea data-cms-seo-description placeholder="Описание для поисковиков"></textarea></label>
       </div>
       <div class="cms-history-fields" hidden>
-        <div class="cms-history-list" data-cms-history-list>Р—Р°РіСЂСѓР¶Р°СЋ РёСЃС‚РѕСЂРёСЋ...</div>
+        <div class="cms-history-list" data-cms-history-list>Загружаю историю...</div>
       </div>
-      <label class="cms-link-field" hidden>РЎСЃС‹Р»РєР°<input data-cms-href placeholder="https://..."></label>
-      <label class="cms-alt-field" hidden>Alt РєР°СЂС‚РёРЅРєРё<input data-cms-alt placeholder="РћРїРёСЃР°РЅРёРµ РєР°СЂС‚РёРЅРєРё"></label>
+      <label class="cms-link-field" hidden>Ссылка<input data-cms-href placeholder="https://..."></label>
+      <label class="cms-alt-field" hidden>Alt картинки<input data-cms-alt placeholder="Описание картинки"></label>
       <div class="cms-row cms-panel-actions">
-        <button type="button" data-cms-apply>РџСЂРёРјРµРЅРёС‚СЊ</button>
-        <button class="cms-secondary" type="button" data-cms-clear>РЎР±СЂРѕСЃРёС‚СЊ СЌР»РµРјРµРЅС‚</button>
+        <button type="button" data-cms-apply>Применить</button>
+        <button class="cms-secondary" type="button" data-cms-clear>Сбросить элемент</button>
       </div>
     `;
 
@@ -200,7 +198,7 @@
     toolbar.querySelector('.cms-save').addEventListener('click', saveContent);
     toolbar.querySelector('.cms-seo').addEventListener('click', showSeoPanel);
     toolbar.querySelector('.cms-history').addEventListener('click', showHistoryPanel);
-    toolbar.querySelector('.cms-help').addEventListener('click', () => toast('РўРµРєСЃС‚: РєР»РёРє Рё РїРµС‡Р°С‚Р°Р№. Р¤РѕС‚Рѕ: РєР»РёРє Рё С„Р°Р№Р». SEO: title/description. РСЃС‚РѕСЂРёСЏ: РѕС‚РєР°С‚ Рє Р»СЋР±РѕР№ РІРµСЂСЃРёРё.'));
+    toolbar.querySelector('.cms-help').addEventListener('click', () => toast('Текст: клик и печатай. Фото: клик и файл. SEO: title/description. История: откат к любой версии.'));
     toolbar.querySelector('.cms-exit').addEventListener('click', () => { location.href = '/'; });
     panel.querySelector('[data-cms-apply]').addEventListener('click', applyPanelFields);
     panel.querySelector('[data-cms-clear]').addEventListener('click', clearSelectedOverride);
@@ -274,7 +272,7 @@
       event.returnValue = '';
     });
 
-    toast('CMS РІРєР»СЋС‡РµРЅР°: РєР»РёРєР°Р№ С‚РµРєСЃС‚/С„РѕС‚Рѕ/СЃСЃС‹Р»РєРё Рё СЃРѕС…СЂР°РЅСЏР№');
+    toast('CMS включена: кликай текст/фото/ссылки и сохраняй');
   }
 
   function selectElement(el, kind) {
@@ -289,8 +287,8 @@
     if (!panel) return;
     panel.hidden = false;
     panel.dataset.mode = kind;
-    panel.querySelector('[data-cms-panel-title]').textContent = 'Р­Р»РµРјРµРЅС‚';
-    panel.querySelector('[data-cms-panel-help]').textContent = 'РљР»РёРєРЅРё С‚РµРєСЃС‚ Рё РїРёС€Рё РїСЂСЏРјРѕ РЅР° СЃС‚СЂР°РЅРёС†Рµ. РљР»РёРєРЅРё С„РѕС‚РєСѓ вЂ” Р·Р°РіСЂСѓР·РёС€СЊ РЅРѕРІСѓСЋ. РЈ СЃСЃС‹Р»РѕРє РјРѕР¶РЅРѕ РјРµРЅСЏС‚СЊ URL С‚СѓС‚.';
+    panel.querySelector('[data-cms-panel-title]').textContent = 'Элемент';
+    panel.querySelector('[data-cms-panel-help]').textContent = 'Кликни текст и пиши прямо на странице. Кликни фотку — загрузишь новую. У ссылок можно менять URL тут.';
     const seoFields = panel.querySelector('.cms-seo-fields');
     const hrefField = panel.querySelector('.cms-link-field');
     const hrefInput = panel.querySelector('[data-cms-href]');
@@ -299,7 +297,7 @@
     const historyFields = panel.querySelector('.cms-history-fields');
     const applyButton = panel.querySelector('[data-cms-apply]');
     const clearButton = panel.querySelector('[data-cms-clear]');
-    applyButton.textContent = 'РџСЂРёРјРµРЅРёС‚СЊ';
+    applyButton.textContent = 'Применить';
     clearButton.hidden = false;
     seoFields.hidden = true;
     historyFields.hidden = true;
@@ -327,7 +325,7 @@
       el.setAttribute('alt', alt);
       setItem(el.dataset.cmsImageKey, { type: 'image', alt });
     }
-    toast('РџСЂРёРјРµРЅРµРЅРѕ, РЅРµ Р·Р°Р±СѓРґСЊ СЃРѕС…СЂР°РЅРёС‚СЊ');
+    toast('Применено, не забудь сохранить');
   }
 
   function ensureMetaDescription() {
@@ -347,12 +345,12 @@
     panel.hidden = false;
     panel.dataset.mode = 'seo';
     panel.querySelector('[data-cms-panel-title]').textContent = 'SEO';
-    panel.querySelector('[data-cms-panel-help]').textContent = 'Р­С‚Рѕ Р·Р°РіРѕР»РѕРІРѕРє РІРєР»Р°РґРєРё Рё РѕРїРёСЃР°РЅРёРµ РґР»СЏ Google/РЇРЅРґРµРєСЃР°. РќР° РґРёР·Р°Р№РЅ СЃС‚СЂР°РЅРёС†С‹ РЅРµ РІР»РёСЏРµС‚.';
+    panel.querySelector('[data-cms-panel-help]').textContent = 'Это заголовок вкладки и описание для Google/Яндекса. На дизайн страницы не влияет.';
     panel.querySelector('.cms-seo-fields').hidden = false;
     panel.querySelector('.cms-history-fields').hidden = true;
     panel.querySelector('.cms-link-field').hidden = true;
     panel.querySelector('.cms-alt-field').hidden = true;
-    panel.querySelector('[data-cms-apply]').textContent = 'РџСЂРёРјРµРЅРёС‚СЊ';
+    panel.querySelector('[data-cms-apply]').textContent = 'Применить';
     panel.querySelector('[data-cms-clear]').hidden = true;
     panel.querySelector('[data-cms-seo-title]').value = state.content.items?.['seo.title']?.text || document.title || '';
     panel.querySelector('[data-cms-seo-description]').value = state.content.items?.['seo.description']?.text || document.querySelector('meta[name="description"]')?.getAttribute('content') || '';
@@ -365,7 +363,7 @@
     ensureMetaDescription().setAttribute('content', description);
     setItem('seo.title', { type: 'seo', text: title });
     setItem('seo.description', { type: 'seo', text: description });
-    toast('SEO РїСЂРёРјРµРЅРµРЅРѕ, РЅРµ Р·Р°Р±СѓРґСЊ СЃРѕС…СЂР°РЅРёС‚СЊ');
+    toast('SEO применено, не забудь сохранить');
   }
 
   async function showHistoryPanel() {
@@ -374,52 +372,52 @@
     const panel = state.panel;
     panel.hidden = false;
     panel.dataset.mode = 'history';
-    panel.querySelector('[data-cms-panel-title]').textContent = 'РСЃС‚РѕСЂРёСЏ РёР·РјРµРЅРµРЅРёР№';
-    panel.querySelector('[data-cms-panel-help]').textContent = 'РљР°Р¶РґРѕРµ СЃРѕС…СЂР°РЅРµРЅРёРµ СЃРѕР·РґР°РµС‚ РІРµСЂСЃРёСЋ. РњРѕР¶РЅРѕ РѕС‚РєР°С‚РёС‚СЊСЃСЏ Рє Р»СЋР±РѕР№ С‚РѕС‡РєРµ, РєР°Рє РІ Git.';
+    panel.querySelector('[data-cms-panel-title]').textContent = 'История изменений';
+    panel.querySelector('[data-cms-panel-help]').textContent = 'Каждое сохранение создает версию. Можно откатиться к любой точке, как в Git.';
     panel.querySelector('.cms-seo-fields').hidden = true;
     panel.querySelector('.cms-history-fields').hidden = false;
     panel.querySelector('.cms-link-field').hidden = true;
     panel.querySelector('.cms-alt-field').hidden = true;
-    panel.querySelector('[data-cms-apply]').textContent = 'РћР±РЅРѕРІРёС‚СЊ';
+    panel.querySelector('[data-cms-apply]').textContent = 'Обновить';
     panel.querySelector('[data-cms-clear]').hidden = true;
     await loadHistoryList();
   }
 
   async function loadHistoryList() {
     const list = state.panel.querySelector('[data-cms-history-list]');
-    list.innerHTML = '<p class="cms-history-empty">Р—Р°РіСЂСѓР¶Р°СЋ РІРµСЂСЃРёРё...</p>';
+    list.innerHTML = '<p class="cms-history-empty">Загружаю версии...</p>';
     try {
       const response = await fetch(`${HISTORY_URL}?t=${Date.now()}`, { cache: 'no-store', credentials: 'same-origin' });
       const result = await response.json().catch(() => ({}));
       if (!response.ok || !result.ok) throw new Error(result.error || 'history_failed');
       const items = Array.isArray(result.items) ? result.items : [];
       if (!items.length) {
-        list.innerHTML = '<p class="cms-history-empty">РСЃС‚РѕСЂРёРё РїРѕРєР° РЅРµС‚. РћРЅР° РїРѕСЏРІРёС‚СЃСЏ РїРѕСЃР»Рµ РІС‚РѕСЂРѕРіРѕ СЃРѕС…СЂР°РЅРµРЅРёСЏ.</p>';
+        list.innerHTML = '<p class="cms-history-empty">Истории пока нет. Она появится после второго сохранения.</p>';
         return;
       }
       list.innerHTML = items.map((item, index) => {
         const id = typeof item === 'string' ? item : item.id;
         const date = typeof item === 'string' ? item.replace(/\.json$/, '') : (item.updatedAt || item.savedAt || item.id);
-        const itemCount = typeof item === 'object' && Number.isFinite(item.itemCount) ? `${item.itemCount} РїСЂР°РІРѕРє` : 'РІРµСЂСЃРёСЏ';
+        const itemCount = typeof item === 'object' && Number.isFinite(item.itemCount) ? `${item.itemCount} правок` : 'версия';
         return `
           <article class="cms-history-item">
             <div>
-              <strong>${index === 0 ? 'РџСЂРµРґС‹РґСѓС‰Р°СЏ РІРµСЂСЃРёСЏ' : `Р’РµСЂСЃРёСЏ ${index + 1}`}</strong>
-              <span>${escapeHtml(formatHistoryDate(date))} В· ${escapeHtml(itemCount)}</span>
+              <strong>${index === 0 ? 'Предыдущая версия' : `Версия ${index + 1}`}</strong>
+              <span>${escapeHtml(formatHistoryDate(date))} · ${escapeHtml(itemCount)}</span>
             </div>
-            <button type="button" data-cms-restore="${escapeHtml(id)}">РћС‚РєР°С‚РёС‚СЊ</button>
+            <button type="button" data-cms-restore="${escapeHtml(id)}">Откатить</button>
           </article>
         `;
       }).join('');
     } catch (error) {
-      list.innerHTML = `<p class="cms-history-empty">РќРµ Р·Р°РіСЂСѓР·РёР»РѕСЃСЊ: ${escapeHtml(error.message)}</p>`;
+      list.innerHTML = `<p class="cms-history-empty">Не загрузилось: ${escapeHtml(error.message)}</p>`;
     }
   }
 
   async function restoreHistory(id) {
     if (!id) return;
-    if (state.dirty && !confirm('Р•СЃС‚СЊ РЅРµСЃРѕС…СЂР°РЅРµРЅРЅС‹Рµ РїСЂР°РІРєРё. РћС‚РєР°С‚РёС‚СЊ Рё РїРѕС‚РµСЂСЏС‚СЊ РёС…?')) return;
-    if (!confirm('РћС‚РєР°С‚РёС‚СЊ СЃР°Р№С‚ Рє РІС‹Р±СЂР°РЅРЅРѕР№ РІРµСЂСЃРёРё? РўРµРєСѓС‰Р°СЏ РІРµСЂСЃРёСЏ С‚РѕР¶Рµ СЃРѕС…СЂР°РЅРёС‚СЃСЏ РІ РёСЃС‚РѕСЂРёРё.')) return;
+    if (state.dirty && !confirm('Есть несохраненные правки. Откатить и потерять их?')) return;
+    if (!confirm('Откатить сайт к выбранной версии? Текущая версия тоже сохранится в истории.')) return;
     document.body.classList.add('cms-saving');
     try {
       const response = await fetch(RESTORE_URL, {
@@ -431,10 +429,10 @@
       const result = await response.json().catch(() => ({}));
       if (!response.ok || !result.ok) throw new Error(result.error || 'restore_failed');
       state.dirty = false;
-      toast('РћС‚РєР°С‚РёР». РћР±РЅРѕРІР»СЏСЋ...');
+      toast('Откатил. Обновляю...');
       setTimeout(() => location.reload(), 450);
     } catch (error) {
-      toast(`РќРµ РѕС‚РєР°С‚РёР»РѕСЃСЊ: ${error.message}`);
+      toast(`Не откатилось: ${error.message}`);
     } finally {
       document.body.classList.remove('cms-saving');
     }
@@ -457,9 +455,9 @@
       if (!response.ok || !result.ok) throw new Error(result.error || 'upload_failed');
       selected.el.setAttribute('src', result.path);
       setItem(selected.el.dataset.cmsImageKey, { type: 'image', src: result.path, alt: selected.el.getAttribute('alt') || '' });
-      toast('РљР°СЂС‚РёРЅРєР° Р·Р°РіСЂСѓР¶РµРЅР°');
+      toast('Картинка загружена');
     } catch (error) {
-      toast(`РќРµ Р·Р°РіСЂСѓР·РёР»РѕСЃСЊ: ${error.message}`);
+      toast(`Не загрузилось: ${error.message}`);
     } finally {
       document.body.classList.remove('cms-saving');
     }
@@ -478,7 +476,7 @@
     document.body.classList.add('cms-saving');
     if (state.saveButton) {
       state.saveButton.disabled = true;
-      state.saveButton.textContent = 'РЎРѕС…СЂР°РЅСЏСЋ...';
+      state.saveButton.textContent = 'Сохраняю...';
     }
     try {
       state.content.updatedAt = new Date().toISOString();
@@ -491,11 +489,11 @@
       const result = await response.json();
       if (!response.ok || !result.ok) throw new Error(result.error || 'save_failed');
       state.dirty = false;
-      if (state.saveButton) state.saveButton.textContent = 'РЎРѕС…СЂР°РЅРёС‚СЊ';
-      toast('РЎРѕС…СЂР°РЅРµРЅРѕ');
+      if (state.saveButton) state.saveButton.textContent = 'Сохранить';
+      toast('Сохранено');
     } catch (error) {
-      toast(`РќРµ СЃРѕС…СЂР°РЅРёР»РѕСЃСЊ: ${error.message}`);
-      if (state.saveButton) state.saveButton.textContent = 'РЎРѕС…СЂР°РЅРёС‚СЊ *';
+      toast(`Не сохранилось: ${error.message}`);
+      if (state.saveButton) state.saveButton.textContent = 'Сохранить *';
     } finally {
       if (state.saveButton) state.saveButton.disabled = false;
       document.body.classList.remove('cms-saving');
@@ -503,22 +501,22 @@
   }
 
   async function undoLastSave() {
-    if (state.dirty && !confirm('Р•СЃС‚СЊ РЅРµСЃРѕС…СЂР°РЅРµРЅРЅС‹Рµ РїСЂР°РІРєРё. РћС‚РєР°С‚РёС‚СЊ Рє РїСЂРѕС€Р»РѕРјСѓ СЃРѕС…СЂР°РЅРµРЅРёСЋ?')) return;
+    if (state.dirty && !confirm('Есть несохраненные правки. Откатить к прошлому сохранению?')) return;
     document.body.classList.add('cms-saving');
     if (state.undoButton) state.undoButton.disabled = true;
     try {
       const response = await fetch(UNDO_URL, { method: 'POST', credentials: 'same-origin' });
       const result = await response.json().catch(() => ({}));
       if (response.status === 409) {
-        toast('РСЃС‚РѕСЂРёРё РїРѕРєР° РЅРµС‚');
+        toast('Истории пока нет');
         return;
       }
       if (!response.ok || !result.ok) throw new Error(result.error || 'undo_failed');
       state.dirty = false;
-      toast('РћС‚РєР°С‚РёР». РћР±РЅРѕРІР»СЏСЋ...');
+      toast('Откатил. Обновляю...');
       setTimeout(() => location.reload(), 450);
     } catch (error) {
-      toast(`РќРµ РѕС‚РєР°С‚РёР»РѕСЃСЊ: ${error.message}`);
+      toast(`Не откатилось: ${error.message}`);
     } finally {
       if (state.undoButton) state.undoButton.disabled = false;
       document.body.classList.remove('cms-saving');
@@ -531,7 +529,7 @@
     const keys = [selected.el.dataset.cmsTextKey, selected.el.dataset.cmsImageKey, selected.el.dataset.cmsLinkKey].filter(Boolean);
     keys.forEach(key => delete state.content.items[key]);
     markDirty();
-    toast('РћРІРµСЂСЂР°Р№Рґ СѓРґР°Р»РµРЅ. РћР±РЅРѕРІРё СЃС‚СЂР°РЅРёС†Сѓ РїРѕСЃР»Рµ СЃРѕС…СЂР°РЅРµРЅРёСЏ.');
+    toast('Оверрайд удален. Обнови страницу после сохранения.');
   }
 
   async function hasEditorAccess() {
@@ -557,6 +555,5 @@
     }
   });
 })();
-
 
 
