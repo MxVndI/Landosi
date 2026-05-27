@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-21T18:21:28.134Z",
+  "items": {
+    "hero.photo": {
+      "type": "image",
+      "src": "/uploads/1779383837718-728x766_1_9001ca8cca14d619050cfa2cd0a13bb3-1080x1136_0xhszpr.jpg",
+      "alt": "Nail Studio — главное фото"
+    },
+    "work.1": {
+      "type": "image",
+      "src": "/uploads/1779383968140-a910e319a851831431e7653889b68fcd.jpg",
+      "alt": "Работа 1 — Хромирование"
+    },
+    "work.2": {
+      "type": "image",
+      "src": "/uploads/1779383991039-image-02-11-20-12-21-21-2200x1200-1.jpg",
+      "alt": "Работа 2 — Французский маникюр"
+    },
+    "work.3": {
+      "type": "image",
+      "src": "/uploads/1779384022739-7bd0qg8b30.jpg",
+      "alt": "Работа 3 — Роспись гелем"
+    },
+    "work.4": {
+      "type": "image",
+      "src": "/uploads/1779384042730-__2024-11-12_135520.png",
+      "alt": "Работа 4 — Кошачий глаз"
+    },
+    "work.5": {
+      "type": "image",
+      "src": "/uploads/1779384064311-dad1f80c8db774e67e7333b48409efc8.jpg",
+      "alt": "Работа 5 — Золотая фольга"
+    },
+    "work.6": {
+      "type": "image",
+      "src": "/uploads/1779384696813-1dbe1633f187e13571ec8647c13d91a6.jpg",
+      "alt": "Работа 6 — Омбре"
+    },
+    "master.1.photo": {
+      "type": "image",
+      "src": "/uploads/1779384747712-2.jpg",
+      "alt": "Анастасия Кузнецова"
+    },
+    "master.2.photo": {
+      "type": "image",
+      "src": "/uploads/1779384775644-62_b.png",
+      "alt": "Мария Соколова"
+    },
+    "master.3.photo": {
+      "type": "image",
+      "src": "/uploads/1779384779723-nail-artist-concept-illustration_114360-23956.avif",
+      "alt": "Дарья Петрова"
+    },
+    "master.4.photo": {
+      "type": "image",
+      "src": "/uploads/1779384840531-depositphotos_211451200-stock-illustration-manicurist-applyi.jpg",
+      "alt": "Ольга Романова"
+    },
+    "ba.1.before": {
+      "type": "image",
+      "src": "/uploads/1779386943632-9811bd822192d74c35de01f4542fb5ff.jpg",
+      "alt": "До процедуры"
+    },
+    "ba.1.after": {
+      "type": "image",
+      "src": "/uploads/1779386965044-biab-gel-aurora-1200x1200-800x800.webp",
+      "alt": "После процедуры"
+    },
+    "ba.2.before": {
+      "type": "image",
+      "src": "/uploads/1779386996271-1655841557_2-mykaleidoscope-ru-p-kombinirovannii-manikyur-be.jpg",
+      "alt": "До наращивания"
+    },
+    "ba.2.after": {
+      "type": "image",
+      "src": "/uploads/1779387016684-russianalmondnails13-c269acd53d23443ab14fddce4104d0d8.webp",
+      "alt": "После наращивания"
+    },
+    "text.0010": {
+      "type": "text",
+      "html": "<span data-cms-text-key=\"pkg.2.price\" contenteditable=\"true\" spellcheck=\"true\" class=\"cms-selected\">5 000</span> ₽"
+    },
+    "gallery.2": {
+      "type": "image",
+      "src": "/uploads/1779387513626-image-02-11-20-12-21-21-2200x1200-1.jpg",
+      "alt": "Французский маникюр"
+    },
+    "gallery.1": {
+      "type": "image",
+      "src": "/uploads/1779387533622-a910e319a851831431e7653889b68fcd.jpg",
+      "alt": "Хромирование"
+    },
+    "gallery.3": {
+      "type": "image",
+      "src": "/uploads/1779387541363-7bd0qg8b30.jpg",
+      "alt": "Роспись гелем"
+    },
+    "gallery.4": {
+      "type": "image",
+      "src": "/uploads/1779387549004-__2024-11-12_135520.png",
+      "alt": "Кошачий глаз"
+    },
+    "gallery.5": {
+      "type": "image",
+      "src": "/uploads/1779387558594-dad1f80c8db774e67e7333b48409efc8.jpg",
+      "alt": "Золотая фольга"
+    },
+    "gallery.6": {
+      "type": "image",
+      "src": "/uploads/1779387574118-1dbe1633f187e13571ec8647c13d91a6.jpg",
+      "alt": "Омбре градиент"
+    },
+    "gallery.7": {
+      "type": "image",
+      "src": "/uploads/1779387597741-vky2g29372ax7lujqzlxk9xd26gtul0x.jpg",
+      "alt": "Стразы"
+    },
+    "gallery.8": {
+      "type": "image",
+      "src": "/uploads/1779387613909-yb7gaioos0h0hlvvoboesqex7iabhcoc3empbxbc-content_front.webp",
+      "alt": "Геометрия"
+    },
+    "gallery.9": {
+      "type": "image",
+      "src": "/uploads/1779387628959-3db08c457fe0784977e10d41de65617f.jpg",
+      "alt": "Акварель"
+    },
+    "gallery.10": {
+      "type": "image",
+      "src": "/uploads/1779387642798-5cd856a4198fd7fd9a06d247b862db8d.jpg",
+      "alt": "Листья"
+    },
+    "gallery.11": {
+      "type": "image",
+      "src": "/uploads/1779387662553-manikur_svadebniyu_11.webp",
+      "alt": "Мрамор"
+    },
+    "gallery.12": {
+      "type": "image",
+      "src": "/uploads/1779387685275-dnmkduolrkx6znwxjcx51v6agmcgk1vy.jpg",
+      "alt": "Звёздная пыль"
+    }
+  }
+}

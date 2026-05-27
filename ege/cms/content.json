@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-23T21:20:17.184Z",
+  "items": {
+    "price.t1-price": {
+      "type": "text",
+      "html": "750 ₽"
+    },
+    "price.t3-price": {
+      "type": "text",
+      "html": "1 500 ₽"
+    },
+    "price.t2-price": {
+      "type": "text",
+      "html": "1 250 ₽"
+    },
+    "text.0001": {
+      "type": "text",
+      "html": "\n      <div class=\"logo-badge\">ЕГЭ</div>\n      <div class=\"logo-text\">\n        <strong data-cms-text-key=\"header.site-name\" contenteditable=\"true\" spellcheck=\"true\"><br></strong>\n        <span data-cms-text-key=\"header.site-tagline\" contenteditable=\"true\" spellcheck=\"true\" class=\"\"><br></span>\n      </div>\n    "
+    }
+  }
+}

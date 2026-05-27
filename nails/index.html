@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-cms-text-key="seo.title">Nail Studio — Профессиональный уход за ногтями в Санкт-Петербурге</title>
+  <meta name="description" data-cms-text-key="seo.description" content="Маникюр, педикюр, наращивание, nail art и уход за ногтями. Топ-мастера, стерильные инструменты, онлайн-запись. Санкт-Петербург, ул. Рубинштейна, д. 24." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="cms/cms.css" />
+  </head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="/" data-cms-link-key="nav.logo">
+      <span class="logo-mark">✦</span>
+      <span class="logo-text" data-cms-text-key="logo.name">Nail Studio</span>
+    </a>
+    <nav class="header__nav" id="nav">
+      <a href="#services" data-cms-text-key="nav.services">Услуги</a>
+      <a href="#masters" data-cms-text-key="nav.masters">Мастера</a>
+      <a href="#works" data-cms-text-key="nav.works">Работы</a>
+      <a href="#price" data-cms-text-key="nav.price">Цены</a>
+      <a href="#contacts" data-cms-text-key="nav.contacts">Контакты</a>
+    </nav>
+    <button class="btn btn--gold header__cta" id="headerBookBtn" data-cms-text-key="nav.cta">Записаться</button>
+    <button class="burger" id="burgerBtn" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="hero__eyebrow" data-cms-text-key="hero.eyebrow">Студия красоты · Санкт-Петербург</p>
+      <h1 class="hero__title" data-cms-text-key="hero.title">Идеальные ногти — ваша визитная карточка</h1>
+      <p class="hero__sub" data-cms-text-key="hero.sub">Профессиональный маникюр, педикюр, наращивание и nail art. Стерильные инструменты, сертифицированные мастера и результат, который говорит сам за себя.</p>
+      <div class="hero__actions">
+        <button class="btn btn--gold btn--lg" id="heroBookBtn" data-cms-text-key="hero.cta1">Записаться онлайн</button>
+        <button class="btn btn--outline btn--lg" id="heroWorksBtn" data-cms-text-key="hero.cta2">Смотреть работы</button>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <strong data-cms-text-key="stat.years">8</strong>
+          <span data-cms-text-key="stat.years.label">лет на рынке</span>
+        </div>
+        <div class="hero__stat">
+          <strong data-cms-text-key="stat.clients">4 200+</strong>
+          <span data-cms-text-key="stat.clients.label">клиентов</span>
+        </div>
+        <div class="hero__stat">
+          <strong data-cms-text-key="stat.masters">6</strong>
+          <span data-cms-text-key="stat.masters.label">мастеров</span>
+        </div>
+        <div class="hero__stat">
+          <strong data-cms-text-key="stat.rating">4.9</strong>
+          <span data-cms-text-key="stat.rating.label">рейтинг</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <div class="hero__photo-wrap">
+        <img
+          class="hero__photo"
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='680' viewBox='0 0 560 680'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f5ede3'/%3E%3Cstop offset='1' stop-color='%23d4a06a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='560' height='680' fill='url(%23g1)'/%3E%3Ccircle cx='280' cy='240' r='130' fill='%23c4893a' opacity='.18'/%3E%3Ccircle cx='280' cy='240' r='80' fill='%23c4893a' opacity='.22'/%3E%3Ctext x='280' y='260' text-anchor='middle' font-family='serif' font-size='80' fill='%23c4893a' opacity='.6'%3E✦%3C/text%3E%3Ctext x='280' y='420' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%23a06830' letter-spacing='3'%3ENAIL STUDIO%3C/text%3E%3C/svg%3E"
+          alt="Nail Studio — главное фото"
+          data-cms-image-key="hero.photo"
+        />
+        <div class="hero__badge" data-cms-text-key="hero.badge">Стерильно · Безопасно · Красиво</div>
+      </div>
+      <div class="hero__deco hero__deco--1"></div>
+      <div class="hero__deco hero__deco--2"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section__head">
+      <p class="section__eyebrow" data-cms-text-key="services.eyebrow">Что мы делаем</p>
+      <h2 class="section__title" data-cms-text-key="services.title">Процедуры</h2>
+      <p class="section__sub" data-cms-text-key="services.sub">Полный спектр ухода за ногтями — от классики до авторских дизайнов</p>
+    </div>
+    <div class="services__grid">
+
+      <article class="service-card" data-service="manicure">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 8C15.16 8 8 15.16 8 24s7.16 16 16 16 16-7.16 16-16S32.84 8 24 8zm-4 24l-6-6 1.41-1.41L20 29.17l12.59-12.58L34 18l-14 14z" fill="currentColor"/></svg>
+        </div>
+        <h3 class="service-card__name" data-cms-text-key="service.1.name">Маникюр</h3>
+        <p class="service-card__desc" data-cms-text-key="service.1.desc">Классический, европейский и комбинированный. Обработка кутикулы, придание формы, полировка.</p>
+        <p class="service-card__price" data-cms-text-key="service.1.price">от 900 ₽</p>
+        <button class="service-card__link" onclick="openBooking('Маникюр')">Записаться →</button>
+      </article>
+
+      <article class="service-card" data-service="pedicure">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M38 16H10c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h28c1.1 0 2-.9 2-2V18c0-1.1-.9-2-2-2zm-3 10H13v-6h22v6z" fill="currentColor"/></svg>
+        </div>
+        <h3 class="service-card__name" data-cms-text-key="service.2.name">Педикюр</h3>
+        <p class="service-card__desc" data-cms-text-key="service.2.desc">SPA-педикюр, аппаратный и классический. Полная обработка стоп, удаление мозолей, уход за ногтями.</p>
+        <p class="service-card__price" data-cms-text-key="service.2.price">от 1 500 ₽</p>
+        <button class="service-card__link" onclick="openBooking('Педикюр')">Записаться →</button>
+      </article>
+
+      <article class="service-card" data-service="nailext">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4L4 20l4 4L24 8l-4-4zm8 0l16 16-4 4L24 8l4-4zM12 28l8 8-4 4-8-8 4-4zm16 0l8 8-4 4-8-8 4-4z" fill="currentColor"/></svg>
+        </div>
+        <h3 class="service-card__name" data-cms-text-key="service.3.name">Наращивание</h3>
+        <p class="service-card__desc" data-cms-text-key="service.3.desc">Акриловое, гелевое и арочное наращивание. Любая длина и форма — миндаль, стилет, квадрат, балерина.</p>
+        <p class="service-card__price" data-cms-text-key="service.3.price">от 2 500 ₽</p>
+        <button class="service-card__link" onclick="openBooking('Наращивание ногтей')">Записаться →</button>
+      </article>
+
+      <article class="service-card" data-service="nailart">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32.94 5.06L6 32l2 8 8-2 26.94-26.94-10-6.06zM8.92 37.08l-1.3-5.4 1.96-1.96 5.4 1.3-6.06 6.06zm8.08-2l-5.08-5.08 20-20 5.08 5.08-20 20z" fill="currentColor"/></svg>
+        </div>
+        <h3 class="service-card__name" data-cms-text-key="service.4.name">Nail Art</h3>
+        <p class="service-card__desc" data-cms-text-key="service.4.desc">Ручная роспись, стразы, фольга, хромирование, градиент. Авторский дизайн под любой образ и повод.</p>
+        <p class="service-card__price" data-cms-text-key="service.4.price">от 300 ₽/ноготь</p>
+        <button class="service-card__link" onclick="openBooking('Nail Art')">Записаться →</button>
+      </article>
+
+      <article class="service-card" data-service="gelpolish">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20S35 4 24 4zm0 36c-8.84 0-16-7.16-16-16S15.16 8 24 8s16 7.16 16 16-7.16 16-16 16zm-2-22h4v12h-4zm0-6h4v4h-4z" fill="currentColor"/></svg>
+        </div>
+        <h3 class="service-card__name" data-cms-text-key="service.5.name">Гель-лак</h3>
+        <p class="service-card__desc" data-cms-text-key="service.5.desc">Однотонное покрытие, французский маникюр, кошачий глаз, хамелеон. Держится до 3–4 недель.</p>
+        <p class="service-card__price" data-cms-text-key="service.5.price">от 1 300 ₽</p>
+        <button class="service-card__link" onclick="openBooking('Гель-лак')">Записаться →</button>
+      </article>
+
+      <article class="service-card" data-service="strengthen">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4l-8 8h16l-8-8zm-8 36l8 8 8-8H16zm20-28v16l8-8-8-8zm-24 0l-8 8 8 8V12z" fill="currentColor"/></svg>
+        </div>
+        <h3 class="service-card__name" data-cms-text-key="service.6.name">Укрепление</h3>
+        <p class="service-card__desc" data-cms-text-key="service.6.desc">Биогель, акрил-пудра, BIAB. Для тонких и ломких ногтей — укрепление с сохранением естественного вида.</p>
+        <p class="service-card__price" data-cms-text-key="service.6.price">от 1 800 ₽</p>
+        <button class="service-card__link" onclick="openBooking('Укрепление ногтей')">Записаться →</button>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== MASTERS ===== -->
+<section class="section masters" id="masters">
+  <div class="container">
+    <div class="section__head">
+      <p class="section__eyebrow" data-cms-text-key="masters.eyebrow">Наша команда</p>
+      <h2 class="section__title" data-cms-text-key="masters.title">Специалисты</h2>
+      <p class="section__sub" data-cms-text-key="masters.sub">Каждый мастер — сертифицированный специалист с опытом более 5 лет</p>
+    </div>
+    <div class="masters__grid">
+
+      <article class="master-card">
+        <div class="master-card__photo-wrap">
+          <img class="master-card__photo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='380' viewBox='0 0 320 380'%3E%3Crect width='320' height='380' fill='%23f0e4d4'/%3E%3Ccircle cx='160' cy='140' r='70' fill='%23c4903a' opacity='.25'/%3E%3Ccircle cx='160' cy='140' r='45' fill='%23c4903a' opacity='.3'/%3E%3Cellipse cx='160' cy='310' rx='100' ry='80' fill='%23c4903a' opacity='.2'/%3E%3Ctext x='160' y='155' text-anchor='middle' font-size='48' fill='%23a07030'%3E♦%3C/text%3E%3C/svg%3E" alt="Анастасия Кузнецова" data-cms-image-key="master.1.photo" />
+        </div>
+        <div class="master-card__info">
+          <h3 class="master-card__name" data-cms-text-key="master.1.name">Анастасия Кузнецова</h3>
+          <p class="master-card__role" data-cms-text-key="master.1.role">Топ-мастер маникюра</p>
+          <p class="master-card__exp" data-cms-text-key="master.1.exp">8 лет опыта</p>
+          <p class="master-card__spec" data-cms-text-key="master.1.spec">Специализация: nail art, наращивание, коррекция</p>
+          <button class="btn btn--outline btn--sm" onclick="openBooking('Анастасия Кузнецова')">Записаться</button>
+        </div>
+      </article>
+
+      <article class="master-card">
+        <div class="master-card__photo-wrap">
+          <img class="master-card__photo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='380' viewBox='0 0 320 380'%3E%3Crect width='320' height='380' fill='%23ead5c8'/%3E%3Ccircle cx='160' cy='140' r='70' fill='%23b07050' opacity='.25'/%3E%3Ccircle cx='160' cy='140' r='45' fill='%23b07050' opacity='.3'/%3E%3Cellipse cx='160' cy='310' rx='100' ry='80' fill='%23b07050' opacity='.2'/%3E%3Ctext x='160' y='155' text-anchor='middle' font-size='48' fill='%23804030'%3E♦%3C/text%3E%3C/svg%3E" alt="Мария Соколова" data-cms-image-key="master.2.photo" />
+        </div>
+        <div class="master-card__info">
+          <h3 class="master-card__name" data-cms-text-key="master.2.name">Мария Соколова</h3>
+          <p class="master-card__role" data-cms-text-key="master.2.role">Мастер nail art</p>
+          <p class="master-card__exp" data-cms-text-key="master.2.exp">5 лет опыта</p>
+          <p class="master-card__spec" data-cms-text-key="master.2.spec">Специализация: авторский дизайн, хромирование, фольга</p>
+          <button class="btn btn--outline btn--sm" onclick="openBooking('Мария Соколова')">Записаться</button>
+        </div>
+      </article>
+
+      <article class="master-card">
+        <div class="master-card__photo-wrap">
+          <img class="master-card__photo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='380' viewBox='0 0 320 380'%3E%3Crect width='320' height='380' fill='%23e8d8cc'/%3E%3Ccircle cx='160' cy='140' r='70' fill='%23c09060' opacity='.25'/%3E%3Ccircle cx='160' cy='140' r='45' fill='%23c09060' opacity='.3'/%3E%3Cellipse cx='160' cy='310' rx='100' ry='80' fill='%23c09060' opacity='.2'/%3E%3Ctext x='160' y='155' text-anchor='middle' font-size='48' fill='%23906040'%3E♦%3C/text%3E%3C/svg%3E" alt="Дарья Петрова" data-cms-image-key="master.3.photo" />
+        </div>
+        <div class="master-card__info">
+          <h3 class="master-card__name" data-cms-text-key="master.3.name">Дарья Петрова</h3>
+          <p class="master-card__role" data-cms-text-key="master.3.role">Специалист педикюра</p>
+          <p class="master-card__exp" data-cms-text-key="master.3.exp">6 лет опыта</p>
+          <p class="master-card__spec" data-cms-text-key="master.3.spec">Специализация: SPA-педикюр, лечебный уход, стопы</p>
+          <button class="btn btn--outline btn--sm" onclick="openBooking('Дарья Петрова')">Записаться</button>
+        </div>
+      </article>
+
+      <article class="master-card">
+        <div class="master-card__photo-wrap">
+          <img class="master-card__photo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='380' viewBox='0 0 320 380'%3E%3Crect width='320' height='380' fill='%23f2e2d2'/%3E%3Ccircle cx='160' cy='140' r='70' fill='%23d4a060' opacity='.25'/%3E%3Ccircle cx='160' cy='140' r='45' fill='%23d4a060' opacity='.3'/%3E%3Cellipse cx='160' cy='310' rx='100' ry='80' fill='%23d4a060' opacity='.2'/%3E%3Ctext x='160' y='155' text-anchor='middle' font-size='48' fill='%23a07040'%3E♦%3C/text%3E%3C/svg%3E" alt="Ольга Романова" data-cms-image-key="master.4.photo" />
+        </div>
+        <div class="master-card__info">
+          <h3 class="master-card__name" data-cms-text-key="master.4.name">Ольга Романова</h3>
+          <p class="master-card__role" data-cms-text-key="master.4.role">Мастер наращивания</p>
+          <p class="master-card__exp" data-cms-text-key="master.4.exp">7 лет опыта</p>
+          <p class="master-card__spec" data-cms-text-key="master.4.spec">Специализация: акрил, гель, арочное наращивание</p>
+          <button class="btn btn--outline btn--sm" onclick="openBooking('Ольга Романова')">Записаться</button>
+        </div>
+      </article>
+
+    </div>
+    <div class="section__footer">
+      <button class="btn btn--ghost" id="allMastersBtn">Смотреть всех мастеров</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORKS / GALLERY ===== -->
+<section class="section works" id="works">
+  <div class="container">
+    <div class="section__head">
+      <p class="section__eyebrow" data-cms-text-key="works.eyebrow">Наши результаты</p>
+      <h2 class="section__title" data-cms-text-key="works.title">Работы</h2>
+      <p class="section__sub" data-cms-text-key="works.sub">Каждая работа — это история красоты</p>
+    </div>
+    <div class="works__grid" id="worksGrid">
+      <div class="work-item work-item--wide">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23c4893a'/%3E%3Cstop offset='1' stop-color='%231c1412'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='400' fill='url(%23g)'/%3E%3Ctext x='300' y='195' text-anchor='middle' font-family='serif' font-size='22' fill='white' opacity='.8'%3EНейл арт · Хромирование%3C/text%3E%3Ctext x='300' y='225' text-anchor='middle' font-family='serif' font-size='36' fill='white' opacity='.5'%3E✦%3C/text%3E%3C/svg%3E" alt="Работа 1 — Хромирование" data-cms-image-key="work.1" class="work-item__img" />
+        <div class="work-item__label" data-cms-text-key="work.1.label">Хромирование</div>
+      </div>
+      <div class="work-item">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='380' height='400' viewBox='0 0 380 400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e8c4a0'/%3E%3Cstop offset='1' stop-color='%23a06030'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='380' height='400' fill='url(%23g)'/%3E%3Ctext x='190' y='195' text-anchor='middle' font-family='serif' font-size='18' fill='white' opacity='.9'%3EФранцузский маникюр%3C/text%3E%3Ctext x='190' y='225' text-anchor='middle' font-family='serif' font-size='32' fill='white' opacity='.4'%3E✦%3C/text%3E%3C/svg%3E" alt="Работа 2 — Французский маникюр" data-cms-image-key="work.2" class="work-item__img" />
+        <div class="work-item__label" data-cms-text-key="work.2.label">Французский маникюр</div>
+      </div>
+      <div class="work-item">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='380' height='290' viewBox='0 0 380 290'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23d4857a'/%3E%3Cstop offset='1' stop-color='%234a1c18'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='380' height='290' fill='url(%23g)'/%3E%3Ctext x='190' y='138' text-anchor='middle' font-family='serif' font-size='18' fill='white' opacity='.9'%3EРоспись гелем%3C/text%3E%3Ctext x='190' y='168' text-anchor='middle' font-family='serif' font-size='28' fill='white' opacity='.4'%3E✦%3C/text%3E%3C/svg%3E" alt="Работа 3 — Роспись гелем" data-cms-image-key="work.3" class="work-item__img" />
+        <div class="work-item__label" data-cms-text-key="work.3.label">Роспись гелем</div>
+      </div>
+      <div class="work-item">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='380' height='290' viewBox='0 0 380 290'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23b8c4d4'/%3E%3Cstop offset='1' stop-color='%231c2a3a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='380' height='290' fill='url(%23g)'/%3E%3Ctext x='190' y='138' text-anchor='middle' font-family='serif' font-size='18' fill='white' opacity='.9'%3EКошачий глаз%3C/text%3E%3Ctext x='190' y='168' text-anchor='middle' font-family='serif' font-size='28' fill='white' opacity='.4'%3E✦%3C/text%3E%3C/svg%3E" alt="Работа 4 — Кошачий глаз" data-cms-image-key="work.4" class="work-item__img" />
+        <div class="work-item__label" data-cms-text-key="work.4.label">Кошачий глаз</div>
+      </div>
+      <div class="work-item">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='380' height='400' viewBox='0 0 380 400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f0d090'/%3E%3Cstop offset='1' stop-color='%238a5010'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='380' height='400' fill='url(%23g)'/%3E%3Ctext x='190' y='195' text-anchor='middle' font-family='serif' font-size='18' fill='white' opacity='.9'%3EЗолотая фольга%3C/text%3E%3Ctext x='190' y='225' text-anchor='middle' font-family='serif' font-size='32' fill='white' opacity='.4'%3E✦%3C/text%3E%3C/svg%3E" alt="Работа 5 — Золотая фольга" data-cms-image-key="work.5" class="work-item__img" />
+        <div class="work-item__label" data-cms-text-key="work.5.label">Золотая фольга</div>
+      </div>
+      <div class="work-item work-item--wide">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='290' viewBox='0 0 600 290'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e8d0f0'/%3E%3Cstop offset='1' stop-color='%23603080'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='290' fill='url(%23g)'/%3E%3Ctext x='300' y='138' text-anchor='middle' font-family='serif' font-size='22' fill='white' opacity='.9'%3EОмбре градиент%3C/text%3E%3Ctext x='300' y='168' text-anchor='middle' font-family='serif' font-size='32' fill='white' opacity='.4'%3E✦%3C/text%3E%3C/svg%3E" alt="Работа 6 — Омбре" data-cms-image-key="work.6" class="work-item__img" />
+        <div class="work-item__label" data-cms-text-key="work.6.label">Омбре градиент</div>
+      </div>
+    </div>
+    <div class="section__footer">
+      <button class="btn btn--gold" id="allWorksBtn">Смотреть все работы</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BEFORE / AFTER ===== -->
+<section class="section before-after">
+  <div class="container">
+    <div class="section__head">
+      <p class="section__eyebrow">До и после</p>
+      <h2 class="section__title" data-cms-text-key="ba.title">Результаты говорят сами</h2>
+    </div>
+    <div class="ba__grid">
+      <div class="ba-card">
+        <div class="ba-card__pair">
+          <div class="ba-card__side">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='200' viewBox='0 0 260 200'%3E%3Crect width='260' height='200' fill='%23d4c4b4'/%3E%3Ctext x='130' y='90' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%23887060'%3EДО%3C/text%3E%3Ctext x='130' y='115' text-anchor='middle' font-family='sans-serif' font-size='11' fill='%23a08070'%3EЛомкие ногти%3C/text%3E%3C/svg%3E" alt="До процедуры" data-cms-image-key="ba.1.before" />
+            <span class="ba-card__tag ba-card__tag--before">До</span>
+          </div>
+          <div class="ba-card__side">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='200' viewBox='0 0 260 200'%3E%3Crect width='260' height='200' fill='%23c4903a'/%3E%3Ctext x='130' y='90' text-anchor='middle' font-family='sans-serif' font-size='14' fill='white'%3EПОСЛЕ%3C/text%3E%3Ctext x='130' y='115' text-anchor='middle' font-family='sans-serif' font-size='11' fill='%23ffe8b0'%3EУкрепление BIAB%3C/text%3E%3C/svg%3E" alt="После процедуры" data-cms-image-key="ba.1.after" />
+            <span class="ba-card__tag ba-card__tag--after">После</span>
+          </div>
+        </div>
+        <p class="ba-card__caption" data-cms-text-key="ba.1.caption">Укрепление ногтей BIAB · Мастер Анастасия</p>
+      </div>
+      <div class="ba-card">
+        <div class="ba-card__pair">
+          <div class="ba-card__side">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='200' viewBox='0 0 260 200'%3E%3Crect width='260' height='200' fill='%23c8b8a8'/%3E%3Ctext x='130' y='90' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%23685848'%3EДО%3C/text%3E%3Ctext x='130' y='115' text-anchor='middle' font-family='sans-serif' font-size='11' fill='%23887060'%3EКороткие, без формы%3C/text%3E%3C/svg%3E" alt="До наращивания" data-cms-image-key="ba.2.before" />
+            <span class="ba-card__tag ba-card__tag--before">До</span>
+          </div>
+          <div class="ba-card__side">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='200' viewBox='0 0 260 200'%3E%3Crect width='260' height='200' fill='%231c1412'/%3E%3Ctext x='130' y='90' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%23c4903a'%3EПОСЛЕ%3C/text%3E%3Ctext x='130' y='115' text-anchor='middle' font-family='sans-serif' font-size='11' fill='%23e8c080'%3EНаращивание миндаль%3C/text%3E%3C/svg%3E" alt="После наращивания" data-cms-image-key="ba.2.after" />
+            <span class="ba-card__tag ba-card__tag--after">После</span>
+          </div>
+        </div>
+        <p class="ba-card__caption" data-cms-text-key="ba.2.caption">Наращивание · Форма миндаль · Мастер Ольга</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PACKAGES ===== -->
+<section class="section packages" id="packages">
+  <div class="container">
+    <div class="section__head">
+      <p class="section__eyebrow" data-cms-text-key="pkg.eyebrow">Выгодно</p>
+      <h2 class="section__title" data-cms-text-key="pkg.title">Пакеты процедур</h2>
+      <p class="section__sub" data-cms-text-key="pkg.sub">Комплексный уход со скидкой до 20%</p>
+    </div>
+    <div class="packages__grid">
+
+      <article class="pkg-card">
+        <p class="pkg-card__eyebrow" data-cms-text-key="pkg.1.eyebrow">Базовый</p>
+        <h3 class="pkg-card__name" data-cms-text-key="pkg.1.name">Лёгкость</h3>
+        <p class="pkg-card__price"><span data-cms-text-key="pkg.1.price">2 500</span> ₽</p>
+        <ul class="pkg-card__list">
+          <li data-cms-text-key="pkg.1.item1">Маникюр классический</li>
+          <li data-cms-text-key="pkg.1.item2">Гель-лак однотонный</li>
+          <li data-cms-text-key="pkg.1.item3">Обработка кутикулы</li>
+        </ul>
+        <button class="btn btn--outline btn--full" onclick="openBooking('Пакет Лёгкость')">Записаться</button>
+      </article>
+
+      <article class="pkg-card pkg-card--featured">
+        <div class="pkg-card__badge" data-cms-text-key="pkg.2.badge">Популярный</div>
+        <p class="pkg-card__eyebrow" data-cms-text-key="pkg.2.eyebrow">Комфорт</p>
+        <h3 class="pkg-card__name" data-cms-text-key="pkg.2.name">Баланс</h3>
+        <p class="pkg-card__price"><span data-cms-text-key="pkg.2.price">4 500</span> ₽</p>
+        <ul class="pkg-card__list">
+          <li data-cms-text-key="pkg.2.item1">Маникюр комбинированный</li>
+          <li data-cms-text-key="pkg.2.item2">Педикюр классический</li>
+          <li data-cms-text-key="pkg.2.item3">Гель-лак на руки и ноги</li>
+          <li data-cms-text-key="pkg.2.item4">Дизайн 2 ногтя</li>
+        </ul>
+        <button class="btn btn--gold btn--full" onclick="openBooking('Пакет Баланс')">Записаться</button>
+      </article>
+
+      <article class="pkg-card">
+        <p class="pkg-card__eyebrow" data-cms-text-key="pkg.3.eyebrow">Люкс</p>
+        <h3 class="pkg-card__name" data-cms-text-key="pkg.3.name">Королева</h3>
+        <p class="pkg-card__price"><span data-cms-text-key="pkg.3.price">7 500</span> ₽</p>
+        <ul class="pkg-card__list">
+          <li data-cms-text-key="pkg.3.item1">Маникюр + SPA-педикюр</li>
+          <li data-cms-text-key="pkg.3.item2">Наращивание ногтей</li>
+          <li data-cms-text-key="pkg.3.item3">Авторский nail art</li>
+          <li data-cms-text-key="pkg.3.item4">Укрепление + питательная маска</li>
+        </ul>
+        <button class="btn btn--outline btn--full" onclick="openBooking('Пакет Королева')">Записаться</button>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICE ===== -->
+<section class="section price" id="price">
+  <div class="container">
+    <div class="section__head">
+      <p class="section__eyebrow" data-cms-text-key="price.eyebrow">Прозрачно</p>
+      <h2 class="section__title" data-cms-text-key="price.title">Цены</h2>
+    </div>
+    <div class="price__grid">
+      <div class="price__col">
+        <h4 class="price__group-title">Маникюр</h4>
+        <div class="price-row"><span data-cms-text-key="pr.1.name">Классический маникюр</span><span class="price-row__dots"></span><span data-cms-text-key="pr.1.price">900 ₽</span></div>
+        <div class="price-row"><span data-cms-text-key="pr.2.name">Европейский маникюр</span><span class="price-row__dots"></span><span data-cms-text-key="pr.2.price">1 100 ₽</span></div>
+        <div class="price-row"><span data-cms-text-key="pr.3.name">Комбинированный маникюр</span><span class="price-row__dots"></span><span data-cms-text-key="pr.3.price">1 200 ₽</span></div>
+        <div class="price-row"><span data-cms-text-key="pr.4.name">Снятие гель-лака</span><span class="price-row__dots"></span><span data-cms-text-key="pr.4.price">350 ₽</span></div>
+        <h4 class="price__group-title">Покрытие</h4>
+        <div class="price-row"><span data-cms-text-key="pr.5.name">Гель-лак однотонный</span><span class="price-row__dots"></span><span data-cms-text-key="pr.5.price">1 300 ₽</span></div>
+        <div class="price-row"><span data-cms-text-key="pr.6.name">Французский маникюр</span><span class="price-row__dots"></span><span data-cms-text-key="pr.6.price">1 500 ₽</span></div>
+        <div class="price-row"><span data-cms-text-key="pr.7.name">Кошачий глаз / хромирование</span><span class="price-row__dots"></span><span data-cms-text-key="pr.7.price">1 800 ₽</span></div>
+      </div>
+      <div class="price__col">
+        <h4 class="price__group-title">Педикюр</h4>
+        <div class="price-row"><span data-cms-text-key="pr.8.name">Классический педикюр</span><span class="price-row__dots"></span><span data-cms-text-key="pr.8.price">1 500 ₽</span></div>
+        <div class="price-row"><span data-cms-text-key="pr.9.name">Аппаратный педикюр</span><span class="price-row__dots"></span><span data-cms-text-key="pr.9.price">1 800 ₽</span></div>
+        <div class="price-row"><span data-cms-text-key="pr.10.name">SPA-педикюр</span><span class="price-row__dots"></span><span data-cms-text-key="pr.10.price">2 500 ₽</span></div>
+        <div class="price-row"><span data-cms-text-key="pr.11.name">Педикюр + гель-лак</span><span class="price-row__dots"></span><span data-cms-text-key="pr.11.price">2 200 ₽</span></div>
+        <h4 class="price__group-title">Наращивание и дизайн</h4>
+        <div class="price-row"><span data-cms-text-key="pr.12.name">Наращивание гелем</span><span class="price-row__dots"></span><span data-cms-text-key="pr.12.price">от 2 500 ₽</span></div>
+        <div class="price-row"><span data-cms-text-key="pr.13.name">Коррекция</span><span class="price-row__dots"></span><span data-cms-text-key="pr.13.price">от 1 800 ₽</span></div>
+        <div class="price-row"><span data-cms-text-key="pr.14.name">Nail art простой</span><span class="price-row__dots"></span><span data-cms-text-key="pr.14.price">от 300 ₽</span></div>
+        <div class="price-row"><span data-cms-text-key="pr.15.name">Nail art сложный</span><span class="price-row__dots"></span><span data-cms-text-key="pr.15.price">от 600 ₽</span></div>
+      </div>
+    </div>
+    <div class="section__footer">
+      <button class="btn btn--gold" id="fullPriceBtn">Смотреть полный прайс</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTRAINDICATIONS ===== -->
+<section class="section contraindications">
+  <div class="container">
+    <div class="contraindications__inner">
+      <div class="contraindications__text">
+        <p class="section__eyebrow" data-cms-text-key="ci.eyebrow">Важно знать</p>
+        <h2 class="section__title" data-cms-text-key="ci.title">Противопоказания</h2>
+        <p class="contraindications__intro" data-cms-text-key="ci.intro">Мы заботимся о вашем здоровье. Перед записью убедитесь, что у вас нет следующих противопоказаний:</p>
+        <ul class="ci-list">
+          <li><span class="ci-icon">✕</span><span data-cms-text-key="ci.1">Кожные заболевания: псориаз, экзема, дерматит в зоне обработки</span></li>
+          <li><span class="ci-icon">✕</span><span data-cms-text-key="ci.2">Онихомикоз (грибок ногтей) — требуется справка от дерматолога</span></li>
+          <li><span class="ci-icon">✕</span><span data-cms-text-key="ci.3">Аллергия на акриловые или гелевые составы</span></li>
+          <li><span class="ci-icon">✕</span><span data-cms-text-key="ci.4">Открытые раны, ссадины или воспаления на руках и стопах</span></li>
+          <li><span class="ci-icon">✕</span><span data-cms-text-key="ci.5">Период обострения хронических заболеваний</span></li>
+          <li><span class="ci-icon">✕</span><span data-cms-text-key="ci.6">Беременность — отдельные процедуры возможны только после консультации</span></li>
+        </ul>
+        <p class="contraindications__note" data-cms-text-key="ci.note">Если вы не уверены — позвоните нам, и мы подберём безопасную альтернативу.</p>
+      </div>
+      <div class="contraindications__visual">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='460' viewBox='0 0 420 460'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23faf6f1'/%3E%3Cstop offset='1' stop-color='%23e8d4c0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='420' height='460' fill='url(%23g)'/%3E%3Ccircle cx='210' cy='200' r='120' fill='none' stroke='%23c4903a' stroke-width='2' opacity='.4'/%3E%3Ccircle cx='210' cy='200' r='80' fill='none' stroke='%23c4903a' stroke-width='1' opacity='.3'/%3E%3Ctext x='210' y='215' text-anchor='middle' font-family='serif' font-size='60' fill='%23c4903a' opacity='.5'%3E♡%3C/text%3E%3Ctext x='210' y='370' text-anchor='middle' font-family='sans-serif' font-size='13' fill='%23a07050' letter-spacing='2'%3EВАШЕ ЗДОРОВЬЕ — ВАЖНЕЕ%3C/text%3E%3C/svg%3E" alt="Здоровье и безопасность" data-cms-image-key="ci.photo" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATES ===== -->
+<section class="section certificates">
+  <div class="container">
+    <div class="section__head">
+      <p class="section__eyebrow" data-cms-text-key="cert.eyebrow">Подтверждено</p>
+      <h2 class="section__title" data-cms-text-key="cert.title">Сертификаты</h2>
+      <p class="section__sub" data-cms-text-key="cert.sub">Все мастера прошли сертификацию в ведущих школах</p>
+    </div>
+    <div class="certs__grid">
+      <div class="cert-card" onclick="openCert(this)">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='340' viewBox='0 0 260 340'%3E%3Crect width='260' height='340' fill='%23faf6f1' rx='4'/%3E%3Crect x='12' y='12' width='236' height='316' fill='none' stroke='%23c4903a' stroke-width='1.5' rx='2'/%3E%3Crect x='24' y='24' width='212' height='292' fill='none' stroke='%23c4903a' stroke-width='.5' rx='1' opacity='.5'/%3E%3Ctext x='130' y='110' text-anchor='middle' font-family='serif' font-size='32' fill='%23c4903a' opacity='.7'%3E✦%3C/text%3E%3Ctext x='130' y='160' text-anchor='middle' font-family='serif' font-size='13' fill='%231c1412'%3EСертификат%3C/text%3E%3Ctext x='130' y='182' text-anchor='middle' font-family='serif' font-size='11' fill='%23a07050'%3ENail Artist Pro%3C/text%3E%3Ctext x='130' y='220' text-anchor='middle' font-family='sans-serif' font-size='10' fill='%23c4903a'%3EАнастасия Кузнецова%3C/text%3E%3Ctext x='130' y='300' text-anchor='middle' font-family='sans-serif' font-size='9' fill='%23c0a080'%3E2023%3C/text%3E%3C/svg%3E" alt="Сертификат 1" data-cms-image-key="cert.1" class="cert-card__img" />
+        <p class="cert-card__caption" data-cms-text-key="cert.1.caption">Nail Artist Pro · 2023</p>
+      </div>
+      <div class="cert-card" onclick="openCert(this)">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='340' viewBox='0 0 260 340'%3E%3Crect width='260' height='340' fill='%23faf6f1' rx='4'/%3E%3Crect x='12' y='12' width='236' height='316' fill='none' stroke='%23c4903a' stroke-width='1.5' rx='2'/%3E%3Crect x='24' y='24' width='212' height='292' fill='none' stroke='%23c4903a' stroke-width='.5' rx='1' opacity='.5'/%3E%3Ctext x='130' y='110' text-anchor='middle' font-family='serif' font-size='32' fill='%23c4903a' opacity='.7'%3E✦%3C/text%3E%3Ctext x='130' y='160' text-anchor='middle' font-family='serif' font-size='13' fill='%231c1412'%3EСертификат%3C/text%3E%3Ctext x='130' y='182' text-anchor='middle' font-family='serif' font-size='11' fill='%23a07050'%3EGel %2B Acryl Master%3C/text%3E%3Ctext x='130' y='220' text-anchor='middle' font-family='sans-serif' font-size='10' fill='%23c4903a'%3EМария Соколова%3C/text%3E%3Ctext x='130' y='300' text-anchor='middle' font-family='sans-serif' font-size='9' fill='%23c0a080'%3E2022%3C/text%3E%3C/svg%3E" alt="Сертификат 2" data-cms-image-key="cert.2" class="cert-card__img" />
+        <p class="cert-card__caption" data-cms-text-key="cert.2.caption">Gel &amp; Acryl Master · 2022</p>
+      </div>
+      <div class="cert-card" onclick="openCert(this)">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='340' viewBox='0 0 260 340'%3E%3Crect width='260' height='340' fill='%23faf6f1' rx='4'/%3E%3Crect x='12' y='12' width='236' height='316' fill='none' stroke='%23c4903a' stroke-width='1.5' rx='2'/%3E%3Crect x='24' y='24' width='212' height='292' fill='none' stroke='%23c4903a' stroke-width='.5' rx='1' opacity='.5'/%3E%3Ctext x='130' y='110' text-anchor='middle' font-family='serif' font-size='32' fill='%23c4903a' opacity='.7'%3E✦%3C/text%3E%3Ctext x='130' y='160' text-anchor='middle' font-family='serif' font-size='13' fill='%231c1412'%3EСертификат%3C/text%3E%3Ctext x='130' y='182' text-anchor='middle' font-family='serif' font-size='11' fill='%23a07050'%3ESPA Pedicure Expert%3C/text%3E%3Ctext x='130' y='220' text-anchor='middle' font-family='sans-serif' font-size='10' fill='%23c4903a'%3EДарья Петрова%3C/text%3E%3Ctext x='130' y='300' text-anchor='middle' font-family='sans-serif' font-size='9' fill='%23c0a080'%3E2024%3C/text%3E%3C/svg%3E" alt="Сертификат 3" data-cms-image-key="cert.3" class="cert-card__img" />
+        <p class="cert-card__caption" data-cms-text-key="cert.3.caption">SPA Pedicure Expert · 2024</p>
+      </div>
+      <div class="cert-card" onclick="openCert(this)">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='340' viewBox='0 0 260 340'%3E%3Crect width='260' height='340' fill='%23faf6f1' rx='4'/%3E%3Crect x='12' y='12' width='236' height='316' fill='none' stroke='%23c4903a' stroke-width='1.5' rx='2'/%3E%3Crect x='24' y='24' width='212' height='292' fill='none' stroke='%23c4903a' stroke-width='.5' rx='1' opacity='.5'/%3E%3Ctext x='130' y='110' text-anchor='middle' font-family='serif' font-size='32' fill='%23c4903a' opacity='.7'%3E✦%3C/text%3E%3Ctext x='130' y='160' text-anchor='middle' font-family='serif' font-size='13' fill='%231c1412'%3EСертификат%3C/text%3E%3Ctext x='130' y='182' text-anchor='middle' font-family='serif' font-size='11' fill='%23a07050'%3ENail Extension Pro%3C/text%3E%3Ctext x='130' y='220' text-anchor='middle' font-family='sans-serif' font-size='10' fill='%23c4903a'%3EОльга Романова%3C/text%3E%3Ctext x='130' y='300' text-anchor='middle' font-family='sans-serif' font-size='9' fill='%23c0a080'%3E2023%3C/text%3E%3C/svg%3E" alt="Сертификат 4" data-cms-image-key="cert.4" class="cert-card__img" />
+        <p class="cert-card__caption" data-cms-text-key="cert.4.caption">Nail Extension Pro · 2023</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="section reviews">
+  <div class="container">
+    <div class="section__head">
+      <p class="section__eyebrow" data-cms-text-key="rev.eyebrow">Отзывы</p>
+      <h2 class="section__title" data-cms-text-key="rev.title">Что говорят клиенты</h2>
+    </div>
+    <div class="reviews__grid">
+      <article class="review-card">
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__text" data-cms-text-key="review.1.text">«Хожу к Анастасии уже два года. Каждый раз результат превосходит ожидания — ногти держатся по 4 недели без сколов. Атмосфера в студии очень уютная, всё стерильно.»</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar">К</div>
+          <div>
+            <strong data-cms-text-key="review.1.name">Ксения Ф.</strong>
+            <span data-cms-text-key="review.1.date">Март 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__text" data-cms-text-key="review.2.text">«Делала педикюр у Дарьи — это просто восторг. Руки золотые, работает аккуратно и быстро. Стопы как у ребёнка после SPA. Буду приходить постоянно.»</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar">Н</div>
+          <div>
+            <strong data-cms-text-key="review.2.name">Наталья М.</strong>
+            <span data-cms-text-key="review.2.date">Апрель 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__text" data-cms-text-key="review.3.text">«Заказывала nail art к свадьбе у Марии — создала именно то, что я хотела, с первого раза. Все гости спрашивали, где делала. Спасибо огромное!»</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar">А</div>
+          <div>
+            <strong data-cms-text-key="review.3.name">Анна В.</strong>
+            <span data-cms-text-key="review.3.date">Май 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__text" data-cms-text-key="review.4.text">«Нарастила ногти у Ольги — результат шикарный. Форма миндаль, продержалась три недели без единой трещины. Цены адекватные, мастер очень внимательный.»</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar">С</div>
+          <div>
+            <strong data-cms-text-key="review.4.name">Светлана Д.</strong>
+            <span data-cms-text-key="review.4.date">Май 2026</span>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="section__footer">
+      <button class="btn btn--ghost" id="allReviewsBtn">Смотреть все отзывы</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACTS ===== -->
+<section class="section contacts" id="contacts">
+  <div class="container">
+    <div class="contacts__inner">
+      <div class="contacts__info">
+        <p class="section__eyebrow" data-cms-text-key="contacts.eyebrow">Мы здесь</p>
+        <h2 class="section__title" data-cms-text-key="contacts.title">Контакты</h2>
+        <ul class="contacts__list">
+          <li>
+            <span class="contacts__icon">📍</span>
+            <div>
+              <strong>Адрес</strong>
+              <a href="https://maps.google.com" target="_blank" data-cms-text-key="contacts.address">Санкт-Петербург, ул. Рубинштейна, д. 24</a>
+            </div>
+          </li>
+          <li>
+            <span class="contacts__icon">📞</span>
+            <div>
+              <strong>Телефон</strong>
+              <a href="tel:+78124567890" data-cms-link-key="contacts.phone" data-cms-text-key="contacts.phone.text">+7 (812) 456-78-90</a>
+            </div>
+          </li>
+          <li>
+            <span class="contacts__icon">✉</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:info@nailsstudio.ru" data-cms-link-key="contacts.email" data-cms-text-key="contacts.email.text">info@nailsstudio.ru</a>
+            </div>
+          </li>
+          <li>
+            <span class="contacts__icon">🕐</span>
+            <div>
+              <strong>Режим работы</strong>
+              <span data-cms-text-key="contacts.hours">Ежедневно 10:00–21:00</span>
+            </div>
+          </li>
+        </ul>
+        <div class="contacts__socials">
+          <a class="social-btn" href="https://t.me/nailsstudio_spb" target="_blank" data-cms-link-key="social.telegram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            Telegram
+          </a>
+          <a class="social-btn" href="https://instagram.com/nailsstudio_spb" target="_blank" data-cms-link-key="social.instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            Instagram
+          </a>
+          <a class="social-btn" href="https://vk.com/nailsstudio_spb" target="_blank" data-cms-link-key="social.vk">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.862-.523-2.049-1.714-1.033-1.01-1.49-.714-1.49.306v1.562c0 .386-.123.614-1.184.614-1.75 0-3.684-.951-5.042-2.73-2.04-2.716-2.599-4.745-2.599-5.153 0-.245.123-.45.491-.45h1.744c.367 0 .49.163.63.56.71 2.05 1.919 3.84 2.409 3.84.184 0 .245-.061.245-.614v-2.39c-.061-1.112-.654-1.204-.654-1.6 0-.245.204-.49.53-.49h2.74c.306 0 .429.163.429.53v3.224c0 .306.122.43.245.43.184 0 .347-.124.694-.49 1.07-1.194 1.84-3.04 1.84-3.04.102-.245.367-.45.714-.45h1.744c.53 0 .65.245.53.613-.184.817-1.99 3.429-1.99 3.429-.163.266-.204.387 0 .634.142.184.61.573 1.01 1.01.632.685 1.112 1.254 1.234 1.662.102.367-.061.571-.45.571z"/></svg>
+            ВКонтакте
+          </a>
+        </div>
+        <button class="btn btn--gold btn--lg" id="contactsBookBtn" style="margin-top:2rem">Записаться онлайн</button>
+      </div>
+      <div class="contacts__map">
+        <div class="map-placeholder">
+          <div class="map-placeholder__inner">
+            <div class="map-pin">📍</div>
+            <p data-cms-text-key="contacts.map.text">Санкт-Петербург<br>ул. Рубинштейна, д. 24</p>
+            <a class="btn btn--ghost btn--sm" href="https://maps.google.com/?q=Санкт-Петербург,+ул.+Рубинштейна,+24" target="_blank">Открыть в картах →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a class="header__logo" href="/" data-cms-link-key="footer.logo">
+        <span class="logo-mark">✦</span>
+        <span class="logo-text" data-cms-text-key="footer.logo.name">Nail Studio</span>
+      </a>
+      <p class="footer__tagline" data-cms-text-key="footer.tagline">Идеальный уход за ногтями</p>
+    </div>
+    <div class="footer__cols">
+      <div class="footer__col">
+        <p class="footer__col-title">Услуги</p>
+        <a href="#services" onclick="closeAllModals()">Маникюр</a>
+        <a href="#services" onclick="closeAllModals()">Педикюр</a>
+        <a href="#services" onclick="closeAllModals()">Наращивание</a>
+        <a href="#services" onclick="closeAllModals()">Nail Art</a>
+        <a href="#services" onclick="closeAllModals()">Гель-лак</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Студия</p>
+        <a href="#masters" onclick="closeAllModals()">Мастера</a>
+        <a href="#works" onclick="closeAllModals()">Работы</a>
+        <a href="#certificates" onclick="closeAllModals()">Сертификаты</a>
+        <a href="#price" onclick="closeAllModals()">Прайс</a>
+        <a href="#contacts" onclick="closeAllModals()">Контакты</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Контакты</p>
+        <a href="tel:+78124567890" data-cms-text-key="footer.phone">+7 (812) 456-78-90</a>
+        <a href="mailto:info@nailsstudio.ru" data-cms-text-key="footer.email">info@nailsstudio.ru</a>
+        <span data-cms-text-key="footer.hours">Пн–Вс 10:00–21:00</span>
+        <a href="https://t.me/nailsstudio_spb" target="_blank" data-cms-text-key="footer.telegram">Telegram @nailsstudio_spb</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <span data-cms-text-key="footer.copy">© 2026 Nail Studio. Все права защищены.</span>
+      <span data-cms-text-key="footer.address">Санкт-Петербург, ул. Рубинштейна, д. 24</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== MODALS ===== -->
+
+<!-- Booking Modal -->
+<div class="modal-backdrop" id="bookingModal" role="dialog" aria-modal="true" aria-label="Онлайн-запись">
+  <div class="modal-card modal-card--booking">
+    <button class="modal-close" id="bookingClose" aria-label="Закрыть">✕</button>
+    <div class="modal-booking__inner">
+      <div class="modal-booking__left">
+        <h2 class="modal-booking__title">Записаться онлайн</h2>
+        <p class="modal-booking__sub">Выберите услугу и удобное время — мы свяжемся с вами для подтверждения.</p>
+        <div class="modal-booking__perks">
+          <div class="perk"><span>✦</span> Стерильные инструменты</div>
+          <div class="perk"><span>✦</span> Сертифицированные мастера</div>
+          <div class="perk"><span>✦</span> Бесплатная консультация</div>
+        </div>
+      </div>
+      <div class="modal-booking__right">
+        <form class="booking-form" id="bookingForm" onsubmit="submitBooking(event)">
+          <div class="form-row form-row--2">
+            <div class="form-field">
+              <label for="bName">Имя *</label>
+              <input type="text" id="bName" name="name" placeholder="Ваше имя" required />
+            </div>
+            <div class="form-field">
+              <label for="bPhone">Телефон *</label>
+              <input type="tel" id="bPhone" name="phone" placeholder="+7 (___) ___-__-__" required />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="bService">Услуга</label>
+            <select id="bService" name="service">
+              <option value="">Выберите услугу</option>
+              <option>Маникюр</option>
+              <option>Педикюр</option>
+              <option>Наращивание ногтей</option>
+              <option>Nail Art</option>
+              <option>Гель-лак</option>
+              <option>Укрепление ногтей</option>
+              <option>Пакет Лёгкость</option>
+              <option>Пакет Баланс</option>
+              <option>Пакет Королева</option>
+            </select>
+          </div>
+          <div class="form-row form-row--2">
+            <div class="form-field">
+              <label for="bDate">Дата</label>
+              <input type="date" id="bDate" name="date" />
+            </div>
+            <div class="form-field">
+              <label for="bTime">Время</label>
+              <select id="bTime" name="time">
+                <option value="">Любое</option>
+                <option>10:00</option><option>11:00</option><option>12:00</option>
+                <option>13:00</option><option>14:00</option><option>15:00</option>
+                <option>16:00</option><option>17:00</option><option>18:00</option>
+                <option>19:00</option><option>20:00</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="bMaster">Мастер</label>
+            <select id="bMaster" name="master">
+              <option value="">Любой доступный</option>
+              <option>Анастасия Кузнецова</option>
+              <option>Мария Соколова</option>
+              <option>Дарья Петрова</option>
+              <option>Ольга Романова</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="bComment">Комментарий</label>
+            <textarea id="bComment" name="comment" rows="2" placeholder="Пожелания, аллергии, вопросы..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--gold btn--full btn--lg">Отправить заявку</button>
+          <p class="form-note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+        </form>
+        <div class="booking-success" id="bookingSuccess" style="display:none">
+          <div class="booking-success__icon">✦</div>
+          <h3>Заявка принята!</h3>
+          <p>Мы свяжемся с вами в течение 30 минут для подтверждения записи.</p>
+          <button class="btn btn--outline" onclick="closeModal('bookingModal')">Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Gallery Modal -->
+<div class="modal-backdrop" id="galleryModal" role="dialog" aria-modal="true" aria-label="Галерея работ">
+  <div class="modal-card modal-card--gallery">
+    <button class="modal-close" id="galleryClose" aria-label="Закрыть">✕</button>
+    <h2 class="modal-gallery__title">Все работы</h2>
+    <div class="modal-gallery__grid" id="galleryGrid">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23c4893a'/%3E%3Cstop offset='1' stop-color='%231c1412'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23g)'/%3E%3Ctext x='200' y='195' text-anchor='middle' font-family='serif' font-size='18' fill='white' opacity='.9'%3EХромирование%3C/text%3E%3Ctext x='200' y='225' text-anchor='middle' font-family='serif' font-size='28' fill='white' opacity='.4'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" alt="Хромирование" data-cms-image-key="gallery.1" loading="lazy" />
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e8c4a0'/%3E%3Cstop offset='1' stop-color='%23a06030'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23g)'/%3E%3Ctext x='200' y='195' text-anchor='middle' font-family='serif' font-size='18' fill='white' opacity='.9'%3EФранцузский маникюр%3C/text%3E%3Ctext x='200' y='225' text-anchor='middle' font-family='serif' font-size='28' fill='white' opacity='.4'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" alt="Французский маникюр" data-cms-image-key="gallery.2" loading="lazy" />
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23d4857a'/%3E%3Cstop offset='1' stop-color='%234a1c18'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23g)'/%3E%3Ctext x='200' y='195' text-anchor='middle' font-family='serif' font-size='18' fill='white' opacity='.9'%3EРоспись гелем%3C/text%3E%3Ctext x='200' y='225' text-anchor='middle' font-family='serif' font-size='28' fill='white' opacity='.4'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" alt="Роспись гелем" data-cms-image-key="gallery.3" loading="lazy" />
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23b8c4d4'/%3E%3Cstop offset='1' stop-color='%231c2a3a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23g)'/%3E%3Ctext x='200' y='195' text-anchor='middle' font-family='serif' font-size='18' fill='white' opacity='.9'%3EКошачий глаз%3C/text%3E%3Ctext x='200' y='225' text-anchor='middle' font-family='serif' font-size='28' fill='white' opacity='.4'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" alt="Кошачий глаз" data-cms-image-key="gallery.4" loading="lazy" />
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f0d090'/%3E%3Cstop offset='1' stop-color='%238a5010'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23g)'/%3E%3Ctext x='200' y='195' text-anchor='middle' font-family='serif' font-size='18' fill='white' opacity='.9'%3EЗолотая фольга%3C/text%3E%3Ctext x='200' y='225' text-anchor='middle' font-family='serif' font-size='28' fill='white' opacity='.4'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" alt="Золотая фольга" data-cms-image-key="gallery.5" loading="lazy" />
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e8d0f0'/%3E%3Cstop offset='1' stop-color='%23603080'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23g)'/%3E%3Ctext x='200' y='195' text-anchor='middle' font-family='serif' font-size='18' fill='white' opacity='.9'%3EОмбре градиент%3C/text%3E%3Ctext x='200' y='225' text-anchor='middle' font-family='serif' font-size='28' fill='white' opacity='.4'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" alt="Омбре градиент" data-cms-image-key="gallery.6" loading="lazy" />
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f0e8d0'/%3E%3Cstop offset='1' stop-color='%23c4903a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23g)'/%3E%3Ctext x='200' y='195' text-anchor='middle' font-family='serif' font-size='18' fill='white' opacity='.9'%3EСтразы%3C/text%3E%3Ctext x='200' y='225' text-anchor='middle' font-family='serif' font-size='28' fill='white' opacity='.4'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" alt="Стразы" data-cms-image-key="gallery.7" loading="lazy" />
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23d0e8d4'/%3E%3Cstop offset='1' stop-color='%231c3a20'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23g)'/%3E%3Ctext x='200' y='195' text-anchor='middle' font-family='serif' font-size='18' fill='white' opacity='.9'%3EГеометрия%3C/text%3E%3Ctext x='200' y='225' text-anchor='middle' font-family='serif' font-size='28' fill='white' opacity='.4'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" alt="Геометрия" data-cms-image-key="gallery.8" loading="lazy" />
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f0c8d8'/%3E%3Cstop offset='1' stop-color='%23803050'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23g)'/%3E%3Ctext x='200' y='195' text-anchor='middle' font-family='serif' font-size='18' fill='white' opacity='.9'%3EАкварель%3C/text%3E%3Ctext x='200' y='225' text-anchor='middle' font-family='serif' font-size='28' fill='white' opacity='.4'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" alt="Акварель" data-cms-image-key="gallery.9" loading="lazy" />
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23c8e0c0'/%3E%3Cstop offset='1' stop-color='%23304820'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23g)'/%3E%3Ctext x='200' y='195' text-anchor='middle' font-family='serif' font-size='18' fill='white' opacity='.9'%3EЛистья%3C/text%3E%3Ctext x='200' y='225' text-anchor='middle' font-family='serif' font-size='28' fill='white' opacity='.4'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" alt="Листья" data-cms-image-key="gallery.10" loading="lazy" />
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e8e4e0'/%3E%3Cstop offset='1' stop-color='%23606060'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23g)'/%3E%3Ctext x='200' y='195' text-anchor='middle' font-family='serif' font-size='18' fill='white' opacity='.9'%3EМрамор%3C/text%3E%3Ctext x='200' y='225' text-anchor='middle' font-family='serif' font-size='28' fill='white' opacity='.4'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" alt="Мрамор" data-cms-image-key="gallery.11" loading="lazy" />
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23c0c8e0'/%3E%3Cstop offset='1' stop-color='%23202848'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23g)'/%3E%3Ctext x='200' y='195' text-anchor='middle' font-family='serif' font-size='18' fill='white' opacity='.9'%3EЗвёздная пыль%3C/text%3E%3Ctext x='200' y='225' text-anchor='middle' font-family='serif' font-size='28' fill='white' opacity='.4'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" alt="Звёздная пыль" data-cms-image-key="gallery.12" loading="lazy" />
+    </div>
+  </div>
+</div>
+
+<!-- Full Price Modal -->
+<div class="modal-backdrop" id="priceModal" role="dialog" aria-modal="true" aria-label="Полный прайс">
+  <div class="modal-card modal-card--price">
+    <button class="modal-close" id="priceClose" aria-label="Закрыть">✕</button>
+    <h2 class="modal-price__title">Полный прайс-лист</h2>
+    <div class="modal-price__content">
+      <div class="price__col">
+        <h4 class="price__group-title">Маникюр</h4>
+        <div class="price-row"><span>Классический маникюр</span><span class="price-row__dots"></span><span>900 ₽</span></div>
+        <div class="price-row"><span>Европейский маникюр</span><span class="price-row__dots"></span><span>1 100 ₽</span></div>
+        <div class="price-row"><span>Комбинированный маникюр</span><span class="price-row__dots"></span><span>1 200 ₽</span></div>
+        <div class="price-row"><span>Мужской маникюр</span><span class="price-row__dots"></span><span>800 ₽</span></div>
+        <div class="price-row"><span>Детский маникюр (до 12 лет)</span><span class="price-row__dots"></span><span>600 ₽</span></div>
+        <div class="price-row"><span>Снятие гель-лака</span><span class="price-row__dots"></span><span>350 ₽</span></div>
+        <div class="price-row"><span>Снятие нарощенных ногтей</span><span class="price-row__dots"></span><span>700 ₽</span></div>
+        <h4 class="price__group-title">Покрытие</h4>
+        <div class="price-row"><span>Гель-лак однотонный</span><span class="price-row__dots"></span><span>1 300 ₽</span></div>
+        <div class="price-row"><span>Французский маникюр</span><span class="price-row__dots"></span><span>1 500 ₽</span></div>
+        <div class="price-row"><span>Кошачий глаз</span><span class="price-row__dots"></span><span>1 600 ₽</span></div>
+        <div class="price-row"><span>Хромирование</span><span class="price-row__dots"></span><span>1 800 ₽</span></div>
+        <div class="price-row"><span>Втирка, фольга</span><span class="price-row__dots"></span><span>1 400 ₽</span></div>
+        <div class="price-row"><span>Омбре, градиент</span><span class="price-row__dots"></span><span>1 700 ₽</span></div>
+      </div>
+      <div class="price__col">
+        <h4 class="price__group-title">Педикюр</h4>
+        <div class="price-row"><span>Классический педикюр</span><span class="price-row__dots"></span><span>1 500 ₽</span></div>
+        <div class="price-row"><span>Аппаратный педикюр</span><span class="price-row__dots"></span><span>1 800 ₽</span></div>
+        <div class="price-row"><span>SPA-педикюр</span><span class="price-row__dots"></span><span>2 500 ₽</span></div>
+        <div class="price-row"><span>Педикюр + гель-лак</span><span class="price-row__dots"></span><span>2 200 ₽</span></div>
+        <div class="price-row"><span>Лечебный педикюр (мозоли)</span><span class="price-row__dots"></span><span>2 800 ₽</span></div>
+        <div class="price-row"><span>Мужской педикюр</span><span class="price-row__dots"></span><span>1 600 ₽</span></div>
+        <h4 class="price__group-title">Наращивание</h4>
+        <div class="price-row"><span>Наращивание гелем</span><span class="price-row__dots"></span><span>от 2 500 ₽</span></div>
+        <div class="price-row"><span>Наращивание акрилом</span><span class="price-row__dots"></span><span>от 2 800 ₽</span></div>
+        <div class="price-row"><span>Арочное моделирование</span><span class="price-row__dots"></span><span>от 3 200 ₽</span></div>
+        <div class="price-row"><span>Коррекция</span><span class="price-row__dots"></span><span>от 1 800 ₽</span></div>
+        <h4 class="price__group-title">Nail Art &amp; дизайн</h4>
+        <div class="price-row"><span>Простой дизайн (1 ноготь)</span><span class="price-row__dots"></span><span>от 300 ₽</span></div>
+        <div class="price-row"><span>Сложный дизайн (1 ноготь)</span><span class="price-row__dots"></span><span>от 600 ₽</span></div>
+        <div class="price-row"><span>Стразы (1 ноготь)</span><span class="price-row__dots"></span><span>от 150 ₽</span></div>
+        <div class="price-row"><span>Авторская роспись</span><span class="price-row__dots"></span><span>от 800 ₽</span></div>
+        <h4 class="price__group-title">Укрепление</h4>
+        <div class="price-row"><span>Биогель</span><span class="price-row__dots"></span><span>1 800 ₽</span></div>
+        <div class="price-row"><span>BIAB (Builder In A Bottle)</span><span class="price-row__dots"></span><span>2 200 ₽</span></div>
+        <div class="price-row"><span>Акрил-пудра</span><span class="price-row__dots"></span><span>1 600 ₽</span></div>
+      </div>
+    </div>
+    <div class="modal-price__cta">
+      <button class="btn btn--gold btn--lg" onclick="closeModal('priceModal'); openBooking('')">Записаться</button>
+    </div>
+  </div>
+</div>
+
+<!-- All Masters Modal -->
+<div class="modal-backdrop" id="mastersModal" role="dialog" aria-modal="true" aria-label="Все мастера">
+  <div class="modal-card modal-card--masters">
+    <button class="modal-close" id="mastersClose" aria-label="Закрыть">✕</button>
+    <h2 class="modal-masters__title">Наши мастера</h2>
+    <div class="modal-masters__grid">
+      <div class="master-mini"><strong>Анастасия Кузнецова</strong><span>Топ-мастер · 8 лет</span><button class="btn btn--outline btn--sm" onclick="openBooking('Анастасия Кузнецова')">Записаться</button></div>
+      <div class="master-mini"><strong>Мария Соколова</strong><span>Nail art · 5 лет</span><button class="btn btn--outline btn--sm" onclick="openBooking('Мария Соколова')">Записаться</button></div>
+      <div class="master-mini"><strong>Дарья Петрова</strong><span>Педикюр · 6 лет</span><button class="btn btn--outline btn--sm" onclick="openBooking('Дарья Петрова')">Записаться</button></div>
+      <div class="master-mini"><strong>Ольга Романова</strong><span>Наращивание · 7 лет</span><button class="btn btn--outline btn--sm" onclick="openBooking('Ольга Романова')">Записаться</button></div>
+      <div class="master-mini"><strong>Виктория Лебедева</strong><span>Маникюр · 4 года</span><button class="btn btn--outline btn--sm" onclick="openBooking('Виктория Лебедева')">Записаться</button></div>
+      <div class="master-mini"><strong>Екатерина Морозова</strong><span>Педикюр, укрепление · 3 года</span><button class="btn btn--outline btn--sm" onclick="openBooking('Екатерина Морозова')">Записаться</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- All Reviews Modal -->
+<div class="modal-backdrop" id="reviewsModal" role="dialog" aria-modal="true" aria-label="Все отзывы">
+  <div class="modal-card modal-card--reviews">
+    <button class="modal-close" id="reviewsClose" aria-label="Закрыть">✕</button>
+    <h2>Отзывы клиентов</h2>
+    <div class="modal-reviews__grid">
+      <article class="review-card"><div class="review-card__stars">★★★★★</div><p>«Хожу к Анастасии уже два года. Каждый раз результат превосходит ожидания — ногти держатся по 4 недели без сколов.»</p><div class="review-card__author"><div class="review-card__avatar">К</div><div><strong>Ксения Ф.</strong><span>Март 2026</span></div></div></article>
+      <article class="review-card"><div class="review-card__stars">★★★★★</div><p>«Педикюр у Дарьи — восторг. Стопы как у ребёнка после SPA. Буду приходить постоянно.»</p><div class="review-card__author"><div class="review-card__avatar">Н</div><div><strong>Наталья М.</strong><span>Апрель 2026</span></div></div></article>
+      <article class="review-card"><div class="review-card__stars">★★★★★</div><p>«Nail art к свадьбе у Марии — создала именно то, что я хотела, с первого раза. Все гости спрашивали!»</p><div class="review-card__author"><div class="review-card__avatar">А</div><div><strong>Анна В.</strong><span>Май 2026</span></div></div></article>
+      <article class="review-card"><div class="review-card__stars">★★★★★</div><p>«Нарастила у Ольги — шикарный результат. Три недели без единой трещины. Очень довольна.»</p><div class="review-card__author"><div class="review-card__avatar">С</div><div><strong>Светлана Д.</strong><span>Май 2026</span></div></div></article>
+      <article class="review-card"><div class="review-card__stars">★★★★★</div><p>«Первый раз здесь — и уже постоянный клиент. Очень уютная атмосфера, мастера внимательные.»</p><div class="review-card__author"><div class="review-card__avatar">И</div><div><strong>Ирина К.</strong><span>Апрель 2026</span></div></div></article>
+      <article class="review-card"><div class="review-card__stars">★★★★★</div><p>«Записалась онлайн — очень удобно. Мастер пришла точно в срок, всё чисто, стерильно, результат отличный.»</p><div class="review-card__author"><div class="review-card__avatar">Е</div><div><strong>Елена Р.</strong><span>Май 2026</span></div></div></article>
+    </div>
+  </div>
+</div>
+
+<!-- Certificate Lightbox -->
+<div class="modal-backdrop" id="certModal" role="dialog" aria-modal="true" aria-label="Сертификат">
+  <div class="modal-card modal-card--cert">
+    <button class="modal-close" id="certClose" aria-label="Закрыть">✕</button>
+    <img id="certModalImg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEAAAAALAAAAAABAAEAAAI=" alt="Сертификат" />
+  </div>
+</div>
+
+<script src="main.js"></script>
+    <script src="cms/cms.js"></script>
+  </body>
+</html>

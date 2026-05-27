@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>РемСтрой — Ремонт квартир и домов в Москве</title>
+  <meta name="description" content="Профессиональный ремонт квартир и домов в Москве. Калькулятор сметы онлайн, фото до/после, пакеты от 2 500 ₽/м². Гарантия 3 года. Заявка в Telegram." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cms/cms.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="/" data-cms-link-key="header.logo">
+      <div class="logo-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <strong data-cms-text-key="header.site-name">РемСтрой</strong>
+        <span data-cms-text-key="header.site-tagline">Ремонт под ключ</span>
+      </div>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#packages" data-cms-link-key="nav.packages">Пакеты</a>
+      <a href="#calculator" data-cms-link-key="nav.calculator">Калькулятор</a>
+      <a href="#portfolio" data-cms-link-key="nav.portfolio">Работы</a>
+      <a href="#stages" data-cms-link-key="nav.stages">Этапы</a>
+      <a href="#reviews" data-cms-link-key="nav.reviews">Отзывы</a>
+      <a href="#contacts" data-cms-link-key="nav.contacts">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+74959876543" class="header-phone" data-cms-text-key="header.phone">+7 (495) 987-65-43</a>
+      <a href="https://t.me/Y002_bot" target="_blank" rel="noopener" class="btn btn-tg-sm" aria-label="Telegram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+        Telegram
+      </a>
+      <button class="btn btn-gold" onclick="openModal('booking')">Оставить заявку</button>
+    </div>
+    <button class="burger" id="burger" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="eyebrow" data-cms-text-key="hero.eyebrow">Официальная бригада · Москва и МО · Работаем с 2016 года</div>
+      <h1 data-cms-text-key="hero.h1">Ремонт квартир<br>и домов <span class="accent">под ключ</span></h1>
+      <p class="hero-lead" data-cms-text-key="hero.lead">Косметический, стандарт и дизайнерский ремонт. Фиксированная цена в договоре, сроки — гарантированы. Бесплатный выезд мастера.</p>
+      <div class="hero-cta">
+        <button class="btn btn-gold btn-lg" onclick="smoothTo('calculator')">Рассчитать стоимость</button>
+        <button class="btn btn-ghost btn-lg" onclick="smoothTo('portfolio')">Смотреть работы →</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><strong data-cms-text-key="hero.stat1-num">8 лет</strong><span data-cms-text-key="hero.stat1-label">на рынке</span></div>
+        <div class="stat-item"><strong data-cms-text-key="hero.stat2-num">500+</strong><span data-cms-text-key="hero.stat2-label">объектов</span></div>
+        <div class="stat-item"><strong data-cms-text-key="hero.stat3-num">3 года</strong><span data-cms-text-key="hero.stat3-label">гарантия</span></div>
+        <div class="stat-item"><strong data-cms-text-key="hero.stat4-num">от 30 дн.</strong><span data-cms-text-key="hero.stat4-label">сдача объекта</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-room-after">
+        <svg viewBox="0 0 540 400" xmlns="http://www.w3.org/2000/svg">
+          <rect width="540" height="400" fill="#F0EBE3"/>
+          <rect y="310" width="540" height="90" fill="#C8A068"/>
+          <line x1="0" y1="327" x2="540" y2="327" stroke="#B89050" stroke-width="0.8"/>
+          <line x1="0" y1="344" x2="540" y2="344" stroke="#B89050" stroke-width="0.8"/>
+          <line x1="0" y1="361" x2="540" y2="361" stroke="#B89050" stroke-width="0.8"/>
+          <line x1="0" y1="378" x2="540" y2="378" stroke="#B89050" stroke-width="0.8"/>
+          <line x1="68" y1="310" x2="68" y2="400" stroke="#B89050" stroke-width="0.5"/>
+          <line x1="136" y1="310" x2="136" y2="400" stroke="#B89050" stroke-width="0.5"/>
+          <line x1="204" y1="310" x2="204" y2="400" stroke="#B89050" stroke-width="0.5"/>
+          <line x1="272" y1="310" x2="272" y2="400" stroke="#B89050" stroke-width="0.5"/>
+          <line x1="340" y1="310" x2="340" y2="400" stroke="#B89050" stroke-width="0.5"/>
+          <line x1="408" y1="310" x2="408" y2="400" stroke="#B89050" stroke-width="0.5"/>
+          <line x1="476" y1="310" x2="476" y2="400" stroke="#B89050" stroke-width="0.5"/>
+          <rect x="160" y="45" width="220" height="170" fill="#D0E8F8"/>
+          <rect x="160" y="45" width="220" height="170" fill="none" stroke="#DDD8D0" stroke-width="3"/>
+          <line x1="270" y1="45" x2="270" y2="215" stroke="#DDD8D0" stroke-width="2"/>
+          <line x1="160" y1="130" x2="380" y2="130" stroke="#DDD8D0" stroke-width="1.5"/>
+          <rect x="60" y="250" width="290" height="60" fill="#8888A2" rx="12"/>
+          <rect x="54" y="238" width="302" height="20" fill="#9898B2" rx="7"/>
+          <rect x="50" y="238" width="18" height="72" fill="#9898B2" rx="7"/>
+          <rect x="342" y="238" width="18" height="72" fill="#9898B2" rx="7"/>
+          <rect x="110" y="308" width="140" height="6" fill="#C8A068" rx="3"/>
+          <rect x="122" y="312" width="4" height="22" fill="#B89050"/>
+          <rect x="244" y="312" width="4" height="22" fill="#B89050"/>
+          <rect y="302" width="540" height="10" fill="#E8E3DB"/>
+          <rect x="0" y="0" width="8" height="400" fill="#C07830"/>
+          <rect x="420" y="70" width="80" height="60" fill="#EAE5DD" stroke="#D8D3CB" stroke-width="1.5"/>
+          <rect x="436" y="85" width="48" height="30" fill="#C07830" opacity="0.25"/>
+          <rect x="430" y="160" width="60" height="80" fill="#5E7A5E" opacity="0.35" rx="4"/>
+          <rect x="436" y="156" width="48" height="8" fill="#4A6A4A" opacity="0.4" rx="3"/>
+        </svg>
+      </div>
+      <div class="hero-badge-float">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C07830" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Гарантия 3 года
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES STRIP -->
+<section class="features-strip">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <div><strong data-cms-text-key="feat1.title">Фиксированная цена</strong><span data-cms-text-key="feat1.text">Смета в договоре — не меняется</span></div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div><strong data-cms-text-key="feat2.title">Сроки по договору</strong><span data-cms-text-key="feat2.text">Штраф за каждый день просрочки</span></div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div><strong data-cms-text-key="feat3.title">Гарантия 3 года</strong><span data-cms-text-key="feat3.text">На все виды работ официально</span></div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div><strong data-cms-text-key="feat4.title">Уборка включена</strong><span data-cms-text-key="feat4.text">Сдаём объект в чистом виде</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packages section" id="packages">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow" data-cms-text-key="packages.eyebrow">Пакеты ремонта</div>
+      <h2 data-cms-text-key="packages.h2">Выберите подходящий<br>вариант ремонта</h2>
+      <p data-cms-text-key="packages.lead">Точная стоимость — после бесплатного выезда мастера. Указаны цены за м² работ, без учёта материалов.</p>
+    </div>
+    <div class="packages-grid">
+      <!-- Косметический -->
+      <div class="package-card">
+        <div class="package-header">
+          <div class="package-badge" data-cms-text-key="pkg1.badge">Эконом</div>
+          <h3 data-cms-text-key="pkg1.name">Косметический</h3>
+          <div class="package-price"><span class="price-from">от</span><strong data-cms-text-key="pkg1.price">2 500</strong><span class="price-unit">₽/м²</span></div>
+        </div>
+        <ul class="package-list">
+          <li data-cms-text-key="pkg1.li1">Поклейка обоев / покраска стен</li>
+          <li data-cms-text-key="pkg1.li2">Укладка напольного покрытия</li>
+          <li data-cms-text-key="pkg1.li3">Замена светильников</li>
+          <li data-cms-text-key="pkg1.li4">Покраска потолков</li>
+          <li data-cms-text-key="pkg1.li5">Замена розеток и выключателей</li>
+          <li class="muted" data-cms-text-key="pkg1.li6">Без штукатурки стен</li>
+          <li class="muted" data-cms-text-key="pkg1.li7">Без стяжки полов</li>
+        </ul>
+        <div class="package-timeline"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-cms-text-key="pkg1.time">Срок: от 14 дней</span></div>
+        <button class="btn btn-outline btn-block" onclick="openModalWithType('booking','Косметический')">Выбрать пакет</button>
+      </div>
+
+      <!-- Стандарт -->
+      <div class="package-card featured">
+        <div class="popular-tag">Популярный</div>
+        <div class="package-header">
+          <div class="package-badge" data-cms-text-key="pkg2.badge">Оптимально</div>
+          <h3 data-cms-text-key="pkg2.name">Стандарт</h3>
+          <div class="package-price"><span class="price-from">от</span><strong data-cms-text-key="pkg2.price">5 000</strong><span class="price-unit">₽/м²</span></div>
+        </div>
+        <ul class="package-list">
+          <li data-cms-text-key="pkg2.li1">Штукатурка и выравнивание стен</li>
+          <li data-cms-text-key="pkg2.li2">Стяжка и выравнивание полов</li>
+          <li data-cms-text-key="pkg2.li3">Укладка плитки (ванная/кухня)</li>
+          <li data-cms-text-key="pkg2.li4">Замена сантехники</li>
+          <li data-cms-text-key="pkg2.li5">Разводка электрики</li>
+          <li data-cms-text-key="pkg2.li6">Натяжные потолки</li>
+          <li data-cms-text-key="pkg2.li7">Установка дверей и плинтусов</li>
+        </ul>
+        <div class="package-timeline"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-cms-text-key="pkg2.time">Срок: от 30 дней</span></div>
+        <button class="btn btn-gold btn-block" onclick="openModalWithType('booking','Стандарт')">Выбрать пакет</button>
+      </div>
+
+      <!-- Дизайнерский -->
+      <div class="package-card">
+        <div class="package-header">
+          <div class="package-badge" data-cms-text-key="pkg3.badge">Премиум</div>
+          <h3 data-cms-text-key="pkg3.name">Дизайнерский</h3>
+          <div class="package-price"><span class="price-from">от</span><strong data-cms-text-key="pkg3.price">10 000</strong><span class="price-unit">₽/м²</span></div>
+        </div>
+        <ul class="package-list">
+          <li data-cms-text-key="pkg3.li1">Авторский дизайн-проект</li>
+          <li data-cms-text-key="pkg3.li2">Все работы стандарт-пакета</li>
+          <li data-cms-text-key="pkg3.li3">Премиум-материалы под ключ</li>
+          <li data-cms-text-key="pkg3.li4">Декоративная штукатурка / камень</li>
+          <li data-cms-text-key="pkg3.li5">Умный дом / мультирум</li>
+          <li data-cms-text-key="pkg3.li6">Авторская мебель и встроенные шкафы</li>
+          <li data-cms-text-key="pkg3.li7">Авторский надзор дизайнера</li>
+        </ul>
+        <div class="package-timeline"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-cms-text-key="pkg3.time">Срок: от 60 дней</span></div>
+        <button class="btn btn-outline btn-block" onclick="openModalWithType('booking','Дизайнерский')">Выбрать пакет</button>
+      </div>
+    </div>
+    <p class="packages-note" data-cms-text-key="packages.note">* Стоимость материалов рассчитывается отдельно. Бесплатный выезд мастера на замер и консультацию — в день обращения.</p>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calculator section" id="calculator">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow" data-cms-text-key="calc.eyebrow">Онлайн-расчёт</div>
+      <h2 data-cms-text-key="calc.h2">Калькулятор сметы</h2>
+      <p data-cms-text-key="calc.lead">Получите предварительную оценку за 30 секунд. Точную смету составим после бесплатного выезда мастера.</p>
+    </div>
+    <div class="calc-inner">
+      <div class="calc-form">
+        <div class="calc-block">
+          <label class="calc-label">Площадь квартиры / дома</label>
+          <div class="calc-area-wrap">
+            <input type="range" id="calc-area-slider" min="15" max="500" value="60" class="calc-slider" aria-label="Площадь"/>
+            <div class="calc-area-input-wrap">
+              <input type="number" id="calc-area" value="60" min="15" max="500" class="calc-number" aria-label="Площадь в м²"/>
+              <span class="calc-unit">м²</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-block">
+          <label class="calc-label">Тип ремонта</label>
+          <div class="calc-radio-group">
+            <label class="calc-radio-item">
+              <input type="radio" name="repair-type" value="cosmetic" />
+              <span class="calc-radio-box">
+                <span class="crb-title">Косметический</span>
+                <span class="crb-price">от 2 500 ₽/м²</span>
+              </span>
+            </label>
+            <label class="calc-radio-item">
+              <input type="radio" name="repair-type" value="standard" checked />
+              <span class="calc-radio-box">
+                <span class="crb-title">Стандарт</span>
+                <span class="crb-price">от 5 000 ₽/м²</span>
+              </span>
+            </label>
+            <label class="calc-radio-item">
+              <input type="radio" name="repair-type" value="designer" />
+              <span class="calc-radio-box">
+                <span class="crb-title">Дизайнерский</span>
+                <span class="crb-price">от 10 000 ₽/м²</span>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="calc-block">
+          <label class="calc-label">Дополнительные работы</label>
+          <div class="calc-check-group">
+            <label class="calc-check-item">
+              <input type="checkbox" id="add-bathroom" />
+              <span class="calc-check-box">
+                <span>Ванная / санузел</span>
+                <span class="check-add">+80 000 – 120 000 ₽</span>
+              </span>
+            </label>
+            <label class="calc-check-item">
+              <input type="checkbox" id="add-kitchen" />
+              <span class="calc-check-box">
+                <span>Кухня</span>
+                <span class="check-add">+60 000 – 100 000 ₽</span>
+              </span>
+            </label>
+            <label class="calc-check-item">
+              <input type="checkbox" id="add-balcony" />
+              <span class="calc-check-box">
+                <span>Балкон / лоджия</span>
+                <span class="check-add">+40 000 – 70 000 ₽</span>
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-result" id="calc-result">
+        <div class="calc-result-label">Предварительная оценка стоимости работ</div>
+        <div class="calc-price-range">
+          <span id="calc-min">300 000</span> — <span id="calc-max">420 000</span> ₽
+        </div>
+        <div class="calc-disclaimer">Без учёта материалов. Точная смета — после замера.</div>
+        <div class="calc-timeline-row">
+          <div class="calc-tl-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Срок: <strong id="calc-days">~30 дней</strong></span>
+          </div>
+          <div class="calc-tl-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C07830" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Гарантия: <strong>3 года</strong></span>
+          </div>
+        </div>
+        <button class="btn btn-gold btn-block calc-cta" onclick="openModal('booking')">Получить точную смету бесплатно</button>
+        <div class="calc-messenger-row">
+          <span>Или напишите нам:</span>
+          <a href="https://t.me/Y002_bot" target="_blank" rel="noopener" class="msg-btn tg-btn" aria-label="Telegram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+            Telegram
+          </a>
+          <a href="https://wa.me/74959876543" target="_blank" rel="noopener" class="msg-btn wa-btn" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.029 18.88a7.382 7.382 0 0 1-3.53-.899L4.5 19.5l1.546-3.835A7.4 7.4 0 0 1 4.62 12.03C4.62 7.94 7.94 4.62 12.03 4.62c4.087 0 7.41 3.32 7.41 7.41 0 4.087-3.32 7.41-7.411 7.41l-.001-.96z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="before-after section" id="before-after">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow" data-cms-text-key="ba.eyebrow">Фото до/после</div>
+      <h2 data-cms-text-key="ba.h2">Видите разницу?</h2>
+      <p data-cms-text-key="ba.lead">Перетащите разделитель влево или вправо, чтобы увидеть результат наших работ.</p>
+    </div>
+    <div class="ba-tabs" role="tablist">
+      <button class="ba-tab-btn active" role="tab" aria-selected="true" data-cms-text-key="ba.tab1">Гостиная</button>
+      <button class="ba-tab-btn" role="tab" aria-selected="false" data-cms-text-key="ba.tab2">Кухня</button>
+      <button class="ba-tab-btn" role="tab" aria-selected="false" data-cms-text-key="ba.tab3">Ванная</button>
+    </div>
+    <div class="ba-slides-wrap">
+      <!-- Гостиная -->
+      <div class="ba-slide active">
+        <div class="ba-slider" aria-label="До/после: гостиная">
+          <div class="ba-before">
+            <img src="uploads/ba-living-before.svg" alt="Гостиная до ремонта" data-cms-image-key="ba.living.before" />
+          </div>
+          <div class="ba-after">
+            <img src="uploads/ba-living-after.svg" alt="Гостиная после ремонта" data-cms-image-key="ba.living.after" />
+          </div>
+          <div class="ba-handle" role="slider" aria-label="Сдвиньте чтобы сравнить" aria-valuenow="50" aria-valuemin="5" aria-valuemax="95">
+            <div class="ba-handle-line"></div>
+            <div class="ba-handle-grip">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/><polyline points="9 6 15 12 9 18" transform="translate(6,0)"/></svg>
+            </div>
+            <div class="ba-handle-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Кухня -->
+      <div class="ba-slide">
+        <div class="ba-slider" aria-label="До/после: кухня">
+          <div class="ba-before">
+            <img src="uploads/ba-kitchen-before.svg" alt="Кухня до ремонта" data-cms-image-key="ba.kitchen.before" />
+          </div>
+          <div class="ba-after">
+            <img src="uploads/ba-kitchen-after.svg" alt="Кухня после ремонта" data-cms-image-key="ba.kitchen.after" />
+          </div>
+          <div class="ba-handle" role="slider" aria-label="Сдвиньте чтобы сравнить" aria-valuenow="50" aria-valuemin="5" aria-valuemax="95">
+            <div class="ba-handle-line"></div>
+            <div class="ba-handle-grip">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/><polyline points="9 6 15 12 9 18" transform="translate(6,0)"/></svg>
+            </div>
+            <div class="ba-handle-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ванная -->
+      <div class="ba-slide">
+        <div class="ba-slider" aria-label="До/после: ванная">
+          <div class="ba-before">
+            <img src="uploads/ba-bath-before.svg" alt="Ванная до ремонта" data-cms-image-key="ba.bath.before" />
+          </div>
+          <div class="ba-after">
+            <img src="uploads/ba-bath-after.svg" alt="Ванная после ремонта" data-cms-image-key="ba.bath.after" />
+          </div>
+          <div class="ba-handle" role="slider" aria-label="Сдвиньте чтобы сравнить" aria-valuenow="50" aria-valuemin="5" aria-valuemax="95">
+            <div class="ba-handle-line"></div>
+            <div class="ba-handle-grip">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/><polyline points="9 6 15 12 9 18" transform="translate(6,0)"/></svg>
+            </div>
+            <div class="ba-handle-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio section" id="portfolio">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow" data-cms-text-key="portfolio.eyebrow">Портфолио</div>
+      <h2 data-cms-text-key="portfolio.h2">Наши работы</h2>
+      <p data-cms-text-key="portfolio.lead">Более 500 завершённых объектов в Москве и области. Нажмите на фото для просмотра.</p>
+    </div>
+    <div class="portfolio-grid" id="portfolio-grid">
+      <div class="portfolio-card" onclick="openModal('gallery')" style="--c1:#C5794B;--c2:#8B4513">
+        <div class="portfolio-img p1" data-cms-image-key="portfolio.1">
+          <div class="portfolio-overlay"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M1 6s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/><path d="M1 12s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/><path d="M1 18s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/></svg></div>
+        </div>
+        <div class="portfolio-info"><span class="portfolio-room" data-cms-text-key="portfolio.1.room">Гостиная</span><span class="portfolio-meta" data-cms-text-key="portfolio.1.meta">45 м² · Пресня</span></div>
+      </div>
+      <div class="portfolio-card" onclick="openModal('gallery')" style="--c1:#8E9BAE;--c2:#5D6B7A">
+        <div class="portfolio-img p2" data-cms-image-key="portfolio.2">
+          <div class="portfolio-overlay"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M1 6s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/><path d="M1 12s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/><path d="M1 18s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/></svg></div>
+        </div>
+        <div class="portfolio-info"><span class="portfolio-room" data-cms-text-key="portfolio.2.room">Кухня</span><span class="portfolio-meta" data-cms-text-key="portfolio.2.meta">18 м² · Сокол</span></div>
+      </div>
+      <div class="portfolio-card" onclick="openModal('gallery')" style="--c1:#9AB0C4;--c2:#5A7A94">
+        <div class="portfolio-img p3" data-cms-image-key="portfolio.3">
+          <div class="portfolio-overlay"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M1 6s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/><path d="M1 12s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/><path d="M1 18s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/></svg></div>
+        </div>
+        <div class="portfolio-info"><span class="portfolio-room" data-cms-text-key="portfolio.3.room">Спальня</span><span class="portfolio-meta" data-cms-text-key="portfolio.3.meta">25 м² · Арбат</span></div>
+      </div>
+      <div class="portfolio-card" onclick="openModal('gallery')" style="--c1:#CCC8C4;--c2:#A0A09A">
+        <div class="portfolio-img p4" data-cms-image-key="portfolio.4">
+          <div class="portfolio-overlay"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M1 6s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/><path d="M1 12s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/><path d="M1 18s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/></svg></div>
+        </div>
+        <div class="portfolio-info"><span class="portfolio-room" data-cms-text-key="portfolio.4.room">Ванная</span><span class="portfolio-meta" data-cms-text-key="portfolio.4.meta">8 м² · Таганка</span></div>
+      </div>
+      <div class="portfolio-card" onclick="openModal('gallery')" style="--c1:#4A4A4A;--c2:#1A1A1A">
+        <div class="portfolio-img p5" data-cms-image-key="portfolio.5">
+          <div class="portfolio-overlay"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M1 6s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/><path d="M1 12s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/><path d="M1 18s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/></svg></div>
+        </div>
+        <div class="portfolio-info"><span class="portfolio-room" data-cms-text-key="portfolio.5.room">Прихожая</span><span class="portfolio-meta" data-cms-text-key="portfolio.5.meta">12 м² · Митино</span></div>
+      </div>
+      <div class="portfolio-card" onclick="openModal('gallery')" style="--c1:#C8922A;--c2:#8C6010">
+        <div class="portfolio-img p6" data-cms-image-key="portfolio.6">
+          <div class="portfolio-overlay"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M1 6s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/><path d="M1 12s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/><path d="M1 18s1-2 5-2 5 2 5 2 1 2 5 2 5-2 5-2"/></svg></div>
+        </div>
+        <div class="portfolio-info"><span class="portfolio-room" data-cms-text-key="portfolio.6.room">Студия</span><span class="portfolio-meta" data-cms-text-key="portfolio.6.meta">38 м² · Марьино</span></div>
+      </div>
+    </div>
+    <div class="portfolio-actions">
+      <button class="btn btn-outline btn-lg" onclick="openModal('gallery')">Смотреть все работы (25+)</button>
+    </div>
+  </div>
+</section>
+
+<!-- STAGES -->
+<section class="stages section" id="stages">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow" data-cms-text-key="stages.eyebrow">Как мы работаем</div>
+      <h2 data-cms-text-key="stages.h2">Этапы ремонта<br>от заявки до ключей</h2>
+    </div>
+    <div class="stages-list">
+      <div class="stage-item">
+        <div class="stage-num">01</div>
+        <div class="stage-content">
+          <h3 data-cms-text-key="stage1.title">Бесплатный выезд и замер</h3>
+          <p data-cms-text-key="stage1.text">Мастер приедет в день обращения, измерит объект, ответит на вопросы и сделает предварительный расчёт прямо на месте.</p>
+        </div>
+        <div class="stage-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+      </div>
+      <div class="stage-item">
+        <div class="stage-num">02</div>
+        <div class="stage-content">
+          <h3 data-cms-text-key="stage2.title">Согласование сметы</h3>
+          <p data-cms-text-key="stage2.text">Составим детальную смету с перечнем работ и материалов. Цена фиксируется — никаких доп. расходов без вашего согласия.</p>
+        </div>
+        <div class="stage-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+      </div>
+      <div class="stage-item">
+        <div class="stage-num">03</div>
+        <div class="stage-content">
+          <h3 data-cms-text-key="stage3.title">Договор и предоплата 30%</h3>
+          <p data-cms-text-key="stage3.text">Подписываем официальный договор с зафиксированными ценами, сроками и штрафами. Начинаем после предоплаты 30%.</p>
+        </div>
+        <div class="stage-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+        </div>
+      </div>
+      <div class="stage-item">
+        <div class="stage-num">04</div>
+        <div class="stage-content">
+          <h3 data-cms-text-key="stage4.title">Ремонтные работы</h3>
+          <p data-cms-text-key="stage4.text">Ведём работы строго по плану. Вы получаете фото-отчёты каждый день — следите за прогрессом даже из другого города.</p>
+        </div>
+        <div class="stage-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+      </div>
+      <div class="stage-item">
+        <div class="stage-num">05</div>
+        <div class="stage-content">
+          <h3 data-cms-text-key="stage5.title">Приёмка и подписание акта</h3>
+          <p data-cms-text-key="stage5.text">Принимаете объект вместе с мастером. Если найдёте замечания — устраним до подписания. Оставшиеся 70% — после вашего «ОК».</p>
+        </div>
+        <div class="stage-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+      </div>
+      <div class="stage-item">
+        <div class="stage-num">06</div>
+        <div class="stage-content">
+          <h3 data-cms-text-key="stage6.title">Гарантия 3 года</h3>
+          <p data-cms-text-key="stage6.text">Выдаём гарантийный талон на все виды работ. При любых вопросах — выедем в течение 48 часов и устраним за свой счёт.</p>
+        </div>
+        <div class="stage-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee section" id="guarantee">
+  <div class="container">
+    <div class="guarantee-inner">
+      <div class="guarantee-main">
+        <div class="guarantee-badge">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C07830" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h2 data-cms-text-key="guarantee.h2">Гарантия<br><span class="accent">3 года</span> на все работы</h2>
+        <p data-cms-text-key="guarantee.text">Мы работаем официально, все обязательства — в договоре. Если что-то пойдёт не так — мы это исправим. За свой счёт.</p>
+        <button class="btn btn-gold" onclick="openModal('booking')">Получить гарантию сейчас</button>
+      </div>
+      <div class="guarantee-cards">
+        <div class="g-card">
+          <div class="g-card-num" data-cms-text-key="gc1.num">3 года</div>
+          <div class="g-card-text" data-cms-text-key="gc1.text">Гарантийный срок на все виды ремонтных работ</div>
+        </div>
+        <div class="g-card">
+          <div class="g-card-num" data-cms-text-key="gc2.num">48 часов</div>
+          <div class="g-card-text" data-cms-text-key="gc2.text">Выезд мастера по гарантийному обращению</div>
+        </div>
+        <div class="g-card">
+          <div class="g-card-num" data-cms-text-key="gc3.num">0 ₽</div>
+          <div class="g-card-text" data-cms-text-key="gc3.text">Стоимость устранения гарантийных дефектов</div>
+        </div>
+        <div class="g-card">
+          <div class="g-card-num" data-cms-text-key="gc4.num">Договор</div>
+          <div class="g-card-text" data-cms-text-key="gc4.text">Письменное подтверждение всех обязательств</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews section" id="reviews">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow" data-cms-text-key="reviews.eyebrow">Отзывы</div>
+      <h2 data-cms-text-key="reviews.h2">Что говорят клиенты</h2>
+    </div>
+    <div class="reviews-carousel">
+      <div class="reviews-track" id="reviews-track">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="--av:#C07830">АК</div>
+            <div>
+              <div class="review-name" data-cms-text-key="rev1.name">Александра К.</div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text" data-cms-text-key="rev1.text">«Делали ремонт в гостиной и спальне. Всё точно по смете, ни рубля сверху. Мастера аккуратные — защитили всю мебель, убрали после работ. Отдельное спасибо за ежедневные фото. Рекомендую!»</p>
+          <div class="review-meta" data-cms-text-key="rev1.meta">Гостиная + спальня, 58 м² · Москва, Тверская</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="--av:#5A7A94">ДВ</div>
+            <div>
+              <div class="review-name" data-cms-text-key="rev2.name">Дмитрий В.</div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text" data-cms-text-key="rev2.text">«Полный ремонт квартиры под ключ. Сделали за 42 дня вместо 45 обещанных. Цена зафиксирована с первого дня. Дизайн-проект включён в стоимость — отдельно доволен этим. Живём уже полгода, всё держится!»</p>
+          <div class="review-meta" data-cms-text-key="rev2.meta">Квартира под ключ, 75 м² · МО, Красногорск</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="--av:#6B8B4A">НС</div>
+            <div>
+              <div class="review-name" data-cms-text-key="rev3.name">Наталья С.</div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text" data-cms-text-key="rev3.text">«Ремонт кухни + ванной. Кафель положили идеально — ни одного кривого шва. Смеситель поставили из нашего, вопросов не было. Работали два мастера и за 18 дней всё сделали. Счастлива!»</p>
+          <div class="review-meta" data-cms-text-key="rev3.meta">Кухня + ванная · Москва, Хамовники</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="--av:#8B4513">МП</div>
+            <div>
+              <div class="review-name" data-cms-text-key="rev4.name">Михаил П.</div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text" data-cms-text-key="rev4.text">«Стандарт-ремонт двушки. Понравилось, что всё описали в смете заранее — что именно делают, какие материалы. В процессе нашлась скрытая проводка — предупредили, согласовали замену отдельно. Честные ребята.»</p>
+          <div class="review-meta" data-cms-text-key="rev4.meta">Двухкомнатная квартира, 62 м² · Москва, Юго-Запад</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="--av:#5D6B7A">ИТ</div>
+            <div>
+              <div class="review-name" data-cms-text-key="rev5.name">Ирина Т.</div>
+              <div class="review-stars">★★★★☆</div>
+            </div>
+          </div>
+          <p class="review-text" data-cms-text-key="rev5.text">«Косметический ремонт прихожей и коридора. Небольшая задержка на 3 дня из-за доставки обоев — предупредили заранее. В итоге всё красиво, обои ровно, плинтусы аккуратно. Цена за работы — честная.»</p>
+          <div class="review-meta" data-cms-text-key="rev5.meta">Прихожая + коридор · Подольск</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="--av:#6B4D30">АМ</div>
+            <div>
+              <div class="review-name" data-cms-text-key="rev6.name">Андрей М.</div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text" data-cms-text-key="rev6.text">«Дизайнерский ремонт частного дома — 180 м². Сложный проект, занял 3 месяца. Команда профессионалов — каждый в своей теме. Дизайнер удержала стиль во всех комнатах. Дом стал другим. Всем советую!»</p>
+          <div class="review-meta" data-cms-text-key="rev6.meta">Частный дом, 180 м² · МО, Истра</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-controls">
+      <button class="reviews-btn" id="reviews-prev" aria-label="Предыдущий">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="reviews-dots" id="reviews-dots"></div>
+      <button class="reviews-btn" id="reviews-next" aria-label="Следующий">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq section" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow" data-cms-text-key="faq.eyebrow">Вопросы и ответы</div>
+      <h2 data-cms-text-key="faq.h2">Часто спрашивают</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false"><span data-cms-text-key="faq1.q">Как рассчитать стоимость ремонта?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-answer"><p data-cms-text-key="faq1.a">Используйте наш онлайн-калькулятор выше — он даст предварительный диапазон за 30 секунд. Для точной сметы закажите бесплатный выезд мастера: замер, обсуждение деталей и предварительный расчёт — в день обращения.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false"><span data-cms-text-key="faq2.q">Сколько занимает ремонт квартиры?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-answer"><p data-cms-text-key="faq2.a">Косметический ремонт однушки — от 14 дней. Стандарт двушки — от 30 дней. Дизайнерский под ключ — от 60 дней. Точные сроки фиксируем в договоре. Несоблюдение сроков — штраф в пользу клиента.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false"><span data-cms-text-key="faq3.q">Нужно ли присутствовать во время работ?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-answer"><p data-cms-text-key="faq3.a">Нет, не обязательно. Вы передаёте ключи прорабу под роспись, а каждый день получаете фотоотчёт в Telegram или WhatsApp. Мы работаем с честными людьми — материалы и инструменты под контролем. Приходите принимать уже готовый объект.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false"><span data-cms-text-key="faq4.q">Можно ли использовать свои материалы?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-answer"><p data-cms-text-key="faq4.a">Да. Мы работаем как с материалами заказчика, так и с нашими. Если берёте свои, мы проверим их совместимость перед началом работ и предупредим, если что-то не подойдёт.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false"><span data-cms-text-key="faq5.q">Как происходит оплата?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-answer"><p data-cms-text-key="faq5.a">30% предоплата при подписании договора — мы закупаем материалы и начинаем работы. 70% — при сдаче объекта, после вашей приёмки и подписания акта. Безналичный расчёт, официальные чеки.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false"><span data-cms-text-key="faq6.q">Работаете ли в Подмосковье?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-answer"><p data-cms-text-key="faq6.a">Да, работаем по всей Московской области. Красногорск, Одинцово, Химки, Мытищи, Подольск, Серпухов, Люберцы, Жуковский, Истра — выезжаем везде. Выезд мастера на замер также бесплатный.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTS -->
+<section class="contacts section" id="contacts">
+  <div class="container">
+    <div class="contacts-inner">
+      <div class="contacts-info">
+        <div class="section-eyebrow" data-cms-text-key="contacts.eyebrow">Контакты</div>
+        <h2 data-cms-text-key="contacts.h2">Оставьте заявку —<br>позвоним за 15 минут</h2>
+        <div class="contacts-list">
+          <a href="tel:+74959876543" class="contact-item" data-cms-link-key="contacts.phone">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.38 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.41-1.41a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span data-cms-text-key="contacts.phone-text">+7 (495) 987-65-43</span>
+          </a>
+          <a href="mailto:info@remstroy-msk.ru" class="contact-item" data-cms-link-key="contacts.email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span data-cms-text-key="contacts.email-text">info@remstroy-msk.ru</span>
+          </a>
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span data-cms-text-key="contacts.address">Москва, ул. Лесная, д. 12, стр. 2</span>
+          </div>
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span data-cms-text-key="contacts.hours">Ежедневно с 9:00 до 21:00</span>
+          </div>
+        </div>
+        <div class="contacts-messengers">
+          <a href="https://t.me/Y002_bot" target="_blank" rel="noopener" class="msg-link tg" aria-label="Telegram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+            Telegram
+          </a>
+          <a href="https://wa.me/74959876543" target="_blank" rel="noopener" class="msg-link wa" aria-label="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.029 18.88a7.382 7.382 0 0 1-3.53-.899L4.5 19.5l1.546-3.835A7.4 7.4 0 0 1 4.62 12.03C4.62 7.94 7.94 4.62 12.03 4.62c4.087 0 7.41 3.32 7.41 7.41 0 4.087-3.32 7.41-7.411 7.41l-.001-.96z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="contacts-form-wrap">
+        <form class="contacts-form" id="form-contacts" novalidate>
+          <h3>Оставить заявку</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-name">Ваше имя</label>
+              <input type="text" id="c-name" name="name" placeholder="Иван Иванов" required />
+            </div>
+            <div class="form-group">
+              <label for="c-phone">Телефон</label>
+              <input type="tel" id="c-phone" name="phone" placeholder="+7 (___) ___-__-__" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-type">Тип ремонта</label>
+              <select id="c-type" name="repair_type">
+                <option value="">Не выбрано</option>
+                <option>Косметический</option>
+                <option>Стандарт</option>
+                <option>Дизайнерский</option>
+                <option>Не знаю — нужна консультация</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="c-area">Площадь, м²</label>
+              <input type="number" id="c-area-contact" name="area" placeholder="60" min="1" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="c-msg">Комментарий</label>
+            <textarea id="c-msg" name="message" placeholder="Расскажите о вашем объекте..." rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold btn-block">Отправить заявку</button>
+          <p class="form-privacy">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a class="logo logo-footer" href="/" data-cms-link-key="footer.logo">
+        <div class="logo-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="logo-text">
+          <strong data-cms-text-key="footer.brand-name">РемСтрой</strong>
+          <span data-cms-text-key="footer.brand-tag">Ремонт под ключ</span>
+        </div>
+      </a>
+      <p data-cms-text-key="footer.brand-desc">Профессиональный ремонт квартир и домов в Москве и МО с 2016 года.</p>
+      <div class="footer-social">
+        <a href="https://t.me/Y002_bot" target="_blank" rel="noopener" aria-label="Telegram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+        </a>
+        <a href="https://wa.me/74959876543" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.029 18.88a7.382 7.382 0 0 1-3.53-.899L4.5 19.5l1.546-3.835A7.4 7.4 0 0 1 4.62 12.03C4.62 7.94 7.94 4.62 12.03 4.62c4.087 0 7.41 3.32 7.41 7.41 0 4.087-3.32 7.41-7.411 7.41l-.001-.96z"/></svg>
+        </a>
+      </div>
+    </div>
+    <nav class="footer-nav">
+      <div class="footer-col">
+        <div class="footer-col-title">Услуги</div>
+        <a href="#packages">Пакеты ремонта</a>
+        <a href="#calculator">Калькулятор сметы</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#stages">Этапы работ</a>
+        <a href="#guarantee">Гарантия</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Компания</div>
+        <a href="#reviews">Отзывы клиентов</a>
+        <a href="#faq">Вопросы и ответы</a>
+        <a href="#contacts">Контакты</a>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Контакты</div>
+        <a href="tel:+74959876543" data-cms-text-key="footer.phone">+7 (495) 987-65-43</a>
+        <a href="mailto:info@remstroy-msk.ru" data-cms-text-key="footer.email">info@remstroy-msk.ru</a>
+        <span data-cms-text-key="footer.address">Москва, ул. Лесная, д. 12, стр. 2</span>
+        <span data-cms-text-key="footer.hours">Пн–Вс, 9:00–21:00</span>
+      </div>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span data-cms-text-key="footer.copy">© 2026 РемСтрой. Все права защищены.</span>
+      <span data-cms-text-key="footer.legal">ИП Иванов И.И. · ИНН 7701234567</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════ MODALS ═══════════════════ -->
+
+<!-- MODAL: Booking -->
+<div class="modal-overlay" id="modal-booking" role="dialog" aria-modal="true" aria-label="Форма заявки">
+  <div class="modal-card">
+    <button class="modal-close" onclick="closeModal('booking')" aria-label="Закрыть">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="modal-header">
+      <h2>Оставить заявку</h2>
+      <p>Заполните форму — перезвоним в течение 15 минут</p>
+    </div>
+    <form class="modal-form" id="form-booking" novalidate>
+      <input type="hidden" name="repair_type" id="modal-repair-type" value="" />
+      <div class="form-row">
+        <div class="form-group">
+          <label for="b-name">Ваше имя *</label>
+          <input type="text" id="b-name" name="name" placeholder="Иван Иванов" required />
+        </div>
+        <div class="form-group">
+          <label for="b-phone">Телефон *</label>
+          <input type="tel" id="b-phone" name="phone" placeholder="+7 (___) ___-__-__" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="b-type">Тип ремонта</label>
+          <select id="b-type" name="repair_type_select">
+            <option value="">Не выбрано</option>
+            <option>Косметический</option>
+            <option>Стандарт</option>
+            <option>Дизайнерский</option>
+            <option>Не знаю — нужна консультация</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="b-area">Площадь, м²</label>
+          <input type="number" id="b-area" name="area" placeholder="60" min="1" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="b-msg">Комментарий</label>
+        <textarea id="b-msg" name="message" placeholder="Расскажите о вашем объекте, что нужно сделать..." rows="3"></textarea>
+      </div>
+      <div class="form-check-row">
+        <label class="form-check-label">
+          <input type="checkbox" id="b-tg" name="want_telegram" value="yes" />
+          <span>Предпочитаю связь в Telegram</span>
+        </label>
+      </div>
+      <button type="submit" class="btn btn-gold btn-block btn-lg">Отправить заявку</button>
+      <p class="form-privacy">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL: Gallery -->
+<div class="modal-overlay" id="modal-gallery" role="dialog" aria-modal="true" aria-label="Галерея работ">
+  <div class="modal-card modal-gallery-card">
+    <button class="modal-close" onclick="closeModal('gallery')" aria-label="Закрыть">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="modal-header">
+      <h2>Все работы</h2>
+      <p>500+ завершённых объектов. Загружайте свои фото через CMS-панель.</p>
+    </div>
+    <div class="gallery-filter">
+      <button class="gallery-filter-btn active" data-filter="all">Все</button>
+      <button class="gallery-filter-btn" data-filter="living">Гостиная</button>
+      <button class="gallery-filter-btn" data-filter="kitchen">Кухня</button>
+      <button class="gallery-filter-btn" data-filter="bedroom">Спальня</button>
+      <button class="gallery-filter-btn" data-filter="bath">Ванная</button>
+      <button class="gallery-filter-btn" data-filter="full">Под ключ</button>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" data-cat="living"   style="--c1:#C5794B;--c2:#8B4513"><div class="gi-label">Гостиная · 45 м²</div></div>
+      <div class="gallery-item" data-cat="kitchen"  style="--c1:#8E9BAE;--c2:#5D6B7A"><div class="gi-label">Кухня · 18 м²</div></div>
+      <div class="gallery-item" data-cat="bedroom"  style="--c1:#9AB0C4;--c2:#5A7A94"><div class="gi-label">Спальня · 25 м²</div></div>
+      <div class="gallery-item" data-cat="bath"     style="--c1:#CCC8C4;--c2:#A0A09A"><div class="gi-label">Ванная · 8 м²</div></div>
+      <div class="gallery-item" data-cat="full"     style="--c1:#4A4A4A;--c2:#1A1A1A"><div class="gi-label">Прихожая · 12 м²</div></div>
+      <div class="gallery-item" data-cat="full"     style="--c1:#C8922A;--c2:#8C6010"><div class="gi-label">Студия · 38 м²</div></div>
+      <div class="gallery-item" data-cat="bedroom"  style="--c1:#7AAE7A;--c2:#3D6B3D"><div class="gi-label">Детская · 20 м²</div></div>
+      <div class="gallery-item" data-cat="full"     style="--c1:#3D5A8A;--c2:#1A2E50"><div class="gi-label">Кабинет · 22 м²</div></div>
+      <div class="gallery-item" data-cat="living"   style="--c1:#C07830;--c2:#8B4A10"><div class="gi-label">Гостиная · 60 м²</div></div>
+      <div class="gallery-item" data-cat="kitchen"  style="--c1:#708090;--c2:#4A5A68"><div class="gi-label">Кухня-гостиная · 35 м²</div></div>
+      <div class="gallery-item" data-cat="bath"     style="--c1:#B8A8D8;--c2:#7A6A9A"><div class="gi-label">Ванная · 10 м²</div></div>
+      <div class="gallery-item" data-cat="full"     style="--c1:#8B6A4A;--c2:#5A3A20"><div class="gi-label">Квартира под ключ · 75 м²</div></div>
+      <div class="gallery-item" data-cat="living"   style="--c1:#D4A070;--c2:#A07040"><div class="gi-label">Гостиная · 32 м²</div></div>
+      <div class="gallery-item" data-cat="bedroom"  style="--c1:#A0B8C8;--c2:#6080A0"><div class="gi-label">Спальня · 18 м²</div></div>
+      <div class="gallery-item" data-cat="full"     style="--c1:#6A8A6A;--c2:#3A5A3A"><div class="gi-label">Дом · 180 м²</div></div>
+      <div class="gallery-item" data-cat="kitchen"  style="--c1:#B0C4D8;--c2:#7090A8"><div class="gi-label">Кухня · 22 м²</div></div>
+      <div class="gallery-item" data-cat="bath"     style="--c1:#E8DED0;--c2:#C0B0A0"><div class="gi-label">Ванная · 7 м²</div></div>
+      <div class="gallery-item" data-cat="full"     style="--c1:#9A7A5A;--c2:#6A4A30"><div class="gi-label">Трёхкомнатная · 90 м²</div></div>
+    </div>
+    <div class="modal-footer-cta">
+      <button class="btn btn-gold" onclick="closeModal('gallery'); openModal('booking')">Хочу такой же ремонт</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Price -->
+<div class="modal-overlay" id="modal-price" role="dialog" aria-modal="true" aria-label="Полный прайс">
+  <div class="modal-card modal-price-card">
+    <button class="modal-close" onclick="closeModal('price')" aria-label="Закрыть">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="modal-header">
+      <h2>Прайс-лист на работы</h2>
+      <p>Актуальные цены 2026. Без учёта стоимости материалов.</p>
+    </div>
+    <div class="price-table-wrap">
+      <table class="price-table">
+        <thead><tr><th>Вид работы</th><th>Ед.</th><th>Цена, ₽</th></tr></thead>
+        <tbody>
+          <tr class="price-cat"><td colspan="3">Отделочные работы</td></tr>
+          <tr><td>Штукатурка стен (машинная)</td><td>м²</td><td>450–650</td></tr>
+          <tr><td>Шпаклёвка стен (финишная)</td><td>м²</td><td>320–450</td></tr>
+          <tr><td>Покраска стен (2 слоя)</td><td>м²</td><td>250–380</td></tr>
+          <tr><td>Поклейка обоев (простые)</td><td>м²</td><td>280–420</td></tr>
+          <tr><td>Поклейка обоев (сложные)</td><td>м²</td><td>420–650</td></tr>
+          <tr><td>Укладка плитки (стены)</td><td>м²</td><td>900–1500</td></tr>
+          <tr><td>Укладка плитки (пол)</td><td>м²</td><td>800–1300</td></tr>
+          <tr class="price-cat"><td colspan="3">Полы</td></tr>
+          <tr><td>Стяжка пола (сухая)</td><td>м²</td><td>450–700</td></tr>
+          <tr><td>Наливной пол (финишный)</td><td>м²</td><td>600–900</td></tr>
+          <tr><td>Ламинат / паркетная доска</td><td>м²</td><td>350–600</td></tr>
+          <tr><td>Плитка ПВХ / LVT</td><td>м²</td><td>450–750</td></tr>
+          <tr class="price-cat"><td colspan="3">Потолки</td></tr>
+          <tr><td>Натяжной потолок (одноуровн.)</td><td>м²</td><td>650–900</td></tr>
+          <tr><td>Натяжной потолок (многоуровн.)</td><td>м²</td><td>1200–1800</td></tr>
+          <tr><td>Штукатурка потолка</td><td>м²</td><td>500–750</td></tr>
+          <tr class="price-cat"><td colspan="3">Электрика</td></tr>
+          <tr><td>Разводка электрики (под ключ)</td><td>точка</td><td>800–1400</td></tr>
+          <tr><td>Установка розетки / выключателя</td><td>шт.</td><td>350–600</td></tr>
+          <tr><td>Монтаж щитка</td><td>шт.</td><td>5000–12000</td></tr>
+          <tr class="price-cat"><td colspan="3">Сантехника</td></tr>
+          <tr><td>Замена унитаза</td><td>шт.</td><td>3500–7000</td></tr>
+          <tr><td>Замена ванны / душевого поддона</td><td>шт.</td><td>6000–14000</td></tr>
+          <tr><td>Замена смесителя</td><td>шт.</td><td>1500–3500</td></tr>
+          <tr><td>Разводка труб (ванная комплекс)</td><td>компл.</td><td>от 18000</td></tr>
+          <tr class="price-cat"><td colspan="3">Двери и перегородки</td></tr>
+          <tr><td>Установка межкомнатной двери</td><td>шт.</td><td>3500–7000</td></tr>
+          <tr><td>Монтаж гипсокартонной перегородки</td><td>м²</td><td>850–1400</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal-footer-cta">
+      <button class="btn btn-gold" onclick="closeModal('price'); openModal('booking')">Запросить персональную смету</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js" defer></script>
+<script src="cms/cms.js" defer></script>
+</body>
+</html>

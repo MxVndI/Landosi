@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ЕГЭ Центр — Подготовка к ЕГЭ и ОГЭ в Москве</title>
+  <meta name="description" content="Репетиторский центр ЕГЭ и ОГЭ в Москве. Опытные преподаватели, бесплатная диагностика, персональный план. Средний балл выпускников — 87. Запишитесь на пробный урок." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="cms/cms.css" />
+  </head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="/" data-cms-link-key="header.logo">
+      <div class="logo-badge">ЕГЭ</div>
+      <div class="logo-text">
+        <strong data-cms-text-key="header.site-name">ЕГЭ Центр</strong>
+        <span data-cms-text-key="header.site-tagline">Подготовка к экзаменам</span>
+      </div>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#subjects" data-cms-link-key="nav.subjects">Предметы</a>
+      <a href="#teachers" data-cms-link-key="nav.teachers">Преподаватели</a>
+      <a href="#results" data-cms-link-key="nav.results">Результаты</a>
+      <a href="#pricing" data-cms-link-key="nav.pricing">Тарифы</a>
+      <a href="#trial" data-cms-link-key="nav.contacts">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+74951234567" class="header-phone" data-cms-text-key="header.phone">+7 (495) 123-45-67</a>
+      <a href="https://t.me/Y002_bot" target="_blank" class="btn btn-tg-sm" aria-label="Telegram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+        Telegram
+      </a>
+      <button class="btn btn-outline" onclick="openModal('lk')">Личный кабинет</button>
+      <button class="btn btn-gold" onclick="openModal('booking')">Записаться</button>
+    </div>
+    <button class="burger" id="burger" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="eyebrow" data-cms-text-key="hero.eyebrow">Репетиторский центр ЕГЭ / ОГЭ</div>
+      <h1 data-cms-text-key="hero.h1">Сдай ЕГЭ на <span class="gold">85+</span><br>и поступи в вуз мечты</h1>
+      <p class="hero-lead" data-cms-text-key="hero.lead">Индивидуальная подготовка с опытными преподавателями, персональный план и личный кабинет с прогрессом. Начни с бесплатной диагностики.</p>
+      <div class="hero-cta">
+        <button class="btn btn-gold btn-lg" onclick="openModal('booking')" data-cms-text-key="hero.cta-main">Записаться на пробный урок</button>
+        <a href="#diagnostics" class="btn btn-ghost btn-lg" data-cms-text-key="hero.cta-sec">Пройти диагностику →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong class="counter" data-target="87" data-cms-text-key="hero.stat1-num">87</strong>
+          <span data-cms-text-key="hero.stat1-label">средний балл</span>
+        </div>
+        <div class="hero-stat">
+          <strong class="counter" data-target="94" data-suffix="%" data-cms-text-key="hero.stat2-num">94%</strong>
+          <span data-cms-text-key="hero.stat2-label">поступают в топ-вузы</span>
+        </div>
+        <div class="hero-stat">
+          <strong data-cms-text-key="hero.stat3-num">12 лет</strong>
+          <span data-cms-text-key="hero.stat3-label">на рынке</span>
+        </div>
+        <div class="hero-stat">
+          <strong class="counter" data-target="2500" data-suffix="+" data-cms-text-key="hero.stat4-num">2500+</strong>
+          <span data-cms-text-key="hero.stat4-label">учеников</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="result-card" style="--delay:0s">
+        <div class="result-card-top">
+          <div class="result-avatar" style="--av:#2B6CB0">МК</div>
+          <div>
+            <strong data-cms-text-key="hero.card1-name">Мария К.</strong>
+            <span data-cms-text-key="hero.card1-subject">Математика (профиль)</span>
+          </div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="result-score">
+          <span class="score-before">51</span>
+          <span class="score-arrow">→</span>
+          <span class="score-after">91</span>
+        </div>
+        <p data-cms-text-key="hero.card1-text">Поступила на бюджет в МГУ им. Ломоносова</p>
+      </div>
+      <div class="result-card" style="--delay:.15s">
+        <div class="result-card-top">
+          <div class="result-avatar" style="--av:#276749">ДИ</div>
+          <div>
+            <strong data-cms-text-key="hero.card2-name">Дима И.</strong>
+            <span data-cms-text-key="hero.card2-subject">Физика</span>
+          </div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="result-score">
+          <span class="score-before">43</span>
+          <span class="score-arrow">→</span>
+          <span class="score-after">88</span>
+        </div>
+        <p data-cms-text-key="hero.card2-text">Поступил в МФТИ на бюджет</p>
+      </div>
+      <div class="result-card" style="--delay:.3s">
+        <div class="result-card-top">
+          <div class="result-avatar" style="--av:#7B3F9E">СВ</div>
+          <div>
+            <strong data-cms-text-key="hero.card3-name">Соня В.</strong>
+            <span data-cms-text-key="hero.card3-subject">Обществознание + Русский</span>
+          </div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="result-score">
+          <span class="score-before">60</span>
+          <span class="score-arrow">→</span>
+          <span class="score-after">95</span>
+        </div>
+        <p data-cms-text-key="hero.card3-text">Поступила в НИУ ВШЭ, факультет права</p>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span></span>
+  </div>
+</section>
+
+<!-- DIAGNOSTICS -->
+<section class="section section-light" id="diagnostics">
+  <div class="container">
+    <div class="section-head center">
+      <div class="section-label" data-cms-text-key="diag.label">Как мы работаем</div>
+      <h2 data-cms-text-key="diag.title">Бесплатная диагностика уровня</h2>
+      <p class="section-lead" data-cms-text-key="diag.lead">За 45 минут мы определим пробелы в знаниях и составим персональный план подготовки</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h3 data-cms-text-key="diag.step1-title">Диагностический тест</h3>
+        <p data-cms-text-key="diag.step1-text">Пробный тест в формате реального ЕГЭ/ОГЭ по вашему предмету. Займет 45–60 минут онлайн или в центре.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h3 data-cms-text-key="diag.step2-title">Разбор результатов</h3>
+        <p data-cms-text-key="diag.step2-text">Преподаватель анализирует ошибки и выявляет слабые темы. Вы получаете подробный отчёт с рекомендациями.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h3 data-cms-text-key="diag.step3-title">Персональный план</h3>
+        <p data-cms-text-key="diag.step3-text">Составляем индивидуальную программу подготовки с учетом цели, текущего уровня и времени до экзамена.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <h3 data-cms-text-key="diag.step4-title">Первый урок</h3>
+        <p data-cms-text-key="diag.step4-text">Начинаем работать по плану. Первый урок — бесплатно. Оцените качество преподавания без риска.</p>
+      </div>
+    </div>
+    <div class="center" style="margin-top:40px">
+      <button class="btn btn-navy btn-lg diag-cta" onclick="openModal('booking')">Записаться на диагностику бесплатно</button>
+    </div>
+  </div>
+</section>
+
+<!-- SUBJECTS -->
+<section class="section" id="subjects">
+  <div class="container">
+    <div class="section-head center">
+      <div class="section-label" data-cms-text-key="subj.label">Чему мы учим</div>
+      <h2 data-cms-text-key="subj.title">Предметы ЕГЭ и ОГЭ</h2>
+      <p class="section-lead" data-cms-text-key="subj.lead">Готовим к экзаменам по всем основным предметам. Занятия индивидуально или в мини-группах до 4 человек.</p>
+    </div>
+    <div class="subjects-grid subjects-grid--3">
+      <div class="subject-card">
+        <div class="subject-icon" style="--sc:#2B6CB0">∑</div>
+        <strong data-cms-text-key="subj.math">Математика</strong>
+        <span>ЕГЭ / ОГЭ</span>
+      </div>
+      <div class="subject-card">
+        <div class="subject-icon" style="--sc:#1A6B4A">Яя</div>
+        <strong data-cms-text-key="subj.rus">Русский язык</strong>
+        <span>ЕГЭ / ОГЭ</span>
+      </div>
+      <div class="subject-card">
+        <div class="subject-icon" style="--sc:#7B3F9E">⚛</div>
+        <strong data-cms-text-key="subj.phys">Физика</strong>
+        <span>ЕГЭ / ОГЭ</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHERS -->
+<section class="section section-light" id="teachers">
+  <div class="container">
+    <div class="section-head center">
+      <div class="section-label" data-cms-text-key="teach.label">Наша команда</div>
+      <h2 data-cms-text-key="teach.title">Преподаватели</h2>
+      <p class="section-lead" data-cms-text-key="teach.lead">Все преподаватели — профессионалы с опытом работы от 5 лет и знанием актуальных требований ФИПИ</p>
+    </div>
+    <div class="teachers-grid teachers-grid--2">
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <img data-cms-image-key="teach.t1-photo" src="images/teacher-1.svg" alt="Анна Петрова" />
+          <div class="teacher-avatar" style="--av:#2B6CB0;display:none">АП</div>
+        </div>
+        <div class="teacher-badge" data-cms-text-key="teach.t1-badge">10 лет опыта</div>
+        <h3 data-cms-text-key="teach.t1-name">Анна Петрова</h3>
+        <div class="teacher-subject" data-cms-text-key="teach.t1-subject">Математика профильная</div>
+        <p data-cms-text-key="teach.t1-bio">Кандидат физ.-мат. наук, МГУ. Подготовила более 300 учеников. Средний результат — 89 баллов.</p>
+        <div class="teacher-result" data-cms-text-key="teach.t1-result">Лучший ученик: 98 баллов</div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <img data-cms-image-key="teach.t2-photo" src="images/teacher-2.svg" alt="Михаил Козлов" />
+          <div class="teacher-avatar" style="--av:#7B3F9E;display:none">МК</div>
+        </div>
+        <div class="teacher-badge" data-cms-text-key="teach.t2-badge">11 лет опыта</div>
+        <h3 data-cms-text-key="teach.t2-name">Михаил Козлов</h3>
+        <div class="teacher-subject" data-cms-text-key="teach.t2-subject">Физика</div>
+        <p data-cms-text-key="teach.t2-bio">Физфак МГУ, преподаёт в МФТИ. Специализируется на сложных задачах второй части. Ученики — в топовых технических вузах.</p>
+        <div class="teacher-result" data-cms-text-key="teach.t2-result">Лучший ученик: 100 баллов</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="section section-navy" id="results">
+  <div class="container">
+    <div class="section-head center">
+      <div class="section-label light" data-cms-text-key="res.label">Наши результаты</div>
+      <h2 class="light" data-cms-text-key="res.title">Ученики говорят сами за себя</h2>
+    </div>
+    <div class="results-stats">
+      <div class="result-big-stat">
+        <strong class="counter" data-target="87" data-cms-text-key="res.s1-num">87</strong>
+        <span data-cms-text-key="res.s1-label">средний балл ЕГЭ<br>наших выпускников</span>
+      </div>
+      <div class="result-big-stat">
+        <strong class="counter" data-target="94" data-suffix="%" data-cms-text-key="res.s2-num">94%</strong>
+        <span data-cms-text-key="res.s2-label">поступают в топ-10<br>университетов</span>
+      </div>
+      <div class="result-big-stat">
+        <strong data-cms-text-key="res.s3-num">+38</strong>
+        <span data-cms-text-key="res.s3-label">баллов в среднем<br>после курса</span>
+      </div>
+      <div class="result-big-stat">
+        <strong class="counter" data-target="2500" data-suffix="+" data-cms-text-key="res.s4-num">2500+</strong>
+        <span data-cms-text-key="res.s4-label">учеников прошли<br>подготовку</span>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="--av:#2B6CB0">ВТ</div>
+          <div>
+            <strong data-cms-text-key="res.r1-name">Виктория Т.</strong>
+            <span data-cms-text-key="res.r1-class">11 класс, 2025</span>
+          </div>
+          <div class="stars gold-stars">★★★★★</div>
+        </div>
+        <div class="review-score-line">
+          <span data-cms-text-key="res.r1-subject">Математика профильная</span>
+          <span class="review-score" data-cms-text-key="res.r1-score">48 → 91 балл</span>
+        </div>
+        <p data-cms-text-key="res.r1-text">«Занималась с Анной Юрьевной полтора года. Начинала с 48 баллов, сдала на 91! Поступила в Высшую школу экономики на факультет экономики. Очень структурированный подход, никакой воды.»</p>
+      </div>
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="--av:#276749">ДК</div>
+          <div>
+            <strong data-cms-text-key="res.r2-name">Дмитрий К.</strong>
+            <span data-cms-text-key="res.r2-class">11 класс, 2025</span>
+          </div>
+          <div class="stars gold-stars">★★★★★</div>
+        </div>
+        <div class="review-score-line">
+          <span data-cms-text-key="res.r2-subject">Физика</span>
+          <span class="review-score" data-cms-text-key="res.r2-score">43 → 88 баллов</span>
+        </div>
+        <p data-cms-text-key="res.r2-text">«Начинал готовиться за 8 месяцев. Михаил Сергеевич объяснял так, что наконец-то понял физику глубоко, а не механически. Итог — 88 баллов и МФТИ. Рекомендую всем технарям.»</p>
+      </div>
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="--av:#7B3F9E">СМ</div>
+          <div>
+            <strong data-cms-text-key="res.r3-name">Соня М.</strong>
+            <span data-cms-text-key="res.r3-class">11 класс, 2025</span>
+          </div>
+          <div class="stars gold-stars">★★★★★</div>
+        </div>
+        <div class="review-score-line">
+          <span data-cms-text-key="res.r3-subject">Обществознание + English</span>
+          <span class="review-score" data-cms-text-key="res.r3-score">92 и 88 баллов</span>
+        </div>
+        <p data-cms-text-key="res.r3-text">«Готовилась к двум предметам сразу. Очень удобный личный кабинет — все домашние задания, видеозаписи уроков и прогресс в одном месте. Поступила в МГИМО на факультет МО.»</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-head center">
+      <div class="section-label" data-cms-text-key="price.label">Стоимость</div>
+      <h2 data-cms-text-key="price.title">Тарифы</h2>
+      <p class="section-lead" data-cms-text-key="price.lead">Выберите формат, который подходит вам. Все тарифы включают личный кабинет и доступ к материалам.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-card-head">
+          <div class="price-label" data-cms-text-key="price.t1-label">Старт</div>
+          <div class="price-amount">
+            <strong data-cms-text-key="price.t1-price">2 500 ₽</strong>
+            <span data-cms-text-key="price.t1-per">/ урок</span>
+          </div>
+          <p data-cms-text-key="price.t1-desc">Для тех, кто только начинает подготовку</p>
+        </div>
+        <ul class="price-features">
+          <li data-cms-text-key="price.t1-f1">✓ 1 урок в неделю (60 мин)</li>
+          <li data-cms-text-key="price.t1-f2">✓ Индивидуальные занятия</li>
+          <li data-cms-text-key="price.t1-f3">✓ Персональный план</li>
+          <li data-cms-text-key="price.t1-f4">✓ Учебные материалы</li>
+          <li data-cms-text-key="price.t1-f5">✓ Доступ к LMS</li>
+          <li class="muted">✗ Проверка домашних заданий</li>
+          <li class="muted">✗ Пробные варианты ЕГЭ</li>
+        </ul>
+        <button class="btn btn-outline-navy btn-full" onclick="openModal('booking')" data-cms-text-key="price.t1-cta">Выбрать тариф</button>
+      </div>
+      <div class="price-card price-card-featured">
+        <div class="price-badge" data-cms-text-key="price.t2-badge">Популярный</div>
+        <div class="price-card-head">
+          <div class="price-label" data-cms-text-key="price.t2-label">Оптимум</div>
+          <div class="price-amount">
+            <strong data-cms-text-key="price.t2-price">2 200 ₽</strong>
+            <span data-cms-text-key="price.t2-per">/ урок</span>
+          </div>
+          <p data-cms-text-key="price.t2-desc">Оптимальный выбор для стабильного результата</p>
+        </div>
+        <ul class="price-features">
+          <li data-cms-text-key="price.t2-f1">✓ 2 урока в неделю (60 мин)</li>
+          <li data-cms-text-key="price.t2-f2">✓ Индивидуальные занятия</li>
+          <li data-cms-text-key="price.t2-f3">✓ Персональный план + коррекция</li>
+          <li data-cms-text-key="price.t2-f4">✓ Проверка домашних заданий</li>
+          <li data-cms-text-key="price.t2-f5">✓ Доступ к LMS</li>
+          <li data-cms-text-key="price.t2-f6">✓ 2 пробных варианта в месяц</li>
+          <li class="muted">✗ Видеозаписи уроков</li>
+        </ul>
+        <button class="btn btn-gold btn-full" onclick="openModal('booking')" data-cms-text-key="price.t2-cta">Выбрать тариф</button>
+      </div>
+      <div class="price-card">
+        <div class="price-card-head">
+          <div class="price-label" data-cms-text-key="price.t3-label">Интенсив</div>
+          <div class="price-amount">
+            <strong data-cms-text-key="price.t3-price">1 900 ₽</strong>
+            <span data-cms-text-key="price.t3-per">/ урок</span>
+          </div>
+          <p data-cms-text-key="price.t3-desc">Максимальная подготовка для амбициозных целей</p>
+        </div>
+        <ul class="price-features">
+          <li data-cms-text-key="price.t3-f1">✓ 3 урока в неделю (60 мин)</li>
+          <li data-cms-text-key="price.t3-f2">✓ Индивидуальные занятия</li>
+          <li data-cms-text-key="price.t3-f3">✓ Персональный план + аналитика</li>
+          <li data-cms-text-key="price.t3-f4">✓ Проверка ДЗ + разбор ошибок</li>
+          <li data-cms-text-key="price.t3-f5">✓ Полный доступ к LMS</li>
+          <li data-cms-text-key="price.t3-f6">✓ Неограниченные пробники</li>
+          <li data-cms-text-key="price.t3-f7">✓ Видеозаписи всех уроков</li>
+        </ul>
+        <button class="btn btn-outline-navy btn-full" onclick="openModal('booking')" data-cms-text-key="price.t3-cta">Выбрать тариф</button>
+      </div>
+    </div>
+    <div class="price-note center">
+      <p data-cms-text-key="price.note">Первый урок — бесплатно. Оплата помесячно, без длительных договоров. <button class="link-btn" onclick="openModal('fullprice')">Смотреть полный прайс →</button></p>
+    </div>
+  </div>
+</section>
+
+<!-- LMS -->
+<section class="section section-light" id="lms">
+  <div class="container">
+    <div class="lms-inner">
+      <div class="lms-text">
+        <div class="section-label" data-cms-text-key="lms.label">Учись где угодно</div>
+        <h2 data-cms-text-key="lms.title">Личный кабинет и LMS</h2>
+        <p class="section-lead" data-cms-text-key="lms.lead">Весь процесс обучения — в одном месте. Расписание, материалы, задания, прогресс и видеозаписи уроков.</p>
+        <ul class="lms-features">
+          <li>
+            <div class="lms-icon">📅</div>
+            <div>
+              <strong data-cms-text-key="lms.f1-title">Расписание уроков</strong>
+              <p data-cms-text-key="lms.f1-text">Планируйте занятия онлайн, получайте напоминания в Telegram</p>
+            </div>
+          </li>
+          <li>
+            <div class="lms-icon">📝</div>
+            <div>
+              <strong data-cms-text-key="lms.f2-title">Домашние задания</strong>
+              <p data-cms-text-key="lms.f2-text">Задания с дедлайном, автопроверка тестов, комментарии преподавателя</p>
+            </div>
+          </li>
+          <li>
+            <div class="lms-icon">🎬</div>
+            <div>
+              <strong data-cms-text-key="lms.f3-title">Видеозаписи уроков</strong>
+              <p data-cms-text-key="lms.f3-text">Все уроки записываются. Пересматривайте сложные темы в любое время</p>
+            </div>
+          </li>
+          <li>
+            <div class="lms-icon">📊</div>
+            <div>
+              <strong data-cms-text-key="lms.f4-title">Прогресс и аналитика</strong>
+              <p data-cms-text-key="lms.f4-text">Графики роста баллов, слабые темы, статистика пробных тестов</p>
+            </div>
+          </li>
+          <li>
+            <div class="lms-icon">✅</div>
+            <div>
+              <strong data-cms-text-key="lms.f5-title">Тесты в формате ЕГЭ/ОГЭ</strong>
+              <p data-cms-text-key="lms.f5-text">Сотни актуальных вариантов. Режим экзамена с таймером.</p>
+            </div>
+          </li>
+        </ul>
+        <button class="btn btn-navy btn-lg" onclick="openModal('lk')">Попробовать личный кабинет</button>
+      </div>
+      <div class="lms-mockup">
+        <div class="browser-chrome">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">app.ege-centr.ru/cabinet</div>
+        </div>
+        <div class="lms-screen">
+          <div class="lms-sidebar">
+            <div class="lms-logo-sm">ЕГЭ Центр</div>
+            <nav class="lms-nav">
+              <a class="active">📊 Дашборд</a>
+              <a>📅 Расписание</a>
+              <a>📝 Задания</a>
+              <a>🎬 Видеозаписи</a>
+              <a>✅ Тесты</a>
+            </nav>
+          </div>
+          <div class="lms-main">
+            <div class="lms-welcome">Привет, Мария! 👋</div>
+            <div class="lms-cards-row">
+              <div class="lms-mini-card">
+                <span>Ближайший урок</span>
+                <strong>Сегодня, 16:00</strong>
+              </div>
+              <div class="lms-mini-card">
+                <span>Прогресс</span>
+                <strong>+24 балла</strong>
+              </div>
+              <div class="lms-mini-card">
+                <span>Заданий сдано</span>
+                <strong>47 / 52</strong>
+              </div>
+            </div>
+            <div class="lms-progress-block">
+              <div class="lms-progress-label">
+                <span>Математика</span>
+                <span>75 баллов</span>
+              </div>
+              <div class="lms-progress-bar"><div style="width:75%"></div></div>
+              <div class="lms-progress-label">
+                <span>Физика</span>
+                <span>68 баллов</span>
+              </div>
+              <div class="lms-progress-bar"><div style="width:68%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRIAL FORM -->
+<section class="section section-navy" id="trial">
+  <div class="container">
+    <div class="trial-inner">
+      <div class="trial-text">
+        <div class="section-label light" data-cms-text-key="trial.label">Первый шаг бесплатно</div>
+        <h2 class="light" data-cms-text-key="trial.title">Запись на пробный урок</h2>
+        <p class="light muted-text" data-cms-text-key="trial.lead">Оставьте заявку — мы свяжемся в течение 15 минут, подберём преподавателя и согласуем удобное время.</p>
+        <div class="trial-guarantees">
+          <div class="guarantee-item">
+            <span>✓</span>
+            <p data-cms-text-key="trial.g1">Первый урок бесплатно</p>
+          </div>
+          <div class="guarantee-item">
+            <span>✓</span>
+            <p data-cms-text-key="trial.g2">Без обязательной оплаты сразу</p>
+          </div>
+          <div class="guarantee-item">
+            <span>✓</span>
+            <p data-cms-text-key="trial.g3">Замена преподавателя при необходимости</p>
+          </div>
+        </div>
+      </div>
+      <form class="trial-form" id="trialForm" onsubmit="submitLead(event, 'trial')">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="trial-name">Ваше имя *</label>
+            <input type="text" id="trial-name" name="name" placeholder="Как к вам обращаться?" required />
+          </div>
+          <div class="form-group">
+            <label for="trial-phone">Телефон *</label>
+            <input type="tel" id="trial-phone" name="phone" placeholder="+7 (___) ___-__-__" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="trial-subject">Предмет</label>
+            <select id="trial-subject" name="subject">
+              <option value="">Выберите предмет</option>
+              <option>Математика профильная</option>
+              <option>Математика базовая</option>
+              <option>Русский язык</option>
+              <option>Физика</option>
+              <option>Химия</option>
+              <option>Биология</option>
+              <option>История</option>
+              <option>Обществознание</option>
+              <option>Информатика</option>
+              <option>Английский язык</option>
+              <option>Литература</option>
+              <option>География</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="trial-exam">Тип экзамена</label>
+            <select id="trial-exam" name="exam">
+              <option value="">ЕГЭ или ОГЭ?</option>
+              <option>ЕГЭ (11 класс)</option>
+              <option>ОГЭ (9 класс)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="trial-msg">Комментарий (необязательно)</label>
+          <textarea id="trial-msg" name="message" rows="3" placeholder="Текущий уровень, цель, пожелания..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold btn-full btn-lg">Записаться на пробный урок бесплатно</button>
+        <p class="consent-text">Нажимая кнопку, вы соглашаетесь с <a href="/privacy" data-cms-link-key="trial.privacy">политикой конфиденциальности</a>. Мы не передаём данные третьим лицам.</p>
+        <div class="form-success" id="trialSuccess" style="display:none">
+          <strong>Заявка принята! 🎉</strong>
+          <p>Мы свяжемся с вами в ближайшие 15 минут.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="/" data-cms-link-key="footer.logo">
+          <div class="logo-badge sm">ЕГЭ</div>
+          <div class="logo-text">
+            <strong data-cms-text-key="footer.name">ЕГЭ Центр</strong>
+          </div>
+        </a>
+        <p data-cms-text-key="footer.about">Репетиторский центр профессиональной подготовки к ЕГЭ и ОГЭ. 12 лет опыта, более 2500 учеников.</p>
+        <div class="footer-socials">
+          <a href="https://t.me/egecenter_msk" target="_blank" data-cms-link-key="footer.tg" aria-label="Telegram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+          </a>
+          <a href="https://vk.com/egecenter" target="_blank" data-cms-link-key="footer.vk" aria-label="ВКонтакте">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.785 16.241s.288-.032.436-.194c.136-.148.131-.427.131-.427s-.019-1.305.587-1.497c.598-.189 1.365 1.26 2.179 1.818.615.422 1.082.33 1.082.33l2.175-.03s1.138-.071.598-1.021c-.044-.076-.314-.661-1.616-1.868-1.363-1.261-1.18-1.057.461-3.239.999-1.33 1.399-2.142 1.273-2.489-.12-.331-.855-.244-.855-.244l-2.447.015s-.181-.025-.315.057c-.132.08-.216.271-.216.271s-.388 1.034-.906 1.913c-1.094 1.859-1.531 1.957-1.709 1.842-.416-.27-.312-1.078-.312-1.652 0-1.796.272-2.545-.529-2.737-.265-.064-.46-.106-1.138-.113-.87-.009-1.606.003-2.022.207-.277.136-.491.44-.361.457.161.021.527.099.72.363.25.341.241 1.107.241 1.107s.144 2.115-.335 2.378c-.329.18-.78-.187-1.748-1.864-.497-.858-.872-1.809-.872-1.809s-.072-.184-.202-.283c-.157-.12-.376-.158-.376-.158l-2.322.015s-.349.01-.478.162c-.114.135-.009.414-.009.414s1.818 4.254 3.878 6.399c1.888 1.97 4.031 1.841 4.031 1.841h.972z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-cms-text-key="footer.col1-title">Обучение</h4>
+        <nav class="footer-nav">
+          <a href="#subjects" data-cms-link-key="footer.subjects">Предметы</a>
+          <a href="#teachers" data-cms-link-key="footer.teachers">Преподаватели</a>
+          <a href="#pricing" data-cms-link-key="footer.pricing">Тарифы</a>
+          <a href="#diagnostics" data-cms-link-key="footer.diag">Диагностика</a>
+          <a href="#lms" data-cms-link-key="footer.lms">Личный кабинет</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4 data-cms-text-key="footer.col2-title">Результаты</h4>
+        <nav class="footer-nav">
+          <a href="#results" data-cms-link-key="footer.results">Отзывы учеников</a>
+          <a href="#results" data-cms-link-key="footer.stats">Наша статистика</a>
+          <a href="#trial" data-cms-link-key="footer.trial">Пробный урок</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4 data-cms-text-key="footer.col3-title">Контакты</h4>
+        <div class="footer-contacts">
+          <p><a href="tel:+74951234567" data-cms-text-key="footer.phone">+7 (495) 123-45-67</a></p>
+          <p><a href="mailto:info@ege-centr.ru" data-cms-text-key="footer.email">info@ege-centr.ru</a></p>
+          <p data-cms-text-key="footer.address">Москва, ул. Большая Дмитровка, д. 7, стр. 1</p>
+          <p data-cms-text-key="footer.hours">Пн–Вс: 9:00–21:00</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-cms-text-key="footer.copy">© 2026 ЕГЭ Центр. Все права защищены.</p>
+      <div class="footer-legal">
+        <a href="/privacy" data-cms-link-key="footer.priv-link">Политика конфиденциальности</a>
+        <a href="/terms" data-cms-link-key="footer.terms-link">Пользовательское соглашение</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL: BOOKING -->
+<div class="modal-overlay" id="modal-booking" role="dialog" aria-modal="true" aria-label="Запись на урок">
+  <div class="modal-card" role="document">
+    <button class="modal-close" onclick="closeModal('booking')" aria-label="Закрыть">✕</button>
+    <div class="modal-head">
+      <div class="modal-label">Пробный урок бесплатно</div>
+      <h3>Записаться на занятие</h3>
+      <p>Заполните форму — мы перезвоним в течение 15 минут</p>
+    </div>
+    <form class="modal-form" id="bookingForm" onsubmit="submitLead(event, 'booking')">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="b-name">Имя *</label>
+          <input type="text" id="b-name" name="name" placeholder="Ваше имя" required />
+        </div>
+        <div class="form-group">
+          <label for="b-phone">Телефон *</label>
+          <input type="tel" id="b-phone" name="phone" placeholder="+7 (___) ___-__-__" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="b-subject">Предмет</label>
+          <select id="b-subject" name="subject">
+            <option value="">Выберите предмет</option>
+            <option>Математика профильная</option>
+            <option>Математика базовая</option>
+            <option>Русский язык</option>
+            <option>Физика</option>
+            <option>Химия</option>
+            <option>Биология</option>
+            <option>История</option>
+            <option>Обществознание</option>
+            <option>Информатика</option>
+            <option>Английский язык</option>
+            <option>Литература</option>
+            <option>География</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="b-exam">Тип экзамена</label>
+          <select id="b-exam" name="exam">
+            <option value="">ЕГЭ или ОГЭ?</option>
+            <option>ЕГЭ (11 класс)</option>
+            <option>ОГЭ (9 класс)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="b-msg">Комментарий</label>
+        <textarea id="b-msg" name="message" rows="3" placeholder="Текущий уровень, пожелания, удобное время..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-gold btn-full btn-lg">Записаться на пробный урок бесплатно</button>
+      <p class="consent-text">Нажимая кнопку, вы соглашаетесь с <a href="/privacy">политикой конфиденциальности</a></p>
+      <div class="form-success" id="bookingSuccess" style="display:none">
+        <strong>Заявка принята! 🎉</strong>
+        <p>Мы свяжемся с вами в ближайшие 15 минут.</p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL: FULL PRICE -->
+<div class="modal-overlay" id="modal-fullprice" role="dialog" aria-modal="true" aria-label="Полный прайс">
+  <div class="modal-card modal-card-wide" role="document">
+    <button class="modal-close" onclick="closeModal('fullprice')" aria-label="Закрыть">✕</button>
+    <div class="modal-head">
+      <h3>Полный прайс</h3>
+      <p>Актуальные цены на 2026 год</p>
+    </div>
+    <div class="price-table-wrap">
+      <table class="price-table">
+        <thead>
+          <tr><th>Услуга</th><th>Формат</th><th>Стоимость</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Диагностика уровня</td><td>Индивидуально</td><td class="price-cell">Бесплатно</td></tr>
+          <tr><td>Пробный урок</td><td>Индивидуально, 60 мин</td><td class="price-cell">Бесплатно</td></tr>
+          <tr><td>Тариф «Старт» (1 урок/нед)</td><td>Индивидуально, 60 мин</td><td class="price-cell">2 500 ₽/урок</td></tr>
+          <tr><td>Тариф «Оптимум» (2 урока/нед)</td><td>Индивидуально, 60 мин</td><td class="price-cell">2 200 ₽/урок</td></tr>
+          <tr><td>Тариф «Интенсив» (3 урока/нед)</td><td>Индивидуально, 60 мин</td><td class="price-cell">1 900 ₽/урок</td></tr>
+          <tr><td>Мини-группа (до 3 человек)</td><td>Группа, 90 мин</td><td class="price-cell">1 500 ₽/урок</td></tr>
+          <tr><td>Пробный вариант ЕГЭ (разбор)</td><td>Индивидуально, 90 мин</td><td class="price-cell">2 000 ₽</td></tr>
+          <tr><td>Экспресс-подготовка (2 нед.)</td><td>5 уроков в неделю</td><td class="price-cell">от 18 000 ₽</td></tr>
+          <tr><td>Пакет «Годовой» (сент–май)</td><td>Все включено</td><td class="price-cell">от 75 000 ₽</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal-footer-cta">
+      <p>Остались вопросы? Позвоните нам: <strong>+7 (495) 123-45-67</strong></p>
+      <button class="btn btn-gold" onclick="closeModal('fullprice'); openModal('booking')">Записаться на консультацию</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: LK -->
+<div class="modal-overlay" id="modal-lk" role="dialog" aria-modal="true" aria-label="Личный кабинет">
+  <div class="modal-card" role="document">
+    <button class="modal-close" onclick="closeModal('lk')" aria-label="Закрыть">✕</button>
+    <div class="modal-head">
+      <h3>Личный кабинет</h3>
+      <p>Вход для учеников или новая регистрация</p>
+    </div>
+    <div class="lk-tabs">
+      <button class="lk-tab active" id="tab-login-btn" onclick="switchTab('login', this)">Уже ученик</button>
+      <button class="lk-tab" id="tab-reg-btn" onclick="switchTab('reg', this)">Записаться</button>
+    </div>
+
+    <!-- Вход: редирект в Telegram -->
+    <div id="loginForm" class="modal-form">
+      <div class="lk-tg-block">
+        <div class="lk-tg-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+        </div>
+        <p>Ссылка для входа в личный кабинет приходит на email после первого занятия. Если не получили — напишите менеджеру в Telegram.</p>
+      </div>
+      <a href="https://t.me/Y002_bot" target="_blank" class="btn btn-tg btn-full btn-lg">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+        Написать в Telegram
+      </a>
+      <div class="lk-divider"><span>или</span></div>
+      <a href="tel:+74951234567" class="btn btn-outline-navy btn-full">Позвонить: +7 (495) 123-45-67</a>
+      <p class="consent-text" style="margin-top:16px">Ещё нет аккаунта? <button type="button" class="link-btn" onclick="switchTab('reg', document.getElementById('tab-reg-btn'))">Записаться на первый урок →</button></p>
+    </div>
+
+    <!-- Регистрация: форма → в Telegram + email -->
+    <form class="modal-form" id="regForm" style="display:none" onsubmit="submitLead(event, 'register')">
+      <p style="margin-bottom:20px;font-size:.9rem;color:var(--muted)">Заполните форму — мы создадим аккаунт и пришлём данные для входа на email в течение 15 минут.</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="reg-name">Имя *</label>
+          <input type="text" id="reg-name" name="name" placeholder="Ваше имя" required />
+        </div>
+        <div class="form-group">
+          <label for="reg-phone">Телефон *</label>
+          <input type="tel" id="reg-phone" name="phone" placeholder="+7 ..." required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="reg-email">Email *</label>
+          <input type="email" id="reg-email" name="email" placeholder="your@email.ru" required />
+        </div>
+        <div class="form-group">
+          <label for="reg-subject">Предмет</label>
+          <select id="reg-subject" name="subject">
+            <option value="">Выберите предмет</option>
+            <option>Математика профильная</option>
+            <option>Математика базовая</option>
+            <option>Русский язык</option>
+            <option>Физика</option>
+            <option>Химия</option>
+            <option>Биология</option>
+            <option>История</option>
+            <option>Обществознание</option>
+            <option>Информатика</option>
+            <option>Английский язык</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-gold btn-full btn-lg">Создать аккаунт бесплатно</button>
+      <p class="consent-text">Нажимая кнопку, вы соглашаетесь с <a href="/privacy">политикой конфиденциальности</a></p>
+      <div class="form-success" id="registerSuccess" style="display:none">
+        <strong>Аккаунт создан! 🎉</strong>
+        <p>Менеджер свяжется с вами в течение 15 минут и пришлёт данные для входа на email.<br>Хотите быстрее? <a href="https://t.me/Y002_bot" target="_blank" style="color:var(--gold)">Напишите нам в Telegram →</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL: ALL TEACHERS -->
+<div class="modal-overlay" id="modal-allteachers" role="dialog" aria-modal="true" aria-label="Все преподаватели">
+  <div class="modal-card modal-card-wide" role="document">
+    <button class="modal-close" onclick="closeModal('allteachers')" aria-label="Закрыть">✕</button>
+    <div class="modal-head">
+      <h3>Все преподаватели</h3>
+      <p>48 профессионалов с опытом работы от 5 лет</p>
+    </div>
+    <div class="all-teachers-grid">
+      <div class="teacher-mini" onclick="openModal('booking')">
+        <div class="teacher-avatar" style="--av:#2B6CB0">АП</div>
+        <strong>Анна Петрова</strong><span>Математика</span><em>10 лет</em>
+      </div>
+      <div class="teacher-mini" onclick="openModal('booking')">
+        <div class="teacher-avatar" style="--av:#7B3F9E">МК</div>
+        <strong>Михаил Козлов</strong><span>Физика</span><em>11 лет</em>
+      </div>
+      <div class="teacher-mini" onclick="openModal('booking')">
+        <div class="teacher-avatar" style="--av:#276749">ЕС</div>
+        <strong>Екатерина Смирнова</strong><span>Русский язык</span><em>8 лет</em>
+      </div>
+      <div class="teacher-mini" onclick="openModal('booking')">
+        <div class="teacher-avatar" style="--av:#B7471A">ДИ</div>
+        <strong>Дмитрий Иванов</strong><span>Химия / Биология</span><em>9 лет</em>
+      </div>
+      <div class="teacher-mini" onclick="openModal('booking')">
+        <div class="teacher-avatar" style="--av:#1A5276">ОН</div>
+        <strong>Ольга Новикова</strong><span>История / Общество</span><em>12 лет</em>
+      </div>
+      <div class="teacher-mini" onclick="openModal('booking')">
+        <div class="teacher-avatar" style="--av:#145A32">АБ</div>
+        <strong>Артём Белов</strong><span>Информатика</span><em>6 лет</em>
+      </div>
+      <div class="teacher-mini" onclick="openModal('booking')">
+        <div class="teacher-avatar" style="--av:#4A235A">ИВ</div>
+        <strong>Ирина Васильева</strong><span>Английский</span><em>9 лет</em>
+      </div>
+      <div class="teacher-mini" onclick="openModal('booking')">
+        <div class="teacher-avatar" style="--av:#7D6608">ПС</div>
+        <strong>Павел Соколов</strong><span>Обществознание</span><em>7 лет</em>
+      </div>
+    </div>
+    <div class="center" style="margin-top:24px">
+      <button class="btn btn-gold" onclick="closeModal('allteachers'); openModal('booking')">Записаться на урок</button>
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING TELEGRAM BUTTON -->
+<a href="https://t.me/Y002_bot" target="_blank" class="fab-tg" aria-label="Написать в Telegram">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+  <span>Написать в Telegram</span>
+</a>
+
+<script src="js/main.js"></script>
+    <script src="cms/cms.js"></script>
+  </body>
+</html>

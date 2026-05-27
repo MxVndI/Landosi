@@ -1,0 +1,22 @@
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="420" fill="#F5F2EE"/>
+  <rect y="340" width="700" height="80" fill="#E0D4C0"/>
+  <line x1="0" y1="358" x2="700" y2="358" stroke="#D0C4B0" stroke-width="0.8"/>
+  <line x1="0" y1="376" x2="700" y2="376" stroke="#D0C4B0" stroke-width="0.8"/>
+  <line x1="0" y1="394" x2="700" y2="394" stroke="#D0C4B0" stroke-width="0.8"/>
+  <rect x="50" y="235" width="600" height="105" fill="#E8E4DE" rx="6"/>
+  <rect x="50" y="220" width="600" height="18" fill="#DEDAD4" rx="3"/>
+  <rect x="60" y="237" width="130" height="98" fill="#D8D4CE" rx="3" stroke="#CCC8C2" stroke-width="1"/>
+  <rect x="200" y="237" width="130" height="98" fill="#D8D4CE" rx="3" stroke="#CCC8C2" stroke-width="1"/>
+  <rect x="340" y="237" width="130" height="98" fill="#D8D4CE" rx="3" stroke="#CCC8C2" stroke-width="1"/>
+  <rect x="480" y="237" width="130" height="98" fill="#D8D4CE" rx="3" stroke="#CCC8C2" stroke-width="1"/>
+  <rect x="60" y="75" width="140" height="140" fill="#D8D4CE" rx="3" stroke="#CCC8C2" stroke-width="1"/>
+  <rect x="210" y="75" width="140" height="140" fill="#D8D4CE" rx="3" stroke="#CCC8C2" stroke-width="1"/>
+  <rect x="360" y="75" width="290" height="140" fill="#D0CCC6" rx="3" stroke="#C8C4BE" stroke-width="1"/>
+  <rect x="60" y="212" width="600" height="10" fill="#E0EDF8" rx="2"/>
+  <ellipse cx="440" cy="220" rx="35" ry="9" fill="#C8C4BE"/>
+  <ellipse cx="495" cy="220" rx="20" ry="6" fill="#C8C4BE"/>
+  <rect x="0" y="0" width="8" height="420" fill="#C07830"/>
+  <rect x="50" y="332" width="600" height="10" fill="#E8E3DB"/>
+  <text x="26" y="50" font-family="sans-serif" font-size="18" fill="#C07830" font-weight="700">ПОСЛЕ</text>
+</svg>

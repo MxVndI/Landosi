@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EDE9FE"/>
+      <stop offset="100%" style="stop-color:#C4B5FD"/>
+    </linearGradient>
+    <linearGradient id="skin2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F9D5A7"/>
+      <stop offset="100%" style="stop-color:#EAB884"/>
+    </linearGradient>
+    <linearGradient id="hair2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5C3D1A"/>
+      <stop offset="100%" style="stop-color:#3A1F05"/>
+    </linearGradient>
+    <clipPath id="circle2">
+      <circle cx="160" cy="160" r="160"/>
+    </clipPath>
+  </defs>
+  <!-- Background -->
+  <circle cx="160" cy="160" r="160" fill="url(#bg2)"/>
+  <!-- Body / jacket -->
+  <ellipse cx="160" cy="345" rx="120" ry="75" fill="#1A1A2E" clip-path="url(#circle2)"/>
+  <!-- Shirt / collar -->
+  <path d="M138 268 L160 290 L182 268 L188 335 Q160 360 132 335 Z" fill="#fff" clip-path="url(#circle2)"/>
+  <!-- Tie -->
+  <path d="M157 272 L160 280 L163 272 L162 300 Q160 308 158 300 Z" fill="#7B3F9E" clip-path="url(#circle2)"/>
+  <!-- Neck -->
+  <rect x="149" y="232" width="22" height="42" rx="9" fill="url(#skin2)"/>
+  <!-- Head -->
+  <ellipse cx="160" cy="177" rx="65" ry="72" fill="url(#skin2)"/>
+  <!-- Hair — short male style -->
+  <ellipse cx="160" cy="120" rx="67" ry="36" fill="url(#hair2)"/>
+  <path d="M95 155 Q95 125 120 115 Q160 105 200 115 Q225 125 225 155 Q220 148 200 144 Q160 140 120 144 Q100 148 95 155Z" fill="url(#hair2)"/>
+  <!-- Ears -->
+  <ellipse cx="97" cy="178" rx="10" ry="12" fill="#DAA064"/>
+  <ellipse cx="223" cy="178" rx="10" ry="12" fill="#DAA064"/>
+  <!-- Eyes -->
+  <ellipse cx="138" cy="177" rx="12" ry="9" fill="#fff"/>
+  <ellipse cx="182" cy="177" rx="12" ry="9" fill="#fff"/>
+  <circle cx="140" cy="178" r="6.5" fill="#1C1008"/>
+  <circle cx="184" cy="178" r="6.5" fill="#1C1008"/>
+  <circle cx="142" cy="176" r="2.5" fill="#fff"/>
+  <circle cx="186" cy="176" r="2.5" fill="#fff"/>
+  <!-- Eyebrows — slightly thick -->
+  <path d="M125 163 Q138 158 151 163" stroke="#3A1F05" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M169 163 Q182 158 195 163" stroke="#3A1F05" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Nose -->
+  <path d="M156 188 Q152 204 160 208 Q168 204 164 188" stroke="#C08050" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Stubble hint -->
+  <ellipse cx="160" cy="222" rx="30" ry="14" fill="#C8956A" opacity="0.25"/>
+  <!-- Mouth -->
+  <path d="M147 218 Q160 227 173 218" stroke="#B06840" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Glasses -->
+  <rect x="120" y="168" width="34" height="22" rx="6" fill="none" stroke="#444" stroke-width="2.2"/>
+  <rect x="166" y="168" width="34" height="22" rx="6" fill="none" stroke="#444" stroke-width="2.2"/>
+  <line x1="154" y1="179" x2="166" y2="179" stroke="#444" stroke-width="2.2"/>
+  <line x1="96" y1="177" x2="120" y2="177" stroke="#444" stroke-width="2"/>
+  <line x1="200" y1="177" x2="224" y2="177" stroke="#444" stroke-width="2"/>
+</svg>

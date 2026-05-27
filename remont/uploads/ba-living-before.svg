@@ -1,0 +1,28 @@
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="420" fill="#BBA880"/>
+  <rect y="320" width="700" height="100" fill="#6B4D30"/>
+  <line x1="0" y1="340" x2="700" y2="340" stroke="#5A3D22" stroke-width="1.2"/>
+  <line x1="0" y1="362" x2="700" y2="362" stroke="#5A3D22" stroke-width="1.2"/>
+  <line x1="0" y1="383" x2="700" y2="383" stroke="#5A3D22" stroke-width="1.2"/>
+  <line x1="0" y1="404" x2="700" y2="404" stroke="#5A3D22" stroke-width="1.2"/>
+  <rect x="230" y="55" width="240" height="170" fill="#8AAABF" stroke="#7A6040" stroke-width="6"/>
+  <line x1="350" y1="55" x2="350" y2="225" stroke="#7A6040" stroke-width="4"/>
+  <line x1="230" y1="140" x2="470" y2="140" stroke="#7A6040" stroke-width="4"/>
+  <path d="M100 80 Q120 105 108 140 Q128 162 112 195" stroke="#9A8060" stroke-width="2" fill="none"/>
+  <path d="M550 130 Q572 155 558 185" stroke="#9A8060" stroke-width="1.5" fill="none"/>
+  <path d="M380 60 Q395 78 385 95" stroke="#9A8060" stroke-width="1.2" fill="none"/>
+  <rect y="310" width="700" height="12" fill="#8C7050"/>
+  <ellipse cx="170" cy="210" rx="22" ry="16" fill="#A89060" opacity="0.65"/>
+  <ellipse cx="560" cy="165" rx="16" ry="11" fill="#A89060" opacity="0.55"/>
+  <rect x="80" y="258" width="300" height="62" fill="#7A6040" rx="6"/>
+  <rect x="74" y="246" width="312" height="20" fill="#8A7050" rx="4"/>
+  <rect x="74" y="246" width="14" height="74" fill="#8A7050" rx="4"/>
+  <rect x="372" y="246" width="14" height="74" fill="#8A7050" rx="4"/>
+  <rect x="55" y="290" width="60" height="50" fill="#888080" rx="4" stroke="#666" stroke-width="1.5"/>
+  <line x1="65" y1="290" x2="65" y2="340" stroke="#777" stroke-width="1"/>
+  <line x1="75" y1="290" x2="75" y2="340" stroke="#777" stroke-width="1"/>
+  <line x1="85" y1="290" x2="85" y2="340" stroke="#777" stroke-width="1"/>
+  <line x1="95" y1="290" x2="95" y2="340" stroke="#777" stroke-width="1"/>
+  <line x1="105" y1="290" x2="105" y2="340" stroke="#777" stroke-width="1"/>
+  <text x="28" y="50" font-family="sans-serif" font-size="18" fill="#7A6A50" font-weight="700">ДО</text>
+</svg>

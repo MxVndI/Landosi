@@ -1,0 +1,18 @@
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="420" fill="#B0A898"/>
+  <rect y="340" width="700" height="80" fill="#7A7268"/>
+  <line x1="0" y1="360" x2="700" y2="360" stroke="#6A6258" stroke-width="1.2"/>
+  <line x1="0" y1="380" x2="700" y2="380" stroke="#6A6258" stroke-width="1.2"/>
+  <line x1="0" y1="400" x2="700" y2="400" stroke="#6A6258" stroke-width="1.2"/>
+  <rect x="80" y="250" width="220" height="90" fill="#888480" rx="6"/>
+  <ellipse cx="190" cy="250" rx="85" ry="10" fill="#999590"/>
+  <rect x="190" y="180" width="16" height="75" fill="#888" rx="2"/>
+  <ellipse cx="198" cy="178" rx="18" ry="8" fill="#777"/>
+  <rect x="440" y="230" width="180" height="110" fill="#888480" rx="4"/>
+  <rect x="440" y="215" width="180" height="18" fill="#8A8680" rx="2"/>
+  <path d="M150 80 Q165 100 155 125" stroke="#9A9488" stroke-width="1.8" fill="none"/>
+  <path d="M520 100 Q538 118 525 142" stroke="#9A9488" stroke-width="1.5" fill="none"/>
+  <line x1="80" y1="60" x2="700" y2="60" stroke="#A0988A" stroke-width="12"/>
+  <line x1="80" y1="72" x2="700" y2="72" stroke="#B0A898" stroke-width="2"/>
+  <text x="28" y="50" font-family="sans-serif" font-size="18" fill="#7A7068" font-weight="700">ДО</text>
+</svg>
