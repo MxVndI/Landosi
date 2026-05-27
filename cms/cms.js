@@ -1,11 +1,11 @@
-(() => {
-  const CONTENT_URL = editMode ? '/api/cms/content' : 'cms/content.json';
-  const SAVE_URL = '/api/cms/content';
-  const UPLOAD_URL = '/api/cms/upload';
-  const SESSION_URL = '/api/cms/session';
-  const UNDO_URL = '/api/cms/undo';
-  const HISTORY_URL = '/api/cms/history';
-  const RESTORE_URL = '/api/cms/restore';
+﻿(() => {
+  const CONTENT_URL = editMode ? 'api/cms/content' : 'cms/content.json';
+  const SAVE_URL = 'api/cms/content';
+  const UPLOAD_URL = 'api/cms/upload';
+  const SESSION_URL = 'api/cms/session';
+  const UNDO_URL = 'api/cms/undo';
+  const HISTORY_URL = 'api/cms/history';
+  const RESTORE_URL = 'api/cms/restore';
   const ADMIN_PATH_RE = /\/admin\/?$/;
   const editMode = new URLSearchParams(location.search).has('cms') || ADMIN_PATH_RE.test(location.pathname);
   const state = {
@@ -555,3 +555,4 @@
     }
   });
 })();
+
