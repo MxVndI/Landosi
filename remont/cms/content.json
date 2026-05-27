@@ -1,1 +1,14 @@
-{"version":1,"items":{}}
+{
+  "version": 1,
+  "updatedAt": "2026-05-28T00:00:00.000Z",
+  "items": {
+    "ba.living.before":  { "type": "image", "src": "uploads/ba-living-before.svg",  "alt": "Гостиная до ремонта" },
+    "ba.living.after":   { "type": "image", "src": "uploads/ba-living-after.svg",   "alt": "Гостиная после ремонта" },
+    "ba.kitchen.before": { "type": "image", "src": "uploads/ba-kitchen-before.svg", "alt": "Кухня до ремонта" },
+    "ba.kitchen.after":  { "type": "image", "src": "uploads/ba-kitchen-after.svg",  "alt": "Кухня после ремонта" },
+    "ba.bath.before":    { "type": "image", "src": "uploads/ba-bath-before.svg",    "alt": "Ванная до ремонта" },
+    "ba.bath.after":     { "type": "image", "src": "uploads/ba-bath-after.svg",     "alt": "Ванная после ремонта" },
+    "portfolio.1":       { "type": "image", "src": "uploads/1779649017824-dnmkduolrkx6znwxjcx51v6agmcgk1vy.jpg",                              "alt": "Ремонт 1" },
+    "portfolio.2":       { "type": "image", "src": "uploads/1779649019714-1655841557_2-mykaleidoscope-ru-p-kombinirovannii-manikyur-be.jpg",   "alt": "Ремонт 2" }
+  }
+}
